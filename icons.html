@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Icons &middot; D8A Brand Kit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="shell">
+
+    <aside class="sidebar">
+      <div class="sidebar-brand"><h1>D8A</h1></div>
+      <div class="sidebar-version">Brand Kit &middot; v1.0</div>
+      <nav>
+        <a href="index.html"><span class="nav-num">00</span> Overview</a>
+        <a href="positioning.html"><span class="nav-num">01</span> Positioning</a>
+        <a href="guidelines.html"><span class="nav-num">02</span> Guidelines</a>
+        <a href="templates.html"><span class="nav-num">03</span> Templates</a>
+        <a href="logos.html"><span class="nav-num">04</span> Logos</a>
+        <a href="colors.html"><span class="nav-num">05</span> Colors</a>
+        <a href="fonts.html"><span class="nav-num">06</span> Fonts</a>
+        <a href="voice.html"><span class="nav-num">07</span> Brand voice</a>
+        <a href="photos.html"><span class="nav-num">08</span> Photography</a>
+        <a href="graphics.html"><span class="nav-num">09</span> Graphics</a>
+        <a href="icons.html" class="active"><span class="nav-num">10</span> Icons</a>
+        <a href="charts.html"><span class="nav-num">11</span> Charts</a>
+      </nav>
+    </aside>
+
+    <main class="main">
+
+      <div class="page-header">
+        <div class="section-label">10 &middot; Icons</div>
+        <h2>Iconography</h2>
+        <p class="intro">D8A uses Lucide icons &mdash; a clean, consistent, open-source icon set with 1px stroke weight. No filled icons, no custom icon libraries.</p>
+      </div>
+
+      <!-- Icon family -->
+      <div class="section">
+        <h3>Icon family</h3>
+        <p>We use <strong>Lucide</strong> (lucide.dev) exclusively. Lucide is the maintained fork of Feather Icons with a larger set and active development. Every icon in the D8A product comes from this family.</p>
+      </div>
+
+      <!-- Common icons -->
+      <div class="section">
+        <h3>Commonly used icons</h3>
+        <table class="color-table">
+          <thead>
+            <tr><th>Icon name</th><th>Usage</th><th>Context</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><code>layers</code></td><td>Data layers</td><td>Canvas, navigation</td></tr>
+            <tr><td><code>git-branch</code></td><td>Pipelines, branching</td><td>Specs, blueprints</td></tr>
+            <tr><td><code>bot</code></td><td>AI agents</td><td>Chat, agent status</td></tr>
+            <tr><td><code>file-text</code></td><td>Specifications</td><td>Spec editor, kanban</td></tr>
+            <tr><td><code>layout-dashboard</code></td><td>Dashboard / overview</td><td>Navigation</td></tr>
+            <tr><td><code>settings</code></td><td>Configuration</td><td>Settings panels</td></tr>
+            <tr><td><code>plus</code></td><td>Create / add</td><td>Buttons, actions</td></tr>
+            <tr><td><code>search</code></td><td>Search</td><td>Search inputs</td></tr>
+            <tr><td><code>check</code></td><td>Complete / success</td><td>Status indicators</td></tr>
+            <tr><td><code>x</code></td><td>Close / dismiss / error</td><td>Modals, alerts</td></tr>
+            <tr><td><code>chevron-right</code></td><td>Navigate / expand</td><td>Lists, breadcrumbs</td></tr>
+            <tr><td><code>infinity</code></td><td>D8A brand mark</td><td>Logo, loading states</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Style rules -->
+      <div class="section">
+        <h3>Icon style rules</h3>
+        <ul>
+          <li><strong>Stroke only.</strong> Never use filled icon variants. D8A icons are always outline-style with 1.5&ndash;2px stroke.</li>
+          <li><strong>Size: 16px, 20px, or 24px.</strong> These are the three allowed sizes. 16px for inline/compact, 20px for standard UI, 24px for prominent/nav.</li>
+          <li><strong>Color: inherit from text.</strong> Icons use <code>currentColor</code> and match the text they sit next to. Don't color icons independently.</li>
+          <li><strong>No icon backgrounds.</strong> Don't put icons inside colored circles, squares, or badges. The icon stands alone.</li>
+          <li><strong>Alignment:</strong> Icons are vertically centered with adjacent text. Use <code>align-items: center</code> in flex layouts.</li>
+          <li><strong>Spacing:</strong> 8px between an icon and its label. 4px for compact layouts.</li>
+        </ul>
+      </div>
+
+      <!-- Don'ts -->
+      <div class="section">
+        <h3>Don't</h3>
+        <div class="do-dont-grid">
+          <div class="do-card">
+            <div class="label">Do</div>
+            <blockquote>Use Lucide icons at consistent sizes with stroke style, matching text color</blockquote>
+          </div>
+          <div class="dont-card">
+            <div class="label">Don't</div>
+            <blockquote>Mix icon families (Lucide + FontAwesome + Material), use filled variants, or put icons in colored circles</blockquote>
+          </div>
+        </div>
+      </div>
+
+      <!-- Where to get -->
+      <div class="section">
+        <h3>Resources</h3>
+        <ul>
+          <li><strong>Browse icons:</strong> lucide.dev/icons</li>
+          <li><strong>React:</strong> <code>npm install lucide-react</code></li>
+          <li><strong>Figma:</strong> Search "Lucide Icons" in Figma community</li>
+          <li><strong>SVG:</strong> Download individual SVGs from lucide.dev</li>
+        </ul>
+      </div>
+
+      <div class="footer">D8A Brand Kit &middot; v1.0 &middot; d8a.pro</div>
+
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charts &middot; D8A Brand Kit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="shell">
+
+    <aside class="sidebar">
+      <div class="sidebar-brand"><h1>D8A</h1></div>
+      <div class="sidebar-version">Brand Kit &middot; v1.0</div>
+      <nav>
+        <a href="index.html"><span class="nav-num">00</span> Overview</a>
+        <a href="positioning.html"><span class="nav-num">01</span> Positioning</a>
+        <a href="guidelines.html"><span class="nav-num">02</span> Guidelines</a>
+        <a href="templates.html"><span class="nav-num">03</span> Templates</a>
+        <a href="logos.html"><span class="nav-num">04</span> Logos</a>
+        <a href="colors.html"><span class="nav-num">05</span> Colors</a>
+        <a href="fonts.html"><span class="nav-num">06</span> Fonts</a>
+        <a href="voice.html"><span class="nav-num">07</span> Brand voice</a>
+        <a href="photos.html"><span class="nav-num">08</span> Photography</a>
+        <a href="graphics.html"><span class="nav-num">09</span> Graphics</a>
+        <a href="icons.html"><span class="nav-num">10</span> Icons</a>
+        <a href="charts.html" class="active"><span class="nav-num">11</span> Charts</a>
+      </nav>
+    </aside>
+
+    <main class="main">
+
+      <div class="page-header">
+        <div class="section-label">11 &middot; Charts</div>
+        <h2>Charts &amp; data viz</h2>
+        <p class="intro">Data visualization follows the monochrome system. Gray scale only. Let the data speak &mdash; not the colors.</p>
+      </div>
+
+      <!-- Chart palette -->
+      <div class="section">
+        <h3>Chart palette (ordered)</h3>
+        <p class="mb-16">Use these colors in order. The first series gets the darkest shade. Additional series get progressively lighter. Never skip a shade.</p>
+        <div class="chart-palette">
+          <div class="chart-color">
+            <div class="bar" style="background:#0a0a0a;"></div>
+            <div class="label">#0a0a0a</div>
+          </div>
+          <div class="chart-color">
+            <div class="bar" style="background:#404040;"></div>
+            <div class="label">#404040</div>
+          </div>
+          <div class="chart-color">
+            <div class="bar" style="background:#737373;"></div>
+            <div class="label">#737373</div>
+          </div>
+          <div class="chart-color">
+            <div class="bar" style="background:#a3a3a3;"></div>
+            <div class="label">#a3a3a3</div>
+          </div>
+          <div class="chart-color">
+            <div class="bar" style="background:#d4d4d4;"></div>
+            <div class="label">#d4d4d4</div>
+          </div>
+          <div class="chart-color">
+            <div class="bar" style="background:#e5e5e5;"></div>
+            <div class="label">#e5e5e5</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- When to use which -->
+      <div class="section">
+        <h3>When to use which</h3>
+        <table class="color-table">
+          <thead>
+            <tr><th>Scenario</th><th>Colors</th><th>Example</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Single metric</td><td>#0a0a0a only</td><td>Pipeline delivery time over 12 months</td></tr>
+            <tr><td>Two-series comparison</td><td>#0a0a0a + #a3a3a3</td><td>Pipelines delivered vs. requested</td></tr>
+            <tr><td>Three+ categories</td><td>Full palette in order</td><td>Pipeline status breakdown by team</td></tr>
+            <tr><td>Emphasis (one highlighted)</td><td>#0a0a0a for hero, #d4d4d4 for rest</td><td>This quarter vs. previous quarters</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Chart rules -->
+      <div class="section">
+        <h3>Chart rules</h3>
+        <ul>
+          <li><strong>No 3D charts.</strong> Ever. Not even for presentations.</li>
+          <li><strong>No chart borders or outlines.</strong> Charts float on the page with labels, not boxed frames.</li>
+          <li><strong>Label directly.</strong> Put labels on or next to data points. Legends are a last resort.</li>
+          <li><strong>Grid lines:</strong> Gray 200 (#e5e5e5), 0.5px weight. Horizontal only. Never vertical grid lines.</li>
+          <li><strong>Axes:</strong> Gray 400 (#a3a3a3), 1px weight. Only show axes that carry information.</li>
+          <li><strong>Font:</strong> Inter 12px for labels, 11px for axis ticks. Never bold in chart text.</li>
+          <li><strong>Bar width:</strong> Bars should be wider than the gaps between them. Minimum 60% fill ratio.</li>
+          <li><strong>Pie charts:</strong> Avoid. Use horizontal bar charts instead. If you absolutely must use a pie chart, maximum 4 slices.</li>
+        </ul>
+      </div>
+
+      <!-- Power BI theme -->
+      <div class="section">
+        <h3>Power BI theme</h3>
+        <p class="mb-16">Copy this JSON and import it in Power BI Desktop via View &rarr; Themes &rarr; Browse for themes.</p>
+        <div class="code-block">{
+  "name": "D8A Monochrome",
+  "dataColors": [
+    "#0a0a0a",
+    "#404040",
+    "#737373",
+    "#a3a3a3",
+    "#d4d4d4",
+    "#e5e5e5"
+  ],
+  "background": "#ffffff",
+  "foreground": "#0a0a0a",
+  "tableAccent": "#0a0a0a",
+  "textClasses": {
+    "callout": {
+      "fontFace": "Inter",
+      "fontSize": 28
+    },
+    "title": {
+      "fontFace": "Inter",
+      "fontSize": 14,
+      "fontWeight": "Bold"
+    },
+    "header": {
+      "fontFace": "Inter",
+      "fontSize": 12
+    },
+    "label": {
+      "fontFace": "Inter",
+      "fontSize": 11
+    }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "border": [{
+          "show": false
+        }],
+        "dropShadow": [{
+          "show": false
+        }]
+      }
+    }
+  }
+}</div>
+      </div>
+
+      <!-- Python / matplotlib -->
+      <div class="section">
+        <h3>Python / matplotlib</h3>
+        <p class="mb-16">Set these defaults at the top of your notebook or script.</p>
+        <div class="code-block">import matplotlib.pyplot as plt
+
+D8A_PALETTE = ['#0a0a0a', '#404040', '#737373', '#a3a3a3', '#d4d4d4', '#e5e5e5']
+
+plt.rcParams.update({
+    'font.family': 'Inter',
+    'font.size': 12,
+    'axes.prop_cycle': plt.cycler(color=D8A_PALETTE),
+    'axes.facecolor': '#ffffff',
+    'axes.edgecolor': '#a3a3a3',
+    'axes.linewidth': 1,
+    'axes.grid': True,
+    'grid.color': '#e5e5e5',
+    'grid.linewidth': 0.5,
+    'grid.alpha': 1,
+    'xtick.color': '#737373',
+    'ytick.color': '#737373',
+    'figure.facecolor': '#ffffff',
+    'figure.edgecolor': 'none',
+})</div>
+      </div>
+
+      <div class="footer">D8A Brand Kit &middot; v1.0 &middot; d8a.pro</div>
+
+    </main>
+  </div>
+</body>
+</html>

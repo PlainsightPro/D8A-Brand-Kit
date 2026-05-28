@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graphics &middot; D8A Brand Kit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="shell">
+
+    <aside class="sidebar">
+      <div class="sidebar-brand"><h1>D8A</h1></div>
+      <div class="sidebar-version">Brand Kit &middot; v1.0</div>
+      <nav>
+        <a href="index.html"><span class="nav-num">00</span> Overview</a>
+        <a href="positioning.html"><span class="nav-num">01</span> Positioning</a>
+        <a href="guidelines.html"><span class="nav-num">02</span> Guidelines</a>
+        <a href="templates.html"><span class="nav-num">03</span> Templates</a>
+        <a href="logos.html"><span class="nav-num">04</span> Logos</a>
+        <a href="colors.html"><span class="nav-num">05</span> Colors</a>
+        <a href="fonts.html"><span class="nav-num">06</span> Fonts</a>
+        <a href="voice.html"><span class="nav-num">07</span> Brand voice</a>
+        <a href="photos.html"><span class="nav-num">08</span> Photography</a>
+        <a href="graphics.html" class="active"><span class="nav-num">09</span> Graphics</a>
+        <a href="icons.html"><span class="nav-num">10</span> Icons</a>
+        <a href="charts.html"><span class="nav-num">11</span> Charts</a>
+      </nav>
+    </aside>
+
+    <main class="main">
+
+      <div class="page-header">
+        <div class="section-label">09 &middot; Graphics</div>
+        <h2>Graphic elements</h2>
+        <p class="intro">Two signature motifs define D8A's visual language: the infinity symbol and line art. They're used everywhere from hero sections to loading states.</p>
+      </div>
+
+      <!-- Infinity -->
+      <div class="section">
+        <h3>The infinity symbol</h3>
+        <p>The infinity symbol (&infin;) represents continuous data delivery &mdash; the never-ending loop of request, spec, build, ship. It's our primary graphic mark alongside the wordmark.</p>
+
+        <div class="logo-grid mt-24">
+          <div class="logo-card bg-white">
+            <svg width="120" height="60" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M30 30C30 18 18 10 10 20C2 30 10 50 22 45C34 40 40 30 60 30C80 30 86 40 98 45C110 50 118 30 110 20C102 10 90 18 90 30C90 42 80 50 60 30C40 10 30 42 30 30Z" stroke="#0a0a0a" stroke-width="2" fill="none"/>
+            </svg>
+            <span class="variant-label">Thin stroke &middot; light bg</span>
+          </div>
+          <div class="logo-card bg-black">
+            <svg width="120" height="60" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M30 30C30 18 18 10 10 20C2 30 10 50 22 45C34 40 40 30 60 30C80 30 86 40 98 45C110 50 118 30 110 20C102 10 90 18 90 30C90 42 80 50 60 30C40 10 30 42 30 30Z" stroke="#fafafa" stroke-width="2" fill="none"/>
+            </svg>
+            <span class="variant-label">Thin stroke &middot; dark bg</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Usage rules -->
+      <div class="section">
+        <h3>Infinity usage</h3>
+        <ul>
+          <li><strong>Hero backgrounds:</strong> Use at large scale (200px+), low opacity (4&ndash;8%), as a subtle watermark.</li>
+          <li><strong>Section dividers:</strong> Use inline at medium scale with thin stroke as a visual break.</li>
+          <li><strong>Loading states:</strong> Animated infinity path as a loading indicator.</li>
+          <li><strong>Favicons &amp; app icons:</strong> Simplified thick-stroke version.</li>
+          <li><strong>Never fill the infinity.</strong> It's always a stroke/outline. The openness is intentional &mdash; it represents flow.</li>
+        </ul>
+      </div>
+
+      <!-- Line art -->
+      <div class="section">
+        <h3>Line art</h3>
+        <p>D8A's secondary graphic language is line art &mdash; thin, precise, geometric lines that suggest data flow, connections, and architecture. Inspired by the blueprint/canvas view in the product.</p>
+
+        <div class="logo-grid mt-24">
+          <div class="logo-card bg-light" style="min-height:200px;">
+            <svg width="200" height="120" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Nodes -->
+              <circle cx="30" cy="60" r="6" stroke="#0a0a0a" stroke-width="1.5" fill="none"/>
+              <circle cx="100" cy="30" r="6" stroke="#0a0a0a" stroke-width="1.5" fill="none"/>
+              <circle cx="100" cy="90" r="6" stroke="#0a0a0a" stroke-width="1.5" fill="none"/>
+              <circle cx="170" cy="60" r="6" stroke="#0a0a0a" stroke-width="1.5" fill="none"/>
+              <!-- Lines -->
+              <line x1="36" y1="57" x2="94" y2="33" stroke="#a3a3a3" stroke-width="1"/>
+              <line x1="36" y1="63" x2="94" y2="87" stroke="#a3a3a3" stroke-width="1"/>
+              <line x1="106" y1="33" x2="164" y2="57" stroke="#a3a3a3" stroke-width="1"/>
+              <line x1="106" y1="87" x2="164" y2="63" stroke="#a3a3a3" stroke-width="1"/>
+            </svg>
+            <span class="variant-label">Node &amp; connection pattern</span>
+          </div>
+          <div class="logo-card bg-black" style="min-height:200px;">
+            <svg width="200" height="120" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Grid lines -->
+              <line x1="0" y1="30" x2="200" y2="30" stroke="#262626" stroke-width="0.5"/>
+              <line x1="0" y1="60" x2="200" y2="60" stroke="#262626" stroke-width="0.5"/>
+              <line x1="0" y1="90" x2="200" y2="90" stroke="#262626" stroke-width="0.5"/>
+              <line x1="50" y1="0" x2="50" y2="120" stroke="#262626" stroke-width="0.5"/>
+              <line x1="100" y1="0" x2="100" y2="120" stroke="#262626" stroke-width="0.5"/>
+              <line x1="150" y1="0" x2="150" y2="120" stroke="#262626" stroke-width="0.5"/>
+              <!-- Flow path -->
+              <polyline points="20,90 50,60 100,60 150,30 180,30" stroke="#525252" stroke-width="1.5" fill="none"/>
+              <circle cx="20" cy="90" r="3" fill="#737373"/>
+              <circle cx="50" cy="60" r="3" fill="#737373"/>
+              <circle cx="100" cy="60" r="3" fill="#737373"/>
+              <circle cx="150" cy="30" r="3" fill="#737373"/>
+              <circle cx="180" cy="30" r="3" fill="#737373"/>
+            </svg>
+            <span class="variant-label">Grid &amp; flow pattern</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Line art rules -->
+      <div class="section">
+        <h3>Line art rules</h3>
+        <ul>
+          <li><strong>Stroke weight:</strong> 1&ndash;2px for detail, 0.5px for grid backgrounds.</li>
+          <li><strong>Color:</strong> Use the gray scale only. Black (#0a0a0a) for primary strokes, Gray 400 (#a3a3a3) for secondary, Gray 200 (#e5e5e5) for background grids.</li>
+          <li><strong>Nodes:</strong> Always circles, never squares. Stroke only (no fill) for primary nodes. Small filled dots for waypoints.</li>
+          <li><strong>Flow direction:</strong> Left to right, or top to bottom. Never right-to-left.</li>
+          <li><strong>No decorative curves.</strong> Lines are straight or use 90-degree angles. Bezier curves only for the infinity symbol.</li>
+        </ul>
+      </div>
+
+      <!-- Do / Don't -->
+      <div class="section">
+        <h3>Do / Don't</h3>
+        <div class="do-dont-grid">
+          <div class="do-card">
+            <div class="label">Do</div>
+            <blockquote>Use line art to illustrate data flow, architecture, and connections between components</blockquote>
+          </div>
+          <div class="dont-card">
+            <div class="label">Don't</div>
+            <blockquote>Use line art as pure decoration with no informational purpose</blockquote>
+          </div>
+        </div>
+        <div class="do-dont-grid mt-16">
+          <div class="do-card">
+            <div class="label">Do</div>
+            <blockquote>Keep line art minimal &mdash; fewer elements with clear relationships</blockquote>
+          </div>
+          <div class="dont-card">
+            <div class="label">Don't</div>
+            <blockquote>Create busy, tangled diagrams with dozens of overlapping lines</blockquote>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">D8A Brand Kit &middot; v1.0 &middot; d8a.pro</div>
+
+    </main>
+  </div>
+</body>
+</html>

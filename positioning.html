@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Positioning &middot; D8A Brand Kit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="shell">
+
+    <aside class="sidebar">
+      <div class="sidebar-brand"><h1>D8A</h1></div>
+      <div class="sidebar-version">Brand Kit &middot; v1.0</div>
+      <nav>
+        <a href="index.html"><span class="nav-num">00</span> Overview</a>
+        <a href="positioning.html" class="active"><span class="nav-num">01</span> Positioning</a>
+        <a href="guidelines.html"><span class="nav-num">02</span> Guidelines</a>
+        <a href="templates.html"><span class="nav-num">03</span> Templates</a>
+        <a href="logos.html"><span class="nav-num">04</span> Logos</a>
+        <a href="colors.html"><span class="nav-num">05</span> Colors</a>
+        <a href="fonts.html"><span class="nav-num">06</span> Fonts</a>
+        <a href="voice.html"><span class="nav-num">07</span> Brand voice</a>
+        <a href="photos.html"><span class="nav-num">08</span> Photography</a>
+        <a href="graphics.html"><span class="nav-num">09</span> Graphics</a>
+        <a href="icons.html"><span class="nav-num">10</span> Icons</a>
+        <a href="charts.html"><span class="nav-num">11</span> Charts</a>
+      </nav>
+    </aside>
+
+    <main class="main">
+
+      <div class="page-header">
+        <div class="section-label">01 &middot; Positioning</div>
+        <h2>Brand positioning</h2>
+        <p class="intro">What D8A is, who it's for, and the problems it kills. This page is the foundation everything else in the kit builds on.</p>
+      </div>
+
+      <!-- Value Proposition -->
+      <div class="section">
+        <h3>Value proposition</h3>
+        <p style="font-size:22px; font-weight:700; line-height:1.4; color:var(--fg); margin-bottom:12px;">
+          Ship data, not excuses. DataOps how it always should have been.
+        </p>
+        <p>D8A is platform-agnostic DataOps. It brings business, data, and AI agents together to deliver end-to-end data pipelines &mdash; spec-first, agentic, business-led. No lock-in. No drama. Just shipped pipelines.</p>
+      </div>
+
+      <!-- What we are / what we are not -->
+      <div class="section">
+        <h3>What D8A is &mdash; and what it isn't</h3>
+        <div class="two-col">
+          <div class="col">
+            <h4>What we are</h4>
+            <ul>
+              <li>Your data delivery machine</li>
+              <li>Platform-agnostic DataOps</li>
+              <li>Spec-first, agentic, business-led</li>
+              <li>Consistent implementation, time after time</li>
+              <li>The orchestration layer above your stack</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h4>What we are not</h4>
+            <ul>
+              <li>Your next data platform technology</li>
+              <li>Your next add-on waiting to be replaced</li>
+              <li>Your next vendor lock-in</li>
+              <li>A one-trick pony</li>
+              <li>A BI tool or an ETL platform</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- ICP -->
+      <div class="section">
+        <h3>Ideal customer profile</h3>
+
+        <h4 class="mb-16">Buyer</h4>
+        <div class="icp-grid mb-24">
+          <div class="icp-card">
+            <h4>Head of Data</h4>
+            <p>Responsible for data strategy, team delivery, and platform decisions. Tired of firefighting and context-switching between tools. Wants their team shipping more and better &mdash; not drowning in tickets.</p>
+          </div>
+        </div>
+
+        <h4 class="mb-16">Users</h4>
+        <div class="icp-grid">
+          <div class="icp-card">
+            <h4>Data Engineer</h4>
+            <p>Builds and maintains pipelines. Wants clear specs, less rework, and an agent that handles the boilerplate so they can focus on the hard problems.</p>
+          </div>
+          <div class="icp-card">
+            <h4>Business User</h4>
+            <p>Requests data. Doesn't care about infrastructure. Wants to describe what they need and get a working pipeline without learning SQL or filing three Jira tickets.</p>
+          </div>
+          <div class="icp-card">
+            <h4>Data Product Owner</h4>
+            <p>Bridges business and engineering. Needs visibility into what's requested, what's in progress, and what's shipped. Specs are their primary tool.</p>
+          </div>
+          <div class="icp-card">
+            <h4>Data Analyst</h4>
+            <p>Consumes data products. Needs reliable, documented, timely data. D8A makes sure the pipeline behind the dashboard actually works.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Customer Pains -->
+      <div class="section">
+        <h3>Customer pains</h3>
+        <div class="pain-gain-grid">
+          <div class="pain-card">
+            <div class="num">01</div>
+            <h4>Requests lost in chat threads</h4>
+            <p>Data requests come in via Slack, email, meetings. Half never get tracked. The other half lose context by the time someone picks them up.</p>
+          </div>
+          <div class="pain-card">
+            <div class="num">02</div>
+            <h4>No spec, no alignment</h4>
+            <p>Engineering builds what they think was asked. Business expected something different. Three rounds of rework before anything ships.</p>
+          </div>
+          <div class="pain-card">
+            <div class="num">03</div>
+            <h4>Platform lock-in</h4>
+            <p>Every tool vendor wants to be the entire stack. Switching costs grow every quarter. Innovation stalls because migration is too painful.</p>
+          </div>
+          <div class="pain-card">
+            <div class="num">04</div>
+            <h4>Manual pipeline development</h4>
+            <p>Every pipeline is hand-coded from scratch. No templates, no patterns, no consistency. Senior engineers spend time on boilerplate instead of architecture.</p>
+          </div>
+          <div class="pain-card">
+            <div class="num">05</div>
+            <h4>Disconnected tooling</h4>
+            <p>Jira for tickets, Confluence for docs, Git for code, Slack for context. Nobody has the full picture. Everything is fragmented.</p>
+          </div>
+          <div class="pain-card">
+            <div class="num">06</div>
+            <h4>Backlogs that never shrink</h4>
+            <p>Data teams are permanently behind. The backlog grows faster than the team can deliver. Business loses trust.</p>
+          </div>
+          <div class="pain-card">
+            <div class="num">07</div>
+            <h4>No reuse across projects</h4>
+            <p>Patterns solved once are solved again next quarter. There's no pattern library, no blueprint, no institutional memory.</p>
+          </div>
+          <div class="pain-card">
+            <div class="num">08</div>
+            <h4>Business can't self-serve</h4>
+            <p>Every data request requires an engineer. Business users are blocked. Engineers are bottlenecked. Everyone is frustrated.</p>
+          </div>
+          <div class="pain-card">
+            <div class="num">09</div>
+            <h4>Inconsistent implementations</h4>
+            <p>Every engineer has their own style. Same type of pipeline, five different approaches. Maintenance becomes archaeology.</p>
+          </div>
+          <div class="pain-card">
+            <div class="num">10</div>
+            <h4>No visibility for leadership</h4>
+            <p>Heads of data can't answer basic questions: how many pipelines are in progress? What's the average delivery time? Where are the bottlenecks?</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Customer Gains -->
+      <div class="section">
+        <h3>Customer gains</h3>
+        <div class="pain-gain-grid">
+          <div class="gain-card">
+            <div class="num">01</div>
+            <h4>Requests captured, specs generated</h4>
+            <p>Every data request becomes a structured spec. AI agents help translate business language into technical requirements. Nothing falls through the cracks.</p>
+          </div>
+          <div class="gain-card">
+            <div class="num">02</div>
+            <h4>Ship more, ship better</h4>
+            <p>Teams deliver more pipelines in less time. Specs remove ambiguity. Agents handle boilerplate. Engineers focus on what matters.</p>
+          </div>
+          <div class="gain-card">
+            <div class="num">03</div>
+            <h4>Run on any platform</h4>
+            <p>Databricks, Snowflake, Fabric, Spark &mdash; D8A orchestrates them all. Switch platforms without rewriting your delivery process.</p>
+          </div>
+          <div class="gain-card">
+            <div class="num">04</div>
+            <h4>Consistent every time</h4>
+            <p>Same patterns, same structure, same quality bar. Every pipeline follows the blueprint. New team members are productive on day one.</p>
+          </div>
+          <div class="gain-card">
+            <div class="num">05</div>
+            <h4>One workspace for everything</h4>
+            <p>Specs, code, requests, status &mdash; all in one place. No more tab-switching between five tools to understand what's happening.</p>
+          </div>
+          <div class="gain-card">
+            <div class="num">06</div>
+            <h4>Business and engineering aligned</h4>
+            <p>Business users submit requests in their language. Agents translate. Engineers build from clear specs. No more telephone game.</p>
+          </div>
+          <div class="gain-card">
+            <div class="num">07</div>
+            <h4>Backlog under control</h4>
+            <p>Faster delivery means the backlog shrinks. Heads of data can show progress, not just promise it.</p>
+          </div>
+          <div class="gain-card">
+            <div class="num">08</div>
+            <h4>Reusable patterns and blueprints</h4>
+            <p>Build a pattern once, deploy it everywhere. Institutional knowledge is captured in the tool, not in someone's head.</p>
+          </div>
+          <div class="gain-card">
+            <div class="num">09</div>
+            <h4>Full pipeline visibility</h4>
+            <p>Every request tracked from intake to production. Leadership sees delivery metrics. Teams see their work in context.</p>
+          </div>
+          <div class="gain-card">
+            <div class="num">10</div>
+            <h4>Agents that actually help</h4>
+            <p>AI agents that take in requests, generate code, and scaffold pipelines. Not a chatbot &mdash; a delivery partner.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">D8A Brand Kit &middot; v1.0 &middot; d8a.pro</div>
+
+    </main>
+  </div>
+</body>
+</html>
