@@ -29,6 +29,17 @@
   --accent:      var(--green-600);
   --accent-soft: var(--green-tint);
 
+  /* Depth (v2.1) — bridge tones between the grays and the green */
+  --green-300:   #7dffb8;  /* mint — gradient endpoints and text on green-tinted darks */
+  --green-900:   #0f2b1c;  /* deep green surface — badges and fills on dark */
+  --ink-green:   #0d1a13;  /* green-tinted black — canvas depth endpoint */
+
+  /* Depth (v2.1) — gradient recipes. One hue family per gradient, or a fade to transparent. */
+  --grad-canvas: linear-gradient(160deg, #0a0a0a 0%, #0d1a13 100%);
+  --grad-green:  linear-gradient(135deg, #00e676 0%, #00a85c 100%);
+  --grad-fade:   linear-gradient(180deg, rgba(0, 230, 118, 0.25) 0%, rgba(0, 230, 118, 0) 100%);
+  --glow-signal: radial-gradient(120% 140% at 85% 15%, rgba(0, 230, 118, 0.16) 0%, rgba(0, 230, 118, 0) 55%);
+
   /* Semantic */
   --bg:          var(--white);
   --fg:          var(--gray-950);
@@ -185,7 +196,7 @@ img { max-width: 100%; display: block; }
 
 /* --- Hero (overview) ------------------------------------ */
 .hero {
-  background: var(--black);
+  background: var(--glow-signal), var(--grad-canvas);
   color: var(--white);
   border-radius: 12px;
   padding: 64px 56px;
@@ -210,6 +221,11 @@ img { max-width: 100%; display: block; }
   letter-spacing: -1px;
   line-height: 1.1;
   margin-bottom: 8px;
+  background: linear-gradient(120deg, var(--white) 45%, var(--green-300) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  width: fit-content;
 }
 
 .hero .tagline-sub {
@@ -228,10 +244,12 @@ img { max-width: 100%; display: block; }
 
 .hero .badge {
   display: inline-block;
-  background: var(--gray-800);
-  color: var(--gray-300);
+  background: var(--green-glow);
+  border: 1px solid rgba(0, 230, 118, 0.25);
+  color: var(--green-300);
+  font-family: var(--font-mono);
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   padding: 8px 16px;
@@ -763,7 +781,7 @@ img { max-width: 100%; display: block; }
 }
 
 .canvas-demo.dark {
-  background: var(--black);
+  background: var(--glow-signal), var(--grad-canvas);
   border-color: var(--black);
 }
 
@@ -816,7 +834,7 @@ img { max-width: 100%; display: block; }
 }
 
 .canvas-demo.dark .demo-cta {
-  background: var(--green);
+  background: var(--grad-green);
   color: var(--black);
 }
 
@@ -826,8 +844,28 @@ img { max-width: 100%; display: block; }
   animation: d8a-pulse 3s linear infinite;
 }
 
+.pulse-tail {
+  stroke-dasharray: 120 280;
+  opacity: 0.25;
+  animation: d8a-pulse 3s linear infinite;
+  animation-delay: 0.12s;
+}
+
 @keyframes d8a-pulse {
   to { stroke-dashoffset: -400; }
+}
+
+/* --- Gradient swatches (colors page) ---------------------- */
+.swatch .color.on-black {
+  background-color: var(--black);
+}
+
+.grad-text {
+  background: linear-gradient(120deg, var(--white) 45%, var(--green-300) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  width: fit-content;
 }
 
 /* --- Utility -------------------------------------------- */

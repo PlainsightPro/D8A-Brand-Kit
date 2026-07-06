@@ -13,7 +13,7 @@
 
     <aside class="sidebar">
       <div class="sidebar-brand"><h1>D8A</h1></div>
-      <div class="sidebar-version">Brand Kit &middot; v2.0</div>
+      <div class="sidebar-version">Brand Kit &middot; v2.1</div>
       <nav>
         <a href="index.html"><span class="nav-num">00</span> Overview</a>
         <a href="positioning.html"><span class="nav-num">01</span> Positioning</a>
@@ -78,13 +78,91 @@
         </div>
       </div>
 
+      <!-- Bridge tones -->
+      <div class="section">
+        <h3>Bridge tones</h3>
+        <p class="mb-16">The gap between the grays and the green is bridged by three in-between tones. They keep dark surfaces from feeling flat-black and let green arrive gradually instead of abruptly.</p>
+        <div class="swatch-grid">
+          <div class="swatch" onclick="copyHex('#7dffb8')">
+            <div class="color" style="background-color: #7dffb8;"></div>
+            <div class="meta">
+              <div class="name">Green 300 &middot; Mint</div>
+              <div class="hex">#7dffb8</div>
+              <div class="usage">Gradient endpoints, text on green-tinted dark surfaces</div>
+            </div>
+          </div>
+          <div class="swatch" onclick="copyHex('#0f2b1c')">
+            <div class="color" style="background-color: #0f2b1c;"></div>
+            <div class="meta">
+              <div class="name">Green 900</div>
+              <div class="hex">#0f2b1c</div>
+              <div class="usage">Deep green surface &mdash; badges and subtle fills on dark</div>
+            </div>
+          </div>
+          <div class="swatch" onclick="copyHex('#0d1a13')">
+            <div class="color" style="background-color: #0d1a13;"></div>
+            <div class="meta">
+              <div class="name">Ink Green</div>
+              <div class="hex">#0d1a13</div>
+              <div class="usage">Green-tinted black &mdash; the far end of the canvas gradient</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gradients & glow -->
+      <div class="section">
+        <h3>Gradients &amp; glow</h3>
+        <p class="mb-16">Four gradient recipes, and only these four. Every gradient stays inside one hue family &mdash; gray or green &mdash; or fades to transparent. Never two hues, never a rainbow.</p>
+        <div class="swatch-grid">
+          <div class="swatch">
+            <div class="color" style="background: radial-gradient(120% 140% at 85% 15%, rgba(0,230,118,0.16) 0%, rgba(0,230,118,0) 55%), linear-gradient(160deg, #0a0a0a 0%, #0d1a13 100%);"></div>
+            <div class="meta">
+              <div class="name">Signal Glow</div>
+              <div class="hex">radial &middot; green 16% &rarr; 0%</div>
+              <div class="usage">Ambient light behind hero content on dark. Atmosphere, not a statement</div>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="color" style="background: linear-gradient(160deg, #0a0a0a 0%, #0d1a13 100%);"></div>
+            <div class="meta">
+              <div class="name">Canvas Depth</div>
+              <div class="hex">#0a0a0a &rarr; #0d1a13</div>
+              <div class="usage">Default dark canvas &mdash; black warming into Ink Green</div>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="color" style="background: linear-gradient(135deg, #00e676 0%, #00a85c 100%);"></div>
+            <div class="meta">
+              <div class="name">Green Ramp</div>
+              <div class="hex">#00e676 &rarr; #00a85c</div>
+              <div class="usage">CTA fills and hero elements &mdash; green with depth, within the family</div>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="color on-black" style="background: linear-gradient(180deg, rgba(0,230,118,0.25) 0%, rgba(0,230,118,0) 100%), #0a0a0a;"></div>
+            <div class="meta">
+              <div class="name">Green Fade</div>
+              <div class="hex">green 25% &rarr; transparent</div>
+              <div class="usage">Area-chart fills, pulse tails, section transitions</div>
+            </div>
+          </div>
+        </div>
+        <ul class="mt-24">
+          <li><strong>One family per gradient.</strong> Gray&rarr;gray, green&rarr;green, or green&rarr;transparent. A gradient is depth, not a second color.</li>
+          <li><strong>Glow is ambient light, not an effect.</strong> Radial, under 20% peak opacity, behind content &mdash; never a drop shadow, never a colored border glow on cards.</li>
+          <li><strong>Display headlines on dark</strong> may run White &rarr; Mint (see <a href="fonts.html"><strong>Fonts</strong></a>). Body text never gradients.</li>
+          <li><strong>Still banned:</strong> gloss, bevels, multi-hue gradients, gradients on light canvas backgrounds (light stays clean &mdash; depth is a dark-canvas tool).</li>
+        </ul>
+      </div>
+
       <!-- One-weapon rule -->
       <div class="section">
         <h3>The one-weapon rule</h3>
         <ul>
           <li><strong>One green statement per surface.</strong> A slide, a section, a social image, a chart &mdash; each gets exactly one green element. The CTA, <em>or</em> the number, <em>or</em> the hero series. Never several.</li>
+          <li><strong>Statement vs. atmosphere.</strong> The rule counts <em>statements</em> &mdash; CTAs, metrics, hero series, the pulse. <em>Atmosphere</em> &mdash; the Signal Glow, bridge-tone surfaces, fades under 25% opacity &mdash; doesn't count. Atmosphere sets the stage; the statement makes the point.</li>
           <li><strong>Green marks the point, not the theme.</strong> If you can remove the green and the message survives, it was in the wrong place.</li>
-          <li><strong>Green is flat.</strong> No gradients, no glows, no shadows. Rule 03 applies to the accent too.</li>
           <li><strong>If everything is green, nothing is.</strong> When in doubt, take green away &mdash; the monochrome system works without it.</li>
         </ul>
         <div class="do-dont-grid mt-24">
@@ -104,7 +182,7 @@
       <!-- Dark-led dual system -->
       <div class="section">
         <h3>Dark-led dual system</h3>
-        <p class="mb-16">The brand leads on black. Marketing surfaces &mdash; website, social, decks, product screenshots &mdash; sit on Black (#0a0a0a), where Ship Green glows at 11.8:1 contrast. The light canvas is for reading: docs, email, long-form. Same system, same rules, different room.</p>
+        <p class="mb-16">The brand leads on black &mdash; but not flat black. Marketing surfaces sit on Canvas Depth (#0a0a0a warming into Ink Green), with the Signal Glow as ambient light behind hero content. The light canvas is for reading: docs, email, long-form &mdash; and stays clean, no gradients. Same system, same rules, different room.</p>
         <div class="two-col">
           <div class="canvas-demo dark">
             <div class="demo-eyebrow">Primary canvas &middot; marketing</div>
@@ -227,6 +305,9 @@
             <tr><td>Green 600</td><td>#00a85c</td><td>0, 168, 92</td><td>153, 100%, 33%</td></tr>
             <tr><td>Green 700</td><td>#007a47</td><td>0, 122, 71</td><td>155, 100%, 24%</td></tr>
             <tr><td>Green Tint</td><td>#e6f9ef</td><td>230, 249, 239</td><td>148, 61%, 94%</td></tr>
+            <tr><td>Green 300 (Mint)</td><td>#7dffb8</td><td>125, 255, 184</td><td>147, 100%, 75%</td></tr>
+            <tr><td>Green 900</td><td>#0f2b1c</td><td>15, 43, 28</td><td>148, 48%, 11%</td></tr>
+            <tr><td>Ink Green</td><td>#0d1a13</td><td>13, 26, 19</td><td>148, 33%, 8%</td></tr>
             <tr><td>Black</td><td>#0a0a0a</td><td>10, 10, 10</td><td>0, 0%, 4%</td></tr>
             <tr><td>Gray 950</td><td>#171717</td><td>23, 23, 23</td><td>0, 0%, 9%</td></tr>
             <tr><td>Gray 800</td><td>#262626</td><td>38, 38, 38</td><td>0, 0%, 15%</td></tr>
@@ -276,7 +357,7 @@
         <p>v1.0 reserved this slot on purpose: the monochrome system was designed to accommodate a single accent without disruption. v2.0 fills it. Green is the one color that means what D8A does &mdash; tests pass, pipeline green, shipped. And it's open territory: dbt owns orange, Databricks red, Snowflake and Azure blue, Fabric teal, Power BI yellow. Those logos sit on our own integrations row &mdash; Ship Green collides with none of them.</p>
       </div>
 
-      <div class="footer">D8A Brand Kit &middot; v2.0 &middot; d8a.pro</div>
+      <div class="footer">D8A Brand Kit &middot; v2.1 &middot; d8a.pro</div>
 
     </main>
   </div>

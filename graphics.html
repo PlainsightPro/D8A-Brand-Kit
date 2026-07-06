@@ -13,7 +13,7 @@
 
     <aside class="sidebar">
       <div class="sidebar-brand"><h1>D8A</h1></div>
-      <div class="sidebar-version">Brand Kit &middot; v2.0</div>
+      <div class="sidebar-version">Brand Kit &middot; v2.1</div>
       <nav>
         <a href="index.html"><span class="nav-num">00</span> Overview</a>
         <a href="positioning.html"><span class="nav-num">01</span> Positioning</a>
@@ -67,9 +67,10 @@
           <div class="logo-card bg-black">
             <svg width="120" height="60" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M30 30C30 18 18 10 10 20C2 30 10 50 22 45C34 40 40 30 60 30C80 30 86 40 98 45C110 50 118 30 110 20C102 10 90 18 90 30C90 42 80 50 60 30C40 10 30 42 30 30Z" stroke="#404040" stroke-width="2" fill="none"/>
+              <path class="pulse-tail" pathLength="400" d="M30 30C30 18 18 10 10 20C2 30 10 50 22 45C34 40 40 30 60 30C80 30 86 40 98 45C110 50 118 30 110 20C102 10 90 18 90 30C90 42 80 50 60 30C40 10 30 42 30 30Z" stroke="#00e676" stroke-width="4" fill="none" stroke-linecap="round"/>
               <path class="pulse-path" pathLength="400" d="M30 30C30 18 18 10 10 20C2 30 10 50 22 45C34 40 40 30 60 30C80 30 86 40 98 45C110 50 118 30 110 20C102 10 90 18 90 30C90 42 80 50 60 30C40 10 30 42 30 30Z" stroke="#00e676" stroke-width="2" fill="none" stroke-linecap="round"/>
             </svg>
-            <span class="variant-label">Animated pulse &middot; loading &amp; hero</span>
+            <span class="variant-label">Animated pulse + tail &middot; loading &amp; hero</span>
           </div>
           <div class="logo-card bg-black">
             <svg width="120" height="60" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -82,6 +83,7 @@
         <ul class="mt-16">
           <li><strong>One pulse per composition.</strong> The pulse counts as the surface's one green statement.</li>
           <li><strong>The loop stays gray</strong> (Gray 700 #404040 on dark) &mdash; only the pulse is green. Never draw the full loop in green at large scale.</li>
+          <li><strong>The tail is atmosphere:</strong> a wider, 25%-opacity trail behind the pulse (Green Fade). It softens the hard edge between gray and green &mdash; use it whenever the pulse animates.</li>
           <li><strong>Motion spec:</strong> 3s per lap, linear, infinite. No easing &mdash; pipelines don't hesitate.</li>
           <li><strong>On light canvas</strong> the pulse uses Green 600 (#00a85c) on a Gray 300 loop.</li>
         </ul>
@@ -180,7 +182,7 @@
         </div>
       </div>
 
-      <div class="footer">D8A Brand Kit &middot; v2.0 &middot; d8a.pro</div>
+      <div class="footer">D8A Brand Kit &middot; v2.1 &middot; d8a.pro</div>
 
     </main>
   </div>
