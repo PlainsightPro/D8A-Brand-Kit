@@ -31,11 +31,11 @@
 
   /* Depth (v2.1) — bridge tones between the grays and the red */
   --red-300:   #ff8591;  /* flare — gradient endpoints and text on red-tinted darks */
-  --red-900:   #2b0f14;  /* deep red surface — badges and fills on dark */
-  --ink-red:   #1a0d10;  /* red-tinted black — canvas depth endpoint */
+  --red-900:   #3a1119;  /* deep red surface — badges and fills on dark */
+  --ink-red:   #241014;  /* red-tinted black — canvas depth endpoint */
 
   /* Depth (v2.1) — gradient recipes. One hue family per gradient, or a fade to transparent. */
-  --grad-canvas: linear-gradient(160deg, #0a0a0a 0%, #1a0d10 100%);
+  --grad-canvas: linear-gradient(160deg, #0a0a0a 0%, #241014 100%);
   --grad-red:  linear-gradient(135deg, #ff2b36 0%, #e4002b 100%);
   --grad-fade:   linear-gradient(180deg, rgba(255, 43, 54, 0.25) 0%, rgba(255, 43, 54, 0) 100%);
   --glow-signal: radial-gradient(120% 140% at 85% 15%, rgba(255, 43, 54, 0.16) 0%, rgba(255, 43, 54, 0) 55%);
