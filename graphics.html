@@ -12,8 +12,8 @@
   <div class="shell">
 
     <aside class="sidebar">
-      <div class="sidebar-brand"><h1>D8A</h1></div>
-      <div class="sidebar-version">Brand Kit &middot; v3.0</div>
+      <div class="sidebar-brand"><h1>D<b>8</b>A</h1></div>
+      <div class="sidebar-version">Brand Kit &middot; v4.0</div>
       <nav>
         <a href="index.html"><span class="nav-num">00</span> Overview</a>
         <a href="positioning.html"><span class="nav-num">01</span> Positioning</a>
@@ -35,7 +35,7 @@
       <div class="page-header">
         <div class="section-label">09 &middot; Graphics</div>
         <h2>Graphic elements</h2>
-        <p class="intro">Three signature gestures define D8A's visual language: the infinity loop with its signal pulse, line art, and &mdash; new in v3.0 &mdash; the redline: the red stroke that underlines the point or strikes the rejected.</p>
+        <p class="intro">Three signature gestures define D8A's visual language: the infinity loop with its prism signal pulse, line art, and the prism mark &mdash; the cobalt gradient that lifts the accent word or underlines the point.</p>
       </div>
 
       <!-- Infinity -->
@@ -62,30 +62,32 @@
       <!-- Signal pulse -->
       <div class="section">
         <h3>The signal pulse</h3>
-        <p>The pulse is a short Redline segment (~15% of the path) traveling the loop &mdash; data moving through request &rarr; spec &rarr; build &rarr; ship. In motion it's the loading indicator and the hero animation. Static, it's a single red segment on a gray loop.</p>
+        <p>The pulse is a short prism segment (~15% of the path) traveling the loop &mdash; data moving through request &rarr; spec &rarr; build &rarr; ship, refracting from indigo to blue as it goes. In motion it's the loading indicator and the hero animation. Static, it's a single gradient segment on a grey loop.</p>
         <div class="logo-grid mt-24">
-          <div class="logo-card bg-black">
+          <div class="logo-card bg-white">
             <svg width="120" height="60" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M30 30C30 18 18 10 10 20C2 30 10 50 22 45C34 40 40 30 60 30C80 30 86 40 98 45C110 50 118 30 110 20C102 10 90 18 90 30C90 42 80 50 60 30C40 10 30 42 30 30Z" stroke="#404040" stroke-width="2" fill="none"/>
-              <path class="pulse-tail" pathLength="400" d="M30 30C30 18 18 10 10 20C2 30 10 50 22 45C34 40 40 30 60 30C80 30 86 40 98 45C110 50 118 30 110 20C102 10 90 18 90 30C90 42 80 50 60 30C40 10 30 42 30 30Z" stroke="#ff2b36" stroke-width="4" fill="none" stroke-linecap="round"/>
-              <path class="pulse-path" pathLength="400" d="M30 30C30 18 18 10 10 20C2 30 10 50 22 45C34 40 40 30 60 30C80 30 86 40 98 45C110 50 118 30 110 20C102 10 90 18 90 30C90 42 80 50 60 30C40 10 30 42 30 30Z" stroke="#ff2b36" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <defs><linearGradient id="pulseGradL" x1="0" y1="0" x2="120" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#5340e6"/><stop offset="1" stop-color="#2e6bff"/></linearGradient></defs>
+              <path d="M30 30C30 18 18 10 10 20C2 30 10 50 22 45C34 40 40 30 60 30C80 30 86 40 98 45C110 50 118 30 110 20C102 10 90 18 90 30C90 42 80 50 60 30C40 10 30 42 30 30Z" stroke="#d4d4d4" stroke-width="2" fill="none"/>
+              <path class="pulse-tail" pathLength="400" d="M30 30C30 18 18 10 10 20C2 30 10 50 22 45C34 40 40 30 60 30C80 30 86 40 98 45C110 50 118 30 110 20C102 10 90 18 90 30C90 42 80 50 60 30C40 10 30 42 30 30Z" stroke="url(#pulseGradL)" stroke-width="4" fill="none" stroke-linecap="round"/>
+              <path class="pulse-path" pathLength="400" d="M30 30C30 18 18 10 10 20C2 30 10 50 22 45C34 40 40 30 60 30C80 30 86 40 98 45C110 50 118 30 110 20C102 10 90 18 90 30C90 42 80 50 60 30C40 10 30 42 30 30Z" stroke="url(#pulseGradL)" stroke-width="2" fill="none" stroke-linecap="round"/>
             </svg>
-            <span class="variant-label">Animated pulse + tail &middot; loading &amp; hero</span>
+            <span class="variant-label">Animated pulse + tail &middot; on light</span>
           </div>
           <div class="logo-card bg-black">
             <svg width="120" height="60" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M30 30C30 18 18 10 10 20C2 30 10 50 22 45C34 40 40 30 60 30C80 30 86 40 98 45C110 50 118 30 110 20C102 10 90 18 90 30C90 42 80 50 60 30C40 10 30 42 30 30Z" stroke="#404040" stroke-width="2" fill="none"/>
-              <path pathLength="400" d="M30 30C30 18 18 10 10 20C2 30 10 50 22 45C34 40 40 30 60 30C80 30 86 40 98 45C110 50 118 30 110 20C102 10 90 18 90 30C90 42 80 50 60 30C40 10 30 42 30 30Z" stroke="#ff2b36" stroke-width="2" fill="none" stroke-linecap="round" stroke-dasharray="60 340"/>
+              <defs><linearGradient id="pulseGradD" x1="0" y1="0" x2="120" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#7d6bff"/><stop offset="1" stop-color="#2e6bff"/></linearGradient></defs>
+              <path d="M30 30C30 18 18 10 10 20C2 30 10 50 22 45C34 40 40 30 60 30C80 30 86 40 98 45C110 50 118 30 110 20C102 10 90 18 90 30C90 42 80 50 60 30C40 10 30 42 30 30Z" stroke="#3a3550" stroke-width="2" fill="none"/>
+              <path class="pulse-path" pathLength="400" d="M30 30C30 18 18 10 10 20C2 30 10 50 22 45C34 40 40 30 60 30C80 30 86 40 98 45C110 50 118 30 110 20C102 10 90 18 90 30C90 42 80 50 60 30C40 10 30 42 30 30Z" stroke="url(#pulseGradD)" stroke-width="2" fill="none" stroke-linecap="round"/>
             </svg>
-            <span class="variant-label">Static pulse &middot; print &amp; stills</span>
+            <span class="variant-label">Animated pulse &middot; on ink</span>
           </div>
         </div>
         <ul class="mt-16">
-          <li><strong>One pulse per composition.</strong> The pulse counts as the surface's one red statement.</li>
-          <li><strong>The loop stays gray</strong> (Gray 700 #404040 on dark) &mdash; only the pulse is red. Never draw the full loop in red at large scale.</li>
-          <li><strong>The tail is atmosphere:</strong> a wider, 25%-opacity trail behind the pulse (Red Fade). It softens the hard edge between gray and red &mdash; use it whenever the pulse animates.</li>
+          <li><strong>One pulse per composition.</strong> The pulse counts as the surface's one prism statement.</li>
+          <li><strong>The loop stays grey</strong> (Line #d4d4d4 on light, #3a3550 on ink) &mdash; only the pulse carries the gradient. Never draw the full loop in the gradient at large scale.</li>
+          <li><strong>The tail is atmosphere:</strong> a wider, 28%-opacity trail behind the pulse (Prism Fade). It softens the edge where grey meets gradient &mdash; use it whenever the pulse animates.</li>
           <li><strong>Motion spec:</strong> 3s per lap, linear, infinite. No easing &mdash; pipelines don't hesitate.</li>
-          <li><strong>On light canvas</strong> the pulse uses Red 600 (#e4002b) on a Gray 300 loop.</li>
+          <li><strong>Gradient direction</strong> follows the path, indigo leading into blue &mdash; the same 110&deg; refraction as everywhere else.</li>
         </ul>
       </div>
 
@@ -101,25 +103,25 @@
         </ul>
       </div>
 
-      <!-- The redline -->
+      <!-- The prism mark -->
       <div class="section">
-        <h3>The redline</h3>
-        <p>The brand's bluntest gesture: a straight red stroke, drawn like an engineer's pen on a spec. It does exactly two things &mdash; it <strong>strikes what we reject</strong>, and it <strong>underlines what we mean</strong>. Nothing else.</p>
+        <h3>The prism mark</h3>
+        <p>The brand's emphasis gesture: the cobalt gradient applied to the one thing that matters in a line of type. It does exactly two things &mdash; it <strong>lifts the accent word</strong> into the gradient, and it <strong>underlines the point</strong> with a gradient rule. Nothing else.</p>
         <div class="logo-grid mt-24">
-          <div class="logo-card bg-black" style="min-height:140px;">
-            <span style="font-size:28px; font-weight:800; letter-spacing:-0.5px; color:#fafafa;">Ship data, not <span class="strike-red">excuses</span>.</span>
-            <span class="variant-label">The strike &middot; reject the noise</span>
+          <div class="logo-card bg-white" style="min-height:140px;">
+            <span style="font-size:28px; font-weight:800; letter-spacing:-0.5px; color:#15121f;">Ship <span class="mark-grad" style="display:inline;">data</span>, not excuses.</span>
+            <span class="variant-label">The prism word &middot; lift the accent</span>
           </div>
           <div class="logo-card bg-white" style="min-height:140px;">
-            <span style="font-size:28px; font-weight:800; letter-spacing:-0.5px; color:#0a0a0a;">Shipped <span class="underline-red" style="text-decoration-color:#e4002b;">3&times; faster</span>.</span>
-            <span class="variant-label">The underline &middot; mark the point</span>
+            <span style="font-size:28px; font-weight:800; letter-spacing:-0.5px; color:#15121f;">Shipped <span class="underline-grad">3&times; faster</span>.</span>
+            <span class="variant-label">The prism underline &middot; mark the point</span>
           </div>
         </div>
         <ul class="mt-16">
-          <li><strong>Straight and honest.</strong> No hand-drawn wobble, no marker texture, no swooshes. The redline is set with type tools: <code>text-decoration-thickness: 0.09em</code>, offset 0.14em for underlines.</li>
-          <li><strong>Strike sparingly.</strong> One struck word or phrase per surface, and only words we genuinely reject: excuses, tickets, handoffs, lock-in. Never strike people, brands, or competitors by name.</li>
-          <li><strong>The redline counts</strong> as the surface's one red statement. A strike and a red CTA on the same slide is one red too many.</li>
-          <li><strong>Color:</strong> Redline (#ff2b36) on dark, Red 600 (#e4002b) on light. The struck text itself keeps its normal color &mdash; only the line is red.</li>
+          <li><strong>One word, or one underline &mdash; not both.</strong> The prism mark is the surface's one statement. A gradient word and a gradient CTA on the same slide is one prism too many.</li>
+          <li><strong>Lift what we affirm.</strong> The gradient goes on the word we mean &mdash; <em>data</em>, <em>shipped</em>, <em>faster</em> &mdash; not on what we reject. This world persuades by lighting the point, not striking the enemy.</li>
+          <li><strong>Straight and precise.</strong> The underline is set with type tools: a gradient rule at 0.14em, offset just below the baseline. No wobble, no marker texture.</li>
+          <li><strong>Large only.</strong> The prism word works at 24px+ where the gradient reads; below that, use solid Cobalt 600.</li>
         </ul>
       </div>
 
@@ -154,15 +156,15 @@
               <line x1="100" y1="0" x2="100" y2="120" stroke="#262626" stroke-width="0.5"/>
               <line x1="150" y1="0" x2="150" y2="120" stroke="#262626" stroke-width="0.5"/>
               <!-- Flow path -->
-              <polyline points="20,90 50,60 100,60 150,30" stroke="#525252" stroke-width="1.5" fill="none"/>
-              <line x1="150" y1="30" x2="180" y2="30" stroke="#ff2b36" stroke-width="1.5"/>
-              <circle cx="20" cy="90" r="3" fill="#737373"/>
-              <circle cx="50" cy="60" r="3" fill="#737373"/>
-              <circle cx="100" cy="60" r="3" fill="#737373"/>
-              <circle cx="150" cy="30" r="3" fill="#737373"/>
-              <circle cx="180" cy="30" r="3" fill="#ff2b36"/>
+              <polyline points="20,90 50,60 100,60 150,30" stroke="#8a86a0" stroke-width="1.5" fill="none"/>
+              <line x1="150" y1="30" x2="180" y2="30" stroke="#6b8cff" stroke-width="1.5"/>
+              <circle cx="20" cy="90" r="3" fill="#9a96ad"/>
+              <circle cx="50" cy="60" r="3" fill="#9a96ad"/>
+              <circle cx="100" cy="60" r="3" fill="#9a96ad"/>
+              <circle cx="150" cy="30" r="3" fill="#9a96ad"/>
+              <circle cx="180" cy="30" r="3" fill="#6b8cff"/>
             </svg>
-            <span class="variant-label">Grid &amp; flow &middot; red = shipped</span>
+            <span class="variant-label">Grid &amp; flow &middot; prism = shipped</span>
           </div>
         </div>
       </div>
@@ -172,7 +174,7 @@
         <h3>Line art rules</h3>
         <ul>
           <li><strong>Stroke weight:</strong> 1&ndash;2px for detail, 0.5px for grid backgrounds.</li>
-          <li><strong>Color:</strong> Gray scale carries the structure. Black (#0a0a0a) for primary strokes, Gray 400 (#a3a3a3) for secondary, Gray 200 (#e5e5e5) for background grids. The <em>active path</em> &mdash; the one that shipped &mdash; may be Redline. Max one red path per composition.</li>
+          <li><strong>Color:</strong> Grey scale carries the structure. Ink (#15121f) for primary strokes, Mauve (#6c6781) for secondary, Line (#e7e3f2) for background grids. The <em>active path</em> &mdash; the one that shipped &mdash; may carry the prism gradient. Max one gradient path per composition.</li>
           <li><strong>Nodes:</strong> Always circles, never squares. Stroke only (no fill) for primary nodes. Small filled dots for waypoints.</li>
           <li><strong>Flow direction:</strong> Left to right, or top to bottom. Never right-to-left.</li>
           <li><strong>No decorative curves.</strong> Lines are straight or use 90-degree angles. Bezier curves only for the infinity symbol.</li>
@@ -204,7 +206,7 @@
         </div>
       </div>
 
-      <div class="footer">D8A Brand Kit &middot; v3.0 &middot; d8a.pro</div>
+      <div class="footer">D8A Brand Kit &middot; v4.0 &middot; d8a.pro</div>
 
     </main>
   </div>

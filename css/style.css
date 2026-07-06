@@ -1,50 +1,56 @@
 /* =========================================================
    D8A Brand Kit — style.css
-   Monochrome chassis · Redline accent · Dark-led
+   Prism · Cobalt gradient accent · Light-led
+   The accent is a prism, not a hex. One truth, every facet.
    ========================================================= */
 
 /* --- Custom Properties ---------------------------------- */
 :root {
-  /* Brand grays */
-  --black:       #0a0a0a;
+  /* Neutrals — pearl & ink, biased slightly toward the accent */
+  --pearl:       #fbfaff;  /* the canvas — white with a whisper of indigo */
+  --mist:        #f3f1fb;  /* raised / hover panel */
+  --ink:         #15121f;  /* near-black, violet bias — headings, ink surfaces */
+  --ink-2:       #1c1733;  /* ink gradient endpoint */
+  --mauve:       #6c6781;  /* muted text, captions */
+  --line:        #e7e3f2;  /* hairlines, borders */
+  --white:       #ffffff;
+
+  /* Structural gray ramp (kept for docs, code, neutral fills) */
   --gray-950:    #171717;
-  --gray-900:    #1a1a1a;
   --gray-800:    #262626;
   --gray-700:    #404040;
-  --gray-600:    #525252;
+  --gray-600:    #4b4757;  /* body copy — violet-grey, readable on pearl */
   --gray-500:    #737373;
   --gray-400:    #a3a3a3;
   --gray-300:    #d4d4d4;
   --gray-200:    #e5e5e5;
   --gray-100:    #f5f5f5;
-  --white:       #fafafa;
 
-  /* Redline — the one accent. The red pen on every spec. */
-  --red:       #ff2b36;  /* signal — dark canvas only */
-  --red-600:   #e4002b;  /* UI accents, large text on light */
-  --red-700:   #b3001f;  /* body-size text and links on light */
-  --red-tint:  #fdeaec;  /* subtle fills on light */
-  --red-glow:  rgba(255, 43, 54, 0.12);  /* subtle fills on dark */
+  /* Cobalt — the prism. The accent is a gradient, not a single colour. */
+  --cobalt-500:  #5340e6;  /* gradient start (indigo) */
+  --blue-500:    #2e6bff;  /* gradient end (blue) */
+  --cobalt-600:  #4536d6;  /* solo accent — links, small marks (AA on white) */
+  --cobalt-700:  #372cb0;  /* hover / deepest */
+  --cobalt-tint: #eef0ff;  /* subtle fill on light */
+  --flash:       #9db4ff;  /* light accent for ink surfaces */
 
-  --accent:      var(--red-600);
-  --accent-soft: var(--red-tint);
+  --accent:      var(--cobalt-600);
+  --accent-soft: var(--cobalt-tint);
 
-  /* Depth (v2.1) — bridge tones between the grays and the red */
-  --red-300:   #ff8591;  /* flare — gradient endpoints and text on red-tinted darks */
-  --red-900:   #3a1119;  /* deep red surface — badges and fills on dark */
-  --ink-red:   #241014;  /* red-tinted black — canvas depth endpoint */
-
-  /* Depth (v2.1) — gradient recipes. One hue family per gradient, or a fade to transparent. */
-  --grad-canvas: linear-gradient(160deg, #0a0a0a 0%, #241014 100%);
-  --grad-red:  linear-gradient(135deg, #ff2b36 0%, #e4002b 100%);
-  --grad-fade:   linear-gradient(180deg, rgba(255, 43, 54, 0.25) 0%, rgba(255, 43, 54, 0) 100%);
-  --glow-signal: radial-gradient(120% 140% at 85% 15%, rgba(255, 43, 54, 0.16) 0%, rgba(255, 43, 54, 0) 55%);
+  /* Prism recipes — the gradient in its four sanctioned forms */
+  --grad:        linear-gradient(110deg, #5340e6 0%, #2e6bff 100%);          /* fills: CTAs, hero series */
+  --grad-text:   linear-gradient(110deg, #5340e6 0%, #2e6bff 100%);          /* clipped text, large only */
+  --grad-fade:   linear-gradient(180deg, rgba(83,64,230,0.22) 0%, rgba(46,107,255,0) 100%); /* chart fills, tails */
+  --ink-grad:    linear-gradient(160deg, #15121f 0%, #1c1733 100%);          /* secondary ink canvas */
+  --mesh:        radial-gradient(42% 62% at 88% 4%, rgba(83,64,230,0.16) 0%, rgba(83,64,230,0) 70%),
+                 radial-gradient(38% 54% at 100% 42%, rgba(46,107,255,0.13) 0%, rgba(46,107,255,0) 72%);
+  --glow:        0 20px 54px -26px rgba(74,54,214,0.45);   /* soft coloured lift — on-brand in this world */
 
   /* Semantic */
-  --bg:          var(--white);
-  --fg:          var(--gray-950);
-  --muted:       var(--gray-500);
-  --border:      var(--gray-200);
+  --bg:          var(--pearl);
+  --fg:          var(--ink);
+  --muted:       var(--mauve);
+  --border:      var(--line);
   --surface:     #ffffff;
 
   /* Typography */
@@ -54,7 +60,8 @@
   /* Spacing */
   --sidebar-w:   260px;
   --content-max: 960px;
-  --radius:      2px;  /* v3.0: sharp edges — blunt, classic, no soft corners */
+  --radius:      12px;  /* v4.0: soft corners — light, dimensional, premium */
+  --radius-sm:   8px;
 }
 
 /* --- Reset ---------------------------------------------- */
@@ -104,7 +111,18 @@ img { max-width: 100%; display: block; }
   font-size: 24px;
   font-weight: 800;
   letter-spacing: -0.5px;
-  color: var(--black);
+  color: var(--ink);
+}
+
+/* the 8 carries the prism, everywhere the wordmark is set in HTML as D<b>8</b>A */
+.sidebar-brand h1 b,
+.logo-text b,
+.mark-8 {
+  font-weight: inherit;
+  background: linear-gradient(110deg, #5340e6, #2e6bff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .sidebar-version {
@@ -128,7 +146,7 @@ img { max-width: 100%; display: block; }
   align-items: center;
   gap: 12px;
   padding: 8px 12px;
-  border-radius: var(--radius);
+  border-radius: var(--radius-sm);
   font-size: 14px;
   font-weight: 500;
   color: var(--gray-600);
@@ -136,13 +154,13 @@ img { max-width: 100%; display: block; }
 }
 
 .sidebar nav a:hover {
-  background: var(--gray-100);
+  background: var(--mist);
   color: var(--fg);
 }
 
 .sidebar nav a.active {
-  background: var(--gray-950);
-  color: var(--white);
+  background: var(--grad);
+  color: #fff;
 }
 
 .nav-num {
@@ -154,7 +172,7 @@ img { max-width: 100%; display: block; }
 }
 
 .sidebar nav a.active .nav-num {
-  color: var(--red);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 /* --- Main ----------------------------------------------- */
@@ -175,7 +193,7 @@ img { max-width: 100%; display: block; }
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: var(--muted);
+  color: var(--cobalt-600);
   margin-bottom: 12px;
 }
 
@@ -185,6 +203,7 @@ img { max-width: 100%; display: block; }
   letter-spacing: -0.5px;
   line-height: 1.15;
   margin-bottom: 16px;
+  color: var(--ink);
 }
 
 .page-header .intro {
@@ -194,15 +213,17 @@ img { max-width: 100%; display: block; }
   line-height: 1.7;
 }
 
-/* --- Hero (overview) ------------------------------------ */
+/* --- Hero (overview) — light, prism, glass -------------- */
 .hero {
-  background: var(--glow-signal), var(--grad-canvas);
-  color: var(--white);
-  border-radius: 12px;
+  background: var(--mesh), var(--pearl);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 20px;
   padding: 64px 56px;
   margin-bottom: 56px;
   position: relative;
   overflow: hidden;
+  box-shadow: var(--glow);
 }
 
 .hero .section-label {
@@ -211,7 +232,7 @@ img { max-width: 100%; display: block; }
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: var(--red);
+  color: var(--cobalt-600);
   margin-bottom: 16px;
 }
 
@@ -221,35 +242,43 @@ img { max-width: 100%; display: block; }
   letter-spacing: -1px;
   line-height: 1.1;
   margin-bottom: 8px;
-  color: var(--white);
+  color: var(--ink);
+  text-wrap: balance;
+}
+
+.hero h2 .grad {
+  background: var(--grad-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .hero .tagline-sub {
   font-size: 22px;
   font-weight: 400;
-  color: var(--gray-400);
+  color: var(--mauve);
   margin-bottom: 24px;
 }
 
 .hero .intro {
   font-size: 17px;
-  color: var(--gray-400);
+  color: var(--mauve);
   max-width: 560px;
   line-height: 1.7;
 }
 
 .hero .badge {
   display: inline-block;
-  background: var(--red-glow);
-  border: 1px solid rgba(255, 43, 54, 0.25);
-  color: var(--red-300);
+  background: var(--white);
+  border: 1px solid var(--line);
+  color: var(--cobalt-600);
   font-family: var(--font-mono);
   font-size: 12px;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   padding: 8px 16px;
-  border-radius: var(--radius);
+  border-radius: 999px;
   margin-top: 24px;
 }
 
@@ -258,10 +287,11 @@ img { max-width: 100%; display: block; }
   right: 48px;
   top: 50%;
   transform: translateY(-50%);
-  opacity: 0.06;
+  opacity: 0.08;
   font-size: 200px;
   font-weight: 900;
   line-height: 1;
+  color: var(--cobalt-500);
   pointer-events: none;
   user-select: none;
 }
@@ -276,12 +306,14 @@ img { max-width: 100%; display: block; }
   font-weight: 700;
   margin-bottom: 16px;
   letter-spacing: -0.3px;
+  color: var(--ink);
 }
 
 .section h4 {
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 12px;
+  color: var(--ink);
 }
 
 .section p,
@@ -312,13 +344,15 @@ img { max-width: 100%; display: block; }
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 28px 24px;
-  transition: border-color 150ms ease, background 150ms ease;
+  background: var(--white);
+  transition: border-color 150ms ease, box-shadow 200ms ease, transform 200ms ease;
   display: block;
 }
 
 .index-card:hover {
-  border-color: var(--gray-400);
-  background: var(--gray-100);
+  border-color: transparent;
+  box-shadow: var(--glow);
+  transform: translateY(-2px);
 }
 
 .index-card .num {
@@ -327,7 +361,7 @@ img { max-width: 100%; display: block; }
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: var(--muted);
+  color: var(--cobalt-600);
   margin-bottom: 8px;
 }
 
@@ -335,11 +369,12 @@ img { max-width: 100%; display: block; }
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 8px;
+  color: var(--ink);
 }
 
 .index-card p {
   font-size: 14px;
-  color: var(--gray-500);
+  color: var(--mauve);
   line-height: 1.6;
 }
 
@@ -355,11 +390,13 @@ img { max-width: 100%; display: block; }
   border-radius: var(--radius);
   overflow: hidden;
   cursor: pointer;
-  transition: border-color 150ms ease;
+  background: var(--white);
+  transition: border-color 150ms ease, box-shadow 200ms ease;
 }
 
 .swatch:hover {
-  border-color: var(--gray-400);
+  border-color: transparent;
+  box-shadow: var(--glow);
 }
 
 .swatch .color {
@@ -374,6 +411,7 @@ img { max-width: 100%; display: block; }
   font-size: 14px;
   font-weight: 700;
   margin-bottom: 2px;
+  color: var(--ink);
 }
 
 .swatch .hex {
@@ -384,7 +422,7 @@ img { max-width: 100%; display: block; }
 
 .swatch .usage {
   font-size: 12px;
-  color: var(--gray-400);
+  color: var(--mauve);
   margin-top: 6px;
 }
 
@@ -422,6 +460,7 @@ img { max-width: 100%; display: block; }
   padding: 24px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
+  background: var(--white);
 }
 
 .type-specimen .sample {
@@ -446,14 +485,15 @@ img { max-width: 100%; display: block; }
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 24px;
+  background: var(--white);
 }
 
 .do-card {
-  border-top: 3px solid var(--red-600);
+  border-top: 3px solid var(--cobalt-600);
 }
 
 .dont-card {
-  border-top: 3px solid var(--gray-400);
+  border-top: 3px solid var(--gray-300);
 }
 
 .do-card .label,
@@ -465,7 +505,7 @@ img { max-width: 100%; display: block; }
   margin-bottom: 12px;
 }
 
-.do-card .label { color: var(--red-700); }
+.do-card .label { color: var(--cobalt-700); }
 .dont-card .label { color: var(--gray-400); }
 
 .do-card blockquote,
@@ -474,6 +514,7 @@ img { max-width: 100%; display: block; }
   line-height: 1.6;
   margin-bottom: 8px;
   font-style: italic;
+  color: var(--ink);
 }
 
 .do-card .reason,
@@ -516,6 +557,7 @@ img { max-width: 100%; display: block; }
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 20px;
+  background: var(--white);
 }
 
 .pain-card .num,
@@ -536,7 +578,7 @@ img { max-width: 100%; display: block; }
 .pain-card p,
 .gain-card p {
   font-size: 13px;
-  color: var(--gray-500);
+  color: var(--mauve);
   line-height: 1.6;
 }
 
@@ -553,12 +595,14 @@ img { max-width: 100%; display: block; }
   padding: 20px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
+  background: var(--white);
 }
 
 .rule .rule-num {
+  font-family: var(--font-mono);
   font-size: 14px;
-  font-weight: 800;
-  color: var(--gray-400);
+  font-weight: 700;
+  color: var(--cobalt-600);
   min-width: 32px;
 }
 
@@ -570,7 +614,7 @@ img { max-width: 100%; display: block; }
 
 .rule .rule-body p {
   font-size: 14px;
-  color: var(--gray-500);
+  color: var(--mauve);
   line-height: 1.6;
 }
 
@@ -587,15 +631,16 @@ img { max-width: 100%; display: block; }
   gap: 12px;
   padding: 12px 16px;
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border-radius: var(--radius-sm);
+  background: var(--white);
   font-size: 14px;
 }
 
 .checklist-item .check {
   width: 20px;
   height: 20px;
-  border: 2px solid var(--gray-300);
-  border-radius: 4px;
+  border: 2px solid var(--cobalt-500);
+  border-radius: 6px;
   flex-shrink: 0;
 }
 
@@ -610,6 +655,7 @@ img { max-width: 100%; display: block; }
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 24px;
+  background: var(--white);
 }
 
 .icp-card h4 {
@@ -620,14 +666,14 @@ img { max-width: 100%; display: block; }
 
 .icp-card p {
   font-size: 14px;
-  color: var(--gray-500);
+  color: var(--mauve);
   line-height: 1.6;
 }
 
-/* --- Code Block ----------------------------------------- */
+/* --- Code Block (secondary ink surface) ----------------- */
 .code-block {
-  background: var(--gray-950);
-  color: var(--gray-300);
+  background: var(--ink-grad);
+  color: #d9d5ea;
   border-radius: var(--radius);
   padding: 20px 24px;
   font-family: var(--font-mono);
@@ -648,22 +694,23 @@ img { max-width: 100%; display: block; }
   border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
+  background: var(--white);
 }
 
 .photo-card .placeholder {
   height: 180px;
-  background: var(--gray-100);
+  background: var(--mist);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--gray-400);
+  color: var(--mauve);
   font-size: 13px;
 }
 
 .photo-card .caption {
   padding: 12px 16px;
   font-size: 13px;
-  color: var(--gray-500);
+  color: var(--mauve);
 }
 
 /* --- Logo Display --------------------------------------- */
@@ -685,9 +732,9 @@ img { max-width: 100%; display: block; }
 }
 
 .logo-card.bg-white  { background: #ffffff; }
-.logo-card.bg-light  { background: var(--gray-100); }
-.logo-card.bg-dark   { background: var(--gray-900); color: var(--white); }
-.logo-card.bg-black  { background: var(--black); color: var(--white); }
+.logo-card.bg-light  { background: var(--mist); }
+.logo-card.bg-dark   { background: var(--ink); color: #fff; }
+.logo-card.bg-black  { background: var(--ink-grad); color: #fff; }
 
 .logo-card .logo-text {
   font-size: 42px;
@@ -709,7 +756,7 @@ img { max-width: 100%; display: block; }
 
 .logo-card.bg-dark .variant-label,
 .logo-card.bg-black .variant-label {
-  color: var(--gray-500);
+  color: var(--flash);
 }
 
 /* --- Chart Palette -------------------------------------- */
@@ -726,7 +773,7 @@ img { max-width: 100%; display: block; }
 
 .chart-color .bar {
   height: 64px;
-  border-radius: var(--radius);
+  border-radius: var(--radius-sm);
   margin-bottom: 8px;
 }
 
@@ -742,10 +789,10 @@ img { max-width: 100%; display: block; }
   bottom: 24px;
   left: 50%;
   transform: translateX(-50%) translateY(100px);
-  background: var(--gray-950);
-  color: var(--white);
+  background: var(--ink);
+  color: #fff;
   padding: 10px 20px;
-  border-radius: var(--radius);
+  border-radius: 999px;
   font-size: 13px;
   font-weight: 500;
   opacity: 0;
@@ -766,19 +813,21 @@ img { max-width: 100%; display: block; }
   border-top: 1px solid var(--border);
   font-size: 13px;
   color: var(--muted);
+  font-family: var(--font-mono);
+  letter-spacing: 0.04em;
 }
 
-/* --- Canvas demos (colors page) -------------------------- */
+/* --- Canvas demos (colors page) ------------------------- */
 .canvas-demo {
   border-radius: var(--radius);
   padding: 40px 36px;
   border: 1px solid var(--border);
-  background: #ffffff;
+  background: var(--white);
 }
 
 .canvas-demo.dark {
-  background: var(--glow-signal), var(--grad-canvas);
-  border-color: var(--black);
+  background: var(--mesh), var(--ink-grad);
+  border-color: var(--ink);
 }
 
 .canvas-demo .demo-eyebrow {
@@ -787,12 +836,12 @@ img { max-width: 100%; display: block; }
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: var(--red-700);
+  color: var(--cobalt-600);
   margin-bottom: 12px;
 }
 
 .canvas-demo.dark .demo-eyebrow {
-  color: var(--red);
+  color: var(--flash);
 }
 
 .canvas-demo .demo-headline {
@@ -800,12 +849,12 @@ img { max-width: 100%; display: block; }
   font-weight: 800;
   letter-spacing: -0.5px;
   line-height: 1.2;
-  color: var(--black);
+  color: var(--ink);
   margin-bottom: 8px;
 }
 
 .canvas-demo.dark .demo-headline {
-  color: var(--white);
+  color: #fff;
 }
 
 .canvas-demo .demo-body {
@@ -816,25 +865,33 @@ img { max-width: 100%; display: block; }
 }
 
 .canvas-demo.dark .demo-body {
-  color: var(--gray-400);
+  color: #b7b1c9;
 }
 
 .demo-cta {
   display: inline-block;
   font-size: 14px;
   font-weight: 600;
-  padding: 10px 20px;
+  padding: 11px 22px;
+  border-radius: 999px;
+  background: var(--grad);
+  color: #fff;
+  box-shadow: var(--glow);
+}
+
+/* --- Glass card (frosted, over mesh) -------------------- */
+.glass {
+  position: relative;
   border-radius: var(--radius);
-  background: var(--red-600);
-  color: #ffffff;
+  border: 1px solid rgba(255,255,255,0.6);
+  background: rgba(255,255,255,0.55);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 20px 60px -30px rgba(80,50,140,0.4);
+  padding: 24px;
 }
 
-.canvas-demo.dark .demo-cta {
-  background: var(--grad-red);
-  color: var(--black);
-}
-
-/* --- Signal pulse (graphics page) ------------------------- */
+/* --- Signal pulse (graphics page) ----------------------- */
 .pulse-path {
   stroke-dasharray: 60 340;
   animation: d8a-pulse 3s linear infinite;
@@ -842,7 +899,7 @@ img { max-width: 100%; display: block; }
 
 .pulse-tail {
   stroke-dasharray: 120 280;
-  opacity: 0.25;
+  opacity: 0.28;
   animation: d8a-pulse 3s linear infinite;
   animation-delay: 0.12s;
 }
@@ -851,31 +908,28 @@ img { max-width: 100%; display: block; }
   to { stroke-dashoffset: -400; }
 }
 
-/* --- Gradient swatches (colors page) ---------------------- */
-.swatch .color.on-black {
-  background-color: var(--black);
+@media (prefers-reduced-motion: reduce) {
+  .pulse-path, .pulse-tail { animation: none; }
 }
 
-.grad-text {
-  background: linear-gradient(120deg, var(--white) 45%, var(--red-300) 100%);
+/* --- Prism text & marks --------------------------------- */
+.swatch .color.on-ink {
+  background: var(--ink);
+}
+
+.grad-text,
+.mark-grad {
+  background: var(--grad-text);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   width: fit-content;
 }
 
-/* --- The redline (v3.0) ----------------------------------- */
-.strike-red {
-  text-decoration: line-through;
-  text-decoration-color: var(--red);
-  text-decoration-thickness: 0.09em;
-}
-
-.underline-red {
-  text-decoration: underline;
-  text-decoration-color: var(--red);
-  text-decoration-thickness: 0.09em;
-  text-underline-offset: 0.14em;
+/* gradient underline behind ink text — the "facet" emphasis mark */
+.underline-grad {
+  background: var(--grad) no-repeat 0 100% / 100% 0.14em;
+  padding-bottom: 0.04em;
 }
 
 /* --- Utility -------------------------------------------- */
@@ -887,7 +941,7 @@ img { max-width: 100%; display: block; }
 .text-mono { font-family: var(--font-mono); }
 .text-muted { color: var(--muted); }
 .text-sm { font-size: 13px; }
-.text-red { color: var(--red-700); }
+.text-accent, .text-red { color: var(--cobalt-600); }
 
 /* --- Responsive ----------------------------------------- */
 @media (max-width: 900px) {

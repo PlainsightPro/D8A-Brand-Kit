@@ -12,8 +12,8 @@
   <div class="shell">
 
     <aside class="sidebar">
-      <div class="sidebar-brand"><h1>D8A</h1></div>
-      <div class="sidebar-version">Brand Kit &middot; v3.0</div>
+      <div class="sidebar-brand"><h1>D<b>8</b>A</h1></div>
+      <div class="sidebar-version">Brand Kit &middot; v4.0</div>
       <nav>
         <a href="index.html"><span class="nav-num">00</span> Overview</a>
         <a href="positioning.html"><span class="nav-num">01</span> Positioning</a>
@@ -35,16 +35,16 @@
       <div class="page-header">
         <div class="section-label">11 &middot; Charts</div>
         <h2>Charts &amp; data viz</h2>
-        <p class="intro">Gray carries the data. Redline makes the point. Every D8A chart makes exactly one point &mdash; and that's the series that gets the red.</p>
+        <p class="intro">Gray carries the data. The prism makes the point. Every D8A chart makes exactly one point &mdash; and that's the series that gets the cobalt.</p>
       </div>
 
       <!-- Chart palette -->
       <div class="section">
         <h3>Chart palette (ordered)</h3>
-        <p class="mb-16">The hero series &mdash; the point of the chart &mdash; gets red: Red 600 (#e4002b) on light canvas, Redline (#ff2b36) on dark. Supporting series get grays, darkest first, never skipping a shade. If no series is the point, the chart is all gray.</p>
+        <p class="mb-16">The hero series &mdash; the point of the chart &mdash; gets the prism: Cobalt 600 (#4536d6) as a solid, or the Prism Fill gradient for a single hero bar. Supporting series get grays, darkest first, never skipping a shade. If no series is the point, the chart is all gray.</p>
         <div class="chart-palette">
           <div class="chart-color">
-            <div class="bar" style="background:#e4002b;"></div>
+            <div class="bar" style="background:linear-gradient(180deg,#5340e6,#2e6bff);"></div>
             <div class="label">hero</div>
           </div>
           <div class="chart-color">
@@ -78,11 +78,11 @@
             <tr><th>Scenario</th><th>Colors</th><th>Example</th></tr>
           </thead>
           <tbody>
-            <tr><td>Single metric (the point)</td><td>#e4002b only</td><td>Pipeline delivery time over 12 months</td></tr>
+            <tr><td>Single metric (the point)</td><td>#4536d6 only</td><td>Pipeline delivery time over 12 months</td></tr>
             <tr><td>Single metric (context)</td><td>#0a0a0a only</td><td>Background stat, no claim attached</td></tr>
-            <tr><td>Two-series comparison</td><td>#e4002b hero + #a3a3a3</td><td>With D8A vs. without</td></tr>
-            <tr><td>Three+ categories</td><td>#e4002b hero + gray ramp in order</td><td>Pipeline status breakdown by team</td></tr>
-            <tr><td>Emphasis (one highlighted)</td><td>#e4002b for hero, #d4d4d4 for rest</td><td>This quarter vs. previous quarters</td></tr>
+            <tr><td>Two-series comparison</td><td>#4536d6 hero + #a3a3a3</td><td>With D8A vs. without</td></tr>
+            <tr><td>Three+ categories</td><td>#4536d6 hero + gray ramp in order</td><td>Pipeline status breakdown by team</td></tr>
+            <tr><td>Emphasis (one highlighted)</td><td>#4536d6 for hero, #d4d4d4 for rest</td><td>This quarter vs. previous quarters</td></tr>
           </tbody>
         </table>
       </div>
@@ -91,9 +91,9 @@
       <div class="section">
         <h3>Chart rules</h3>
         <ul>
-          <li><strong>One red series per chart. Never two.</strong> The red series is the chart's claim &mdash; if you can't say which series is the point, none of them gets red.</li>
-          <li><strong>Red is the point, not a warning.</strong> If the chart encodes pass/fail or good/bad semantics where red would read as "negative", the hero series falls back to Black and the takeaway gets a red underline in the title instead.</li>
-          <li><strong>Fills fade.</strong> Area charts and the hero bar may use Red Fade (red 25% &rarr; transparent, top to bottom). Supporting series, grids, and axes stay flat gray &mdash; depth belongs to the point, not the context.</li>
+          <li><strong>One prism series per chart. Never two.</strong> The cobalt series is the chart's claim &mdash; if you can't say which series is the point, none of them gets the gradient.</li>
+          <li><strong>No status baggage.</strong> Unlike red or green, cobalt carries no pass/fail meaning &mdash; the hero series never gets misread as &ldquo;good&rdquo; or &ldquo;broken&rdquo;. The brand accent and the chart's own semantic colours never fight.</li>
+          <li><strong>Fills fade.</strong> Area charts and the hero bar may use Prism Fade (cobalt 30% &rarr; transparent, top to bottom). Supporting series, grids, and axes stay flat gray &mdash; depth belongs to the point, not the context.</li>
           <li><strong>No 3D charts.</strong> Ever. Not even for presentations.</li>
           <li><strong>No chart borders or outlines.</strong> Charts float on the page with labels, not boxed frames.</li>
           <li><strong>Label directly.</strong> Put labels on or next to data points. Legends are a last resort.</li>
@@ -110,9 +110,9 @@
         <h3>Power BI theme</h3>
         <p class="mb-16">Copy this JSON and import it in Power BI Desktop via View &rarr; Themes &rarr; Browse for themes.</p>
         <div class="code-block">{
-  "name": "D8A Redline",
+  "name": "D8A Prism",
   "dataColors": [
-    "#e4002b",
+    "#4536d6",
     "#0a0a0a",
     "#404040",
     "#737373",
@@ -121,7 +121,7 @@
   ],
   "background": "#ffffff",
   "foreground": "#0a0a0a",
-  "tableAccent": "#e4002b",
+  "tableAccent": "#4536d6",
   "textClasses": {
     "callout": {
       "fontFace": "Inter",
@@ -162,7 +162,7 @@
         <p class="mb-16">Set these defaults at the top of your notebook or script.</p>
         <div class="code-block">import matplotlib.pyplot as plt
 
-D8A_PALETTE = ['#e4002b', '#0a0a0a', '#404040', '#737373', '#a3a3a3', '#d4d4d4']
+D8A_PALETTE = ['#4536d6', '#0a0a0a', '#404040', '#737373', '#a3a3a3', '#d4d4d4']
 
 plt.rcParams.update({
     'font.family': 'Inter',
@@ -182,7 +182,7 @@ plt.rcParams.update({
 })</div>
       </div>
 
-      <div class="footer">D8A Brand Kit &middot; v3.0 &middot; d8a.pro</div>
+      <div class="footer">D8A Brand Kit &middot; v4.0 &middot; d8a.pro</div>
 
     </main>
   </div>

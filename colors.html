@@ -12,8 +12,8 @@
   <div class="shell">
 
     <aside class="sidebar">
-      <div class="sidebar-brand"><h1>D8A</h1></div>
-      <div class="sidebar-version">Brand Kit &middot; v3.0</div>
+      <div class="sidebar-brand"><h1>D<b>8</b>A</h1></div>
+      <div class="sidebar-version">Brand Kit &middot; v4.0</div>
       <nav>
         <a href="index.html"><span class="nav-num">00</span> Overview</a>
         <a href="positioning.html"><span class="nav-num">01</span> Positioning</a>
@@ -35,277 +35,199 @@
       <div class="page-header">
         <div class="section-label">05 &middot; Colors</div>
         <h2>Colors</h2>
-        <p class="intro">D8A runs monochrome with one weapon. Black for authority. Gray for hierarchy. White for space. Redline for the point &mdash; the red pen that cuts the excuse, drawn exactly once per surface.</p>
+        <p class="intro">D8A runs light. Pearl for space, ink for authority, and one prism &mdash; the Cobalt gradient &mdash; for the point. The accent isn&rsquo;t a colour; it&rsquo;s light refracted. Used once per surface.</p>
       </div>
 
-      <!-- Redline -->
+      <!-- The prism -->
       <div class="section">
-        <h3>Redline &mdash; the accent</h3>
-        <p class="mb-16">Redline is the engineer's red pen &mdash; the mark on a spec that says <em>this stays, that goes</em> &mdash; and the line an engine runs at. It's blunt on purpose: red has been the color of revolutions and of classic design for a century, from constructivist posters to Swiss typography. It marks the CTA, the key metric, the hero chart series, the strike through the excuse. Never decoration, never an error state.</p>
+        <h3>The prism &mdash; the accent</h3>
+        <p class="mb-16">D8A is platform-agnostic: one source of truth, shown from every angle. The accent says exactly that &mdash; a single indigo refracting into blue, a spectrum from one source. It marks the CTA, the key metric, the hero chart series, the wordmark&rsquo;s 8. Never decoration.</p>
+        <div style="height:96px; border-radius:12px; background:linear-gradient(110deg,#5340e6,#2e6bff); box-shadow:0 20px 54px -26px rgba(74,54,214,.5); margin-bottom:20px;"></div>
         <div class="swatch-grid">
-          <div class="swatch" onclick="copyHex('#ff2b36')">
-            <div class="color" style="background-color: #ff2b36;"></div>
+          <div class="swatch" onclick="copyHex('#5340e6')">
+            <div class="color" style="background-color: #5340e6;"></div>
             <div class="meta">
-              <div class="name">Redline</div>
-              <div class="hex">#ff2b36</div>
-              <div class="usage">The signal. Dark canvas only &mdash; CTAs, pulses, active states, hero series</div>
+              <div class="name">Cobalt 500</div>
+              <div class="hex">#5340e6</div>
+              <div class="usage">Prism start (indigo). Large text, icons, gradient stop</div>
             </div>
           </div>
-          <div class="swatch" onclick="copyHex('#e4002b')">
-            <div class="color" style="background-color: #e4002b;"></div>
+          <div class="swatch" onclick="copyHex('#2e6bff')">
+            <div class="color" style="background-color: #2e6bff;"></div>
             <div class="meta">
-              <div class="name">Red 600</div>
-              <div class="hex">#e4002b</div>
-              <div class="usage">Light canvas: button fills, text and links (4.7:1 AA), chart hero series</div>
+              <div class="name">Blue 500</div>
+              <div class="hex">#2e6bff</div>
+              <div class="usage">Prism end. Gradient stop &mdash; large type only on white (3.3:1)</div>
             </div>
           </div>
-          <div class="swatch" onclick="copyHex('#b3001f')">
-            <div class="color" style="background-color: #b3001f;"></div>
+          <div class="swatch" onclick="copyHex('#4536d6')">
+            <div class="color" style="background-color: #4536d6;"></div>
             <div class="meta">
-              <div class="name">Red 700</div>
-              <div class="hex">#b3001f</div>
-              <div class="usage">Light canvas: small text, labels, hover states (6.3:1)</div>
+              <div class="name">Cobalt 600</div>
+              <div class="hex">#4536d6</div>
+              <div class="usage">The solo accent &mdash; links, labels, body-size text (6.5:1 AA)</div>
             </div>
           </div>
-          <div class="swatch" onclick="copyHex('#fdeaec')">
-            <div class="color" style="background-color: #fdeaec; border-bottom: 1px solid #e5e5e5;"></div>
+          <div class="swatch" onclick="copyHex('#372cb0')">
+            <div class="color" style="background-color: #372cb0;"></div>
             <div class="meta">
-              <div class="name">Red Tint</div>
-              <div class="hex">#fdeaec</div>
-              <div class="usage">Subtle fills on light. On dark, use rgba(255,43,54,.12) instead</div>
+              <div class="name">Cobalt 700</div>
+              <div class="hex">#372cb0</div>
+              <div class="usage">Hover and deepest emphasis (8.5:1)</div>
+            </div>
+          </div>
+          <div class="swatch" onclick="copyHex('#eef0ff')">
+            <div class="color" style="background-color: #eef0ff; border-bottom: 1px solid #e5e5e5;"></div>
+            <div class="meta">
+              <div class="name">Cobalt Tint</div>
+              <div class="hex">#eef0ff</div>
+              <div class="usage">Subtle fills, active-row backgrounds on light</div>
+            </div>
+          </div>
+          <div class="swatch" onclick="copyHex('#9db4ff')">
+            <div class="color" style="background-color: #9db4ff;"></div>
+            <div class="meta">
+              <div class="name">Flash</div>
+              <div class="hex">#9db4ff</div>
+              <div class="usage">The accent on ink surfaces &mdash; eyebrows and labels on dark</div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Bridge tones -->
+      <!-- Prism recipes -->
       <div class="section">
-        <h3>Bridge tones</h3>
-        <p class="mb-16">The gap between the grays and the red is bridged by three in-between tones. Be honest about what two of them are: <strong>Red 900 and Ink Red are tinted blacks</strong>. In a small chip they read as near-black &mdash; that's by design. Their job is done at full-canvas scale, where the undertone warms the surface without ever reading as &ldquo;a red background&rdquo;. If a surface obviously looks red, the tint is too strong.</p>
+        <h3>Prism recipes</h3>
+        <p class="mb-16">The gradient appears in four sanctioned forms &mdash; and only these four. The angle stays near 110&deg; so the refraction always runs the same way.</p>
         <div class="swatch-grid">
-          <div class="swatch" onclick="copyHex('#ff8591')">
-            <div class="color" style="background-color: #ff8591;"></div>
+          <div class="swatch">
+            <div class="color" style="height:120px; background:linear-gradient(110deg,#5340e6,#2e6bff);"></div>
             <div class="meta">
-              <div class="name">Red 300 &middot; Flare</div>
-              <div class="hex">#ff8591</div>
-              <div class="usage">Gradient endpoints, text on red-tinted dark surfaces</div>
+              <div class="name">Prism Fill</div>
+              <div class="hex">#5340e6 &rarr; #2e6bff</div>
+              <div class="usage">CTAs, hero chart series, the wordmark 8</div>
             </div>
           </div>
-          <div class="swatch" onclick="copyHex('#3a1119')">
-            <div class="color" style="background-color: #3a1119;"></div>
+          <div class="swatch">
+            <div class="color" style="height:120px; background:#fbfaff; display:flex; align-items:center; justify-content:center;">
+              <span style="font-size:34px; font-weight:800; letter-spacing:-.02em; background:linear-gradient(110deg,#5340e6,#2e6bff); -webkit-background-clip:text; background-clip:text; color:transparent;">Aa</span>
+            </div>
             <div class="meta">
-              <div class="name">Red 900</div>
-              <div class="hex">#3a1119</div>
-              <div class="usage">Deep red surface &mdash; badges and subtle fills on dark</div>
+              <div class="name">Prism Text</div>
+              <div class="hex">clipped &middot; large only</div>
+              <div class="usage">Display headlines on light. 24px+ only &mdash; never body text</div>
             </div>
           </div>
-          <div class="swatch" onclick="copyHex('#241014')">
-            <div class="color" style="background-color: #241014;"></div>
+          <div class="swatch">
+            <div class="color on-ink" style="height:120px; background:linear-gradient(180deg,rgba(83,64,230,.32),rgba(46,107,255,0)),#15121f;"></div>
             <div class="meta">
-              <div class="name">Ink Red</div>
-              <div class="hex">#241014</div>
-              <div class="usage">Red-tinted black &mdash; the far end of the canvas gradient</div>
+              <div class="name">Prism Fade</div>
+              <div class="hex">cobalt 32% &rarr; transparent</div>
+              <div class="usage">Area-chart fills, pulse tails, glow behind glass</div>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="color" style="height:120px; background:radial-gradient(60% 80% at 82% 14%, rgba(83,64,230,.28), transparent 70%), #fbfaff;"></div>
+            <div class="meta">
+              <div class="name">Signal Mesh</div>
+              <div class="hex">radial &middot; ambient</div>
+              <div class="usage">Soft prism light behind hero content. Atmosphere, not a statement</div>
             </div>
           </div>
         </div>
-        <div class="mt-24" style="display:flex; border-radius:2px; overflow:hidden;">
-          <div style="flex:1; height:160px; background:#0a0a0a; display:flex; align-items:flex-end; padding:12px 14px;">
-            <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:1px; text-transform:uppercase; color:#737373;">Black #0a0a0a</span>
-          </div>
-          <div style="flex:1; height:160px; background:#241014; display:flex; align-items:flex-end; padding:12px 14px;">
-            <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:1px; text-transform:uppercase; color:#737373;">Ink Red #241014</span>
-          </div>
-          <div style="flex:1; height:160px; background:#3a1119; display:flex; align-items:flex-end; padding:12px 14px;">
-            <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:1px; text-transform:uppercase; color:#737373;">Red 900 #3a1119</span>
-          </div>
-        </div>
-        <p class="text-sm text-muted mt-16">Edge to edge is how these tones actually work &mdash; adjacent surfaces, not isolated chips. Left to right: pure black, then the undertone stepping in.</p>
       </div>
 
-      <!-- Gradients & glow -->
+      <!-- Neutrals -->
       <div class="section">
-        <h3>Gradients &amp; glow</h3>
-        <p class="mb-16">Four gradient recipes, and only these four. Every gradient stays inside one hue family &mdash; gray or red &mdash; or fades to transparent. Never two hues, never a rainbow.</p>
+        <h3>Neutrals &mdash; pearl &amp; ink</h3>
+        <p class="mb-16">Not pure white, not pure black. The neutrals carry a whisper of indigo so the whole system feels of one piece &mdash; chosen, not defaulted.</p>
         <div class="swatch-grid">
-          <div class="swatch">
-            <div class="color" style="height:140px; background: radial-gradient(120% 140% at 85% 15%, rgba(255,43,54,0.16) 0%, rgba(255,43,54,0) 55%), linear-gradient(160deg, #0a0a0a 0%, #241014 100%);"></div>
-            <div class="meta">
-              <div class="name">Signal Glow</div>
-              <div class="hex">radial &middot; red 16% &rarr; 0%</div>
-              <div class="usage">Ambient light behind hero content on dark. Atmosphere, not a statement</div>
-            </div>
+          <div class="swatch" onclick="copyHex('#fbfaff')">
+            <div class="color" style="background-color: #fbfaff; border-bottom: 1px solid #e5e5e5;"></div>
+            <div class="meta"><div class="name">Pearl</div><div class="hex">#fbfaff</div><div class="usage">The primary canvas &mdash; page and card backgrounds</div></div>
           </div>
-          <div class="swatch">
-            <div class="color" style="height:140px; background: linear-gradient(160deg, #0a0a0a 0%, #241014 100%);"></div>
-            <div class="meta">
-              <div class="name">Canvas Depth</div>
-              <div class="hex">#0a0a0a &rarr; #241014</div>
-              <div class="usage">Default dark canvas &mdash; black warming into Ink Red</div>
-            </div>
+          <div class="swatch" onclick="copyHex('#f3f1fb')">
+            <div class="color" style="background-color: #f3f1fb; border-bottom: 1px solid #e5e5e5;"></div>
+            <div class="meta"><div class="name">Mist</div><div class="hex">#f3f1fb</div><div class="usage">Raised panels, hover states</div></div>
           </div>
-          <div class="swatch">
-            <div class="color" style="height:140px; background: linear-gradient(135deg, #ff2b36 0%, #e4002b 100%);"></div>
-            <div class="meta">
-              <div class="name">Red Ramp</div>
-              <div class="hex">#ff2b36 &rarr; #e4002b</div>
-              <div class="usage">CTA fills and hero elements &mdash; red with depth, within the family</div>
-            </div>
+          <div class="swatch" onclick="copyHex('#e7e3f2')">
+            <div class="color" style="background-color: #e7e3f2;"></div>
+            <div class="meta"><div class="name">Line</div><div class="hex">#e7e3f2</div><div class="usage">Borders, dividers, hairlines</div></div>
           </div>
-          <div class="swatch">
-            <div class="color on-black" style="height:140px; background: linear-gradient(180deg, rgba(255,43,54,0.25) 0%, rgba(255,43,54,0) 100%), #0a0a0a;"></div>
-            <div class="meta">
-              <div class="name">Red Fade</div>
-              <div class="hex">red 25% &rarr; transparent</div>
-              <div class="usage">Area-chart fills, pulse tails, section transitions</div>
-            </div>
+          <div class="swatch" onclick="copyHex('#6c6781')">
+            <div class="color" style="background-color: #6c6781;"></div>
+            <div class="meta"><div class="name">Mauve</div><div class="hex">#6c6781</div><div class="usage">Muted text, captions, metadata</div></div>
+          </div>
+          <div class="swatch" onclick="copyHex('#4b4757')">
+            <div class="color" style="background-color: #4b4757;"></div>
+            <div class="meta"><div class="name">Slate</div><div class="hex">#4b4757</div><div class="usage">Body copy on light</div></div>
+          </div>
+          <div class="swatch" onclick="copyHex('#15121f')">
+            <div class="color" style="background-color: #15121f;"></div>
+            <div class="meta"><div class="name">Ink</div><div class="hex">#15121f</div><div class="usage">Headings, and the secondary (dark) canvas</div></div>
           </div>
         </div>
-        <ul class="mt-24">
-          <li><strong>One family per gradient.</strong> Gray&rarr;gray, red&rarr;red, or red&rarr;transparent. A gradient is depth, not a second color.</li>
-          <li><strong>Glow is ambient light, not an effect.</strong> Radial, under 20% peak opacity, behind content &mdash; never a drop shadow, never a colored border glow on cards.</li>
-          <li><strong>Display headlines on dark</strong> may run White &rarr; Flare (see <a href="fonts.html"><strong>Fonts</strong></a>). Body text never gradients.</li>
-          <li><strong>Still banned:</strong> gloss, bevels, multi-hue gradients, gradients on light canvas backgrounds (light stays clean &mdash; depth is a dark-canvas tool).</li>
-        </ul>
       </div>
 
       <!-- One-weapon rule -->
       <div class="section">
         <h3>The one-weapon rule</h3>
         <ul>
-          <li><strong>One red statement per surface.</strong> A slide, a section, a social image, a chart &mdash; each gets exactly one red element. The CTA, <em>or</em> the number, <em>or</em> the hero series. Never several.</li>
-          <li><strong>Statement vs. atmosphere.</strong> The rule counts <em>statements</em> &mdash; CTAs, metrics, hero series, the pulse. <em>Atmosphere</em> &mdash; the Signal Glow, bridge-tone surfaces, fades under 25% opacity &mdash; doesn't count. Atmosphere sets the stage; the statement makes the point.</li>
-          <li><strong>Red marks the point, not the theme.</strong> If you can remove the red and the message survives, it was in the wrong place.</li>
-          <li><strong>If everything is red, nothing is.</strong> When in doubt, take red away &mdash; the monochrome system works without it.</li>
+          <li><strong>One prism statement per surface.</strong> A slide, a section, a social image, a chart &mdash; each gets exactly one gradient element. The CTA, <em>or</em> the metric, <em>or</em> the hero series. Never several.</li>
+          <li><strong>Statement vs. atmosphere.</strong> The rule counts <em>statements</em> &mdash; CTAs, metrics, hero series, the gradient headline word. <em>Atmosphere</em> &mdash; the Signal Mesh, tint fills, fades under 30% &mdash; doesn&rsquo;t count. Atmosphere sets the light; the statement makes the point.</li>
+          <li><strong>The gradient is the point, not the theme.</strong> If you can flatten the gradient to grey and the message survives, it was in the wrong place.</li>
+          <li><strong>Everything else is ink on pearl.</strong> When in doubt, take the prism away &mdash; the light neutral system reads clean and premium without it.</li>
         </ul>
         <div class="do-dont-grid mt-24">
           <div class="do-card">
             <div class="label">Do</div>
-            <blockquote>A dark slide, gray body text, one red metric: &ldquo;3&times; faster&rdquo;</blockquote>
-            <p class="reason">The red does one job: it points at the proof.</p>
+            <blockquote>A pearl slide, ink text, one prism metric: &ldquo;3&times; faster&rdquo;</blockquote>
+            <p class="reason">The gradient does one job: it points at the proof.</p>
           </div>
           <div class="dont-card">
             <div class="label">Don't</div>
-            <blockquote>Red headline, red icons, red borders, red background section</blockquote>
-            <p class="reason">Four red elements, zero emphasis. The weapon only works drawn once.</p>
+            <blockquote>Gradient headline, gradient icons, gradient borders, gradient background</blockquote>
+            <p class="reason">Four gradients, zero emphasis. The prism only works refracted once.</p>
           </div>
         </div>
       </div>
 
-      <!-- Dark-led dual system -->
+      <!-- Light-led dual system -->
       <div class="section">
-        <h3>Dark-led dual system</h3>
-        <p class="mb-16">The brand leads on black &mdash; but not flat black. Marketing surfaces sit on Canvas Depth (#0a0a0a warming into Ink Red), with the Signal Glow as ambient light behind hero content. The light canvas is for reading: docs, email, long-form &mdash; and stays clean, no gradients. Same system, same rules, different room.</p>
+        <h3>Light-led dual system</h3>
+        <p class="mb-16">The brand leads on light. Marketing surfaces sit on Pearl with the Signal Mesh as ambient prism light. Ink (#15121f) is the secondary canvas &mdash; product screenshots, code, the occasional bold section &mdash; where the gradient glows brightest. Same system, same rules, different room.</p>
         <div class="two-col">
-          <div class="canvas-demo dark">
-            <div class="demo-eyebrow">Primary canvas &middot; marketing</div>
-            <div class="demo-headline">Ship data,<br>not excuses.</div>
-            <div class="demo-body">Dark canvas, gray hierarchy, one red statement. This is how D8A shows up in the feed.</div>
-            <span class="demo-cta">Join the waitlist &rarr;</span>
-          </div>
           <div class="canvas-demo">
-            <div class="demo-eyebrow">Secondary canvas &middot; reading</div>
+            <div class="demo-eyebrow">Primary canvas &middot; light</div>
             <div class="demo-headline">Ship data,<br>not excuses.</div>
-            <div class="demo-body">Light canvas for docs, email, and long-form. Red steps down to Red 600 / 700 for contrast.</div>
+            <div class="demo-body">Pearl canvas, ink hierarchy, one prism statement. This is how D8A shows up by default.</div>
+            <span class="demo-cta">Join the waitlist &rarr;</span>
+          </div>
+          <div class="canvas-demo dark">
+            <div class="demo-eyebrow">Secondary canvas &middot; ink</div>
+            <div class="demo-headline">Ship data,<br>not excuses.</div>
+            <div class="demo-body">Ink for depth &mdash; screenshots, code, statement sections. The gradient is at its brightest here.</div>
             <span class="demo-cta">Join the waitlist &rarr;</span>
           </div>
         </div>
       </div>
 
-      <!-- Core palette -->
+      <!-- Accessibility -->
       <div class="section">
-        <h3>Core palette</h3>
-        <div class="swatch-grid">
-          <div class="swatch" onclick="copyHex('#0a0a0a')">
-            <div class="color" style="background-color: #0a0a0a;"></div>
-            <div class="meta">
-              <div class="name">Black</div>
-              <div class="hex">#0a0a0a</div>
-              <div class="usage">The primary brand canvas. Also primary text, headlines, logo on light</div>
-            </div>
-          </div>
-          <div class="swatch" onclick="copyHex('#171717')">
-            <div class="color" style="background-color: #171717;"></div>
-            <div class="meta">
-              <div class="name">Gray 950</div>
-              <div class="hex">#171717</div>
-              <div class="usage">Dark surfaces, code blocks, dark mode backgrounds</div>
-            </div>
-          </div>
-          <div class="swatch" onclick="copyHex('#262626')">
-            <div class="color" style="background-color: #262626;"></div>
-            <div class="meta">
-              <div class="name">Gray 800</div>
-              <div class="hex">#262626</div>
-              <div class="usage">Secondary dark surfaces, badge backgrounds</div>
-            </div>
-          </div>
-          <div class="swatch" onclick="copyHex('#525252')">
-            <div class="color" style="background-color: #525252;"></div>
-            <div class="meta">
-              <div class="name">Gray 600</div>
-              <div class="hex">#525252</div>
-              <div class="usage">Body text, secondary content</div>
-            </div>
-          </div>
-        </div>
+        <h3>Accessibility</h3>
+        <ul>
+          <li><strong>Ink on Pearl:</strong> 16.4:1 &mdash; WCAG AAA</li>
+          <li><strong>Slate on Pearl:</strong> 8.1:1 &mdash; WCAG AAA body text</li>
+          <li><strong>Mauve on Pearl:</strong> 4.9:1 &mdash; WCAG AA (muted text, captions)</li>
+          <li><strong>Cobalt 600 on white:</strong> 6.5:1 &mdash; WCAG AA body text and links</li>
+          <li><strong>Cobalt 700 on white:</strong> 8.5:1 &mdash; WCAG AAA</li>
+          <li><strong>Blue 500 on white:</strong> 3.3:1 &mdash; large text and UI only, never body</li>
+          <li><strong>Flash on Ink:</strong> 7.6:1 &mdash; the accent for eyebrows on dark surfaces</li>
+          <li><strong>Prism Text</strong> is a gradient &mdash; use at 24px+ where the darkest stop still clears AA-large; never for body copy.</li>
+        </ul>
       </div>
 
-      <!-- Extended grays -->
-      <div class="section">
-        <h3>Extended grays</h3>
-        <div class="swatch-grid">
-          <div class="swatch" onclick="copyHex('#737373')">
-            <div class="color" style="background-color: #737373;"></div>
-            <div class="meta">
-              <div class="name">Gray 500</div>
-              <div class="hex">#737373</div>
-              <div class="usage">Muted text, captions, labels</div>
-            </div>
-          </div>
-          <div class="swatch" onclick="copyHex('#a3a3a3')">
-            <div class="color" style="background-color: #a3a3a3;"></div>
-            <div class="meta">
-              <div class="name">Gray 400</div>
-              <div class="hex">#a3a3a3</div>
-              <div class="usage">Placeholder text, disabled states</div>
-            </div>
-          </div>
-          <div class="swatch" onclick="copyHex('#d4d4d4')">
-            <div class="color" style="background-color: #d4d4d4;"></div>
-            <div class="meta">
-              <div class="name">Gray 300</div>
-              <div class="hex">#d4d4d4</div>
-              <div class="usage">Borders, dividers, subtle separators</div>
-            </div>
-          </div>
-          <div class="swatch" onclick="copyHex('#e5e5e5')">
-            <div class="color" style="background-color: #e5e5e5;"></div>
-            <div class="meta">
-              <div class="name">Gray 200</div>
-              <div class="hex">#e5e5e5</div>
-              <div class="usage">Light borders, card outlines</div>
-            </div>
-          </div>
-          <div class="swatch" onclick="copyHex('#f5f5f5')">
-            <div class="color" style="background-color: #f5f5f5;"></div>
-            <div class="meta">
-              <div class="name">Gray 100</div>
-              <div class="hex">#f5f5f5</div>
-              <div class="usage">Background surfaces, hover states</div>
-            </div>
-          </div>
-          <div class="swatch" onclick="copyHex('#fafafa')">
-            <div class="color" style="background-color: #fafafa; border-bottom: 1px solid #e5e5e5;"></div>
-            <div class="meta">
-              <div class="name">White</div>
-              <div class="hex">#fafafa</div>
-              <div class="usage">Page backgrounds, card surfaces</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Color values table -->
+      <!-- Full values -->
       <div class="section">
         <h3>Full color values</h3>
         <table class="color-table">
@@ -313,64 +235,29 @@
             <tr><th>Name</th><th>HEX</th><th>RGB</th><th>HSL</th></tr>
           </thead>
           <tbody>
-            <tr><td>Redline</td><td>#ff2b36</td><td>255, 43, 54</td><td>357, 100%, 58%</td></tr>
-            <tr><td>Red 600</td><td>#e4002b</td><td>228, 0, 43</td><td>349, 100%, 45%</td></tr>
-            <tr><td>Red 700</td><td>#b3001f</td><td>179, 0, 31</td><td>350, 100%, 35%</td></tr>
-            <tr><td>Red Tint</td><td>#fdeaec</td><td>253, 234, 236</td><td>354, 83%, 96%</td></tr>
-            <tr><td>Red 300 (Flare)</td><td>#ff8591</td><td>255, 133, 145</td><td>354, 100%, 76%</td></tr>
-            <tr><td>Red 900</td><td>#3a1119</td><td>58, 17, 25</td><td>348, 55%, 15%</td></tr>
-            <tr><td>Ink Red</td><td>#241014</td><td>36, 16, 20</td><td>348, 38%, 10%</td></tr>
-            <tr><td>Black</td><td>#0a0a0a</td><td>10, 10, 10</td><td>0, 0%, 4%</td></tr>
-            <tr><td>Gray 950</td><td>#171717</td><td>23, 23, 23</td><td>0, 0%, 9%</td></tr>
-            <tr><td>Gray 800</td><td>#262626</td><td>38, 38, 38</td><td>0, 0%, 15%</td></tr>
-            <tr><td>Gray 600</td><td>#525252</td><td>82, 82, 82</td><td>0, 0%, 32%</td></tr>
-            <tr><td>Gray 500</td><td>#737373</td><td>115, 115, 115</td><td>0, 0%, 45%</td></tr>
-            <tr><td>Gray 400</td><td>#a3a3a3</td><td>163, 163, 163</td><td>0, 0%, 64%</td></tr>
-            <tr><td>Gray 300</td><td>#d4d4d4</td><td>212, 212, 212</td><td>0, 0%, 83%</td></tr>
-            <tr><td>Gray 200</td><td>#e5e5e5</td><td>229, 229, 229</td><td>0, 0%, 90%</td></tr>
-            <tr><td>Gray 100</td><td>#f5f5f5</td><td>245, 245, 245</td><td>0, 0%, 96%</td></tr>
-            <tr><td>White</td><td>#fafafa</td><td>250, 250, 250</td><td>0, 0%, 98%</td></tr>
+            <tr><td>Cobalt 500</td><td>#5340e6</td><td>83, 64, 230</td><td>247, 76%, 58%</td></tr>
+            <tr><td>Blue 500</td><td>#2e6bff</td><td>46, 107, 255</td><td>222, 100%, 59%</td></tr>
+            <tr><td>Cobalt 600</td><td>#4536d6</td><td>69, 54, 214</td><td>246, 65%, 53%</td></tr>
+            <tr><td>Cobalt 700</td><td>#372cb0</td><td>55, 44, 176</td><td>245, 60%, 43%</td></tr>
+            <tr><td>Cobalt Tint</td><td>#eef0ff</td><td>238, 240, 255</td><td>231, 100%, 97%</td></tr>
+            <tr><td>Flash</td><td>#9db4ff</td><td>157, 180, 255</td><td>222, 100%, 81%</td></tr>
+            <tr><td>Pearl</td><td>#fbfaff</td><td>251, 250, 255</td><td>252, 100%, 99%</td></tr>
+            <tr><td>Mist</td><td>#f3f1fb</td><td>243, 241, 251</td><td>252, 45%, 96%</td></tr>
+            <tr><td>Line</td><td>#e7e3f2</td><td>231, 227, 242</td><td>256, 33%, 92%</td></tr>
+            <tr><td>Mauve</td><td>#6c6781</td><td>108, 103, 129</td><td>252, 11%, 45%</td></tr>
+            <tr><td>Slate</td><td>#4b4757</td><td>75, 71, 87</td><td>255, 10%, 31%</td></tr>
+            <tr><td>Ink</td><td>#15121f</td><td>21, 18, 31</td><td>254, 27%, 10%</td></tr>
           </tbody>
         </table>
       </div>
 
-      <!-- Pairing rules -->
+      <!-- Why prism -->
       <div class="section">
-        <h3>Color pairing rules</h3>
-        <ul>
-          <li><strong>Text on light backgrounds:</strong> Use Black (#0a0a0a) or Gray 600 (#525252) for body. Never lighter than Gray 500.</li>
-          <li><strong>Text on dark backgrounds:</strong> Use White (#fafafa) or Gray 300 (#d4d4d4) for body. Never darker than Gray 400.</li>
-          <li><strong>Borders:</strong> Gray 200 on light surfaces, Gray 800 on dark surfaces.</li>
-          <li><strong>Emphasis:</strong> Hierarchy comes from weight, size, and contrast. Red is reserved for the single point of the surface &mdash; not for general emphasis.</li>
-          <li><strong>Red on dark:</strong> Redline (#ff2b36) only. It's tuned for the black canvas &mdash; large marks, strikes, and UI, not paragraphs.</li>
-          <li><strong>Red on light:</strong> Red 600 (#e4002b) for fills, text, and links (4.7:1 AA), Red 700 (#b3001f) for small text and hovers. Redline itself never carries body text on white (3.6:1 &mdash; UI and large type only).</li>
-          <li><strong>Never</strong> red-on-red, red text on mid-grays, or red paired with any other hue.</li>
-          <li><strong>Red is the mark, not an error state.</strong> Where an interface or chart encodes pass/fail semantics, the brand red steps aside &mdash; don't make the reader guess whether red means "the point" or "broken".</li>
-        </ul>
+        <h3>Why Prism</h3>
+        <p>The brand explored a flat accent first &mdash; and a flat accent, in any hue, was the wrong shape for what D8A is. D8A is <em>platform-agnostic</em>: one source of truth, refracted across every stack you run. Iridescence <strong>is</strong> that idea made visible &mdash; a single surface throwing a spectrum, one input read from every angle. So the accent isn&rsquo;t a colour, it&rsquo;s a prism: a cobalt-to-blue gradient, disciplined to one statement per surface, on a clean pearl canvas. The restraint is the class; the prism is the fresh.</p>
       </div>
 
-      <!-- Accessibility -->
-      <div class="section">
-        <h3>Accessibility</h3>
-        <ul>
-          <li><strong>Black on White:</strong> 19.3:1 contrast ratio &mdash; WCAG AAA</li>
-          <li><strong>Gray 600 on White:</strong> 7.1:1 contrast ratio &mdash; WCAG AAA</li>
-          <li><strong>Gray 500 on White:</strong> 4.6:1 contrast ratio &mdash; WCAG AA (large text only)</li>
-          <li><strong>White on Gray 950:</strong> 16.2:1 contrast ratio &mdash; WCAG AAA</li>
-          <li><strong>Redline on Black:</strong> 5.3:1 contrast ratio &mdash; WCAG AA. Red carries marks and headlines, not paragraphs</li>
-          <li><strong>Red 600 on White:</strong> 4.7:1 contrast ratio &mdash; WCAG AA body text</li>
-          <li><strong>Red 700 on White:</strong> 6.3:1 contrast ratio &mdash; WCAG AA+</li>
-          <li><strong>Redline on White:</strong> 3.6:1 &mdash; UI components and large type only. Never body text.</li>
-        </ul>
-      </div>
-
-      <!-- Why red -->
-      <div class="section">
-        <h3>Why Redline</h3>
-        <p>v2.0 tried CI green &mdash; the color of a passing pipeline. Correct, safe, and too nice. D8A's voice picks fights with the status quo; the color has to match. Red is the only accent that is both revolutionary and classic: the constructivist poster, the Swiss grid, the editor's pen, the engine at redline. In our world a &ldquo;redline&rdquo; is literally the markup an engineer puts on a spec &mdash; and D8A is spec-first. One caution shaped the shade: Databricks lives at orange-red (#ff3621), so Redline runs cooler and deeper, toward crimson &mdash; and appears as a <em>mark</em> (a strike, a line, a pulse), never as a logo-style color wash.</p>
-      </div>
-
-      <div class="footer">D8A Brand Kit &middot; v3.0 &middot; d8a.pro</div>
+      <div class="footer">D8A Brand Kit &middot; v4.0 &middot; d8a.pro</div>
 
     </main>
   </div>
