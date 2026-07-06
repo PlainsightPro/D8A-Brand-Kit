@@ -13,7 +13,7 @@
 
     <aside class="sidebar">
       <div class="sidebar-brand"><h1>D8A</h1></div>
-      <div class="sidebar-version">Brand Kit &middot; v1.0</div>
+      <div class="sidebar-version">Brand Kit &middot; v2.0</div>
       <nav>
         <a href="index.html"><span class="nav-num">00</span> Overview</a>
         <a href="positioning.html"><span class="nav-num">01</span> Positioning</a>
@@ -35,14 +35,18 @@
       <div class="page-header">
         <div class="section-label">11 &middot; Charts</div>
         <h2>Charts &amp; data viz</h2>
-        <p class="intro">Data visualization follows the monochrome system. Gray scale only. Let the data speak &mdash; not the colors.</p>
+        <p class="intro">Gray carries the data. Ship Green makes the point. Every D8A chart makes exactly one point &mdash; and that's the series that gets the green.</p>
       </div>
 
       <!-- Chart palette -->
       <div class="section">
         <h3>Chart palette (ordered)</h3>
-        <p class="mb-16">Use these colors in order. The first series gets the darkest shade. Additional series get progressively lighter. Never skip a shade.</p>
+        <p class="mb-16">The hero series &mdash; the point of the chart &mdash; gets green: Green 600 (#00a85c) on light canvas, Ship Green (#00e676) on dark. Supporting series get grays, darkest first, never skipping a shade. If no series is the point, the chart is all gray.</p>
         <div class="chart-palette">
+          <div class="chart-color">
+            <div class="bar" style="background:#00a85c;"></div>
+            <div class="label">hero</div>
+          </div>
           <div class="chart-color">
             <div class="bar" style="background:#0a0a0a;"></div>
             <div class="label">#0a0a0a</div>
@@ -63,10 +67,6 @@
             <div class="bar" style="background:#d4d4d4;"></div>
             <div class="label">#d4d4d4</div>
           </div>
-          <div class="chart-color">
-            <div class="bar" style="background:#e5e5e5;"></div>
-            <div class="label">#e5e5e5</div>
-          </div>
         </div>
       </div>
 
@@ -78,10 +78,11 @@
             <tr><th>Scenario</th><th>Colors</th><th>Example</th></tr>
           </thead>
           <tbody>
-            <tr><td>Single metric</td><td>#0a0a0a only</td><td>Pipeline delivery time over 12 months</td></tr>
-            <tr><td>Two-series comparison</td><td>#0a0a0a + #a3a3a3</td><td>Pipelines delivered vs. requested</td></tr>
-            <tr><td>Three+ categories</td><td>Full palette in order</td><td>Pipeline status breakdown by team</td></tr>
-            <tr><td>Emphasis (one highlighted)</td><td>#0a0a0a for hero, #d4d4d4 for rest</td><td>This quarter vs. previous quarters</td></tr>
+            <tr><td>Single metric (the point)</td><td>#00a85c only</td><td>Pipeline delivery time over 12 months</td></tr>
+            <tr><td>Single metric (context)</td><td>#0a0a0a only</td><td>Background stat, no claim attached</td></tr>
+            <tr><td>Two-series comparison</td><td>#00a85c hero + #a3a3a3</td><td>With D8A vs. without</td></tr>
+            <tr><td>Three+ categories</td><td>#00a85c hero + gray ramp in order</td><td>Pipeline status breakdown by team</td></tr>
+            <tr><td>Emphasis (one highlighted)</td><td>#00a85c for hero, #d4d4d4 for rest</td><td>This quarter vs. previous quarters</td></tr>
           </tbody>
         </table>
       </div>
@@ -90,12 +91,13 @@
       <div class="section">
         <h3>Chart rules</h3>
         <ul>
+          <li><strong>One green series per chart. Never two.</strong> The green series is the chart's claim &mdash; if you can't say which series is the point, none of them gets green.</li>
           <li><strong>No 3D charts.</strong> Ever. Not even for presentations.</li>
           <li><strong>No chart borders or outlines.</strong> Charts float on the page with labels, not boxed frames.</li>
           <li><strong>Label directly.</strong> Put labels on or next to data points. Legends are a last resort.</li>
           <li><strong>Grid lines:</strong> Gray 200 (#e5e5e5), 0.5px weight. Horizontal only. Never vertical grid lines.</li>
           <li><strong>Axes:</strong> Gray 400 (#a3a3a3), 1px weight. Only show axes that carry information.</li>
-          <li><strong>Font:</strong> Inter 12px for labels, 11px for axis ticks. Never bold in chart text.</li>
+          <li><strong>Font:</strong> Inter 12px for labels; JetBrains Mono 11px for axis ticks and data values. Never bold in chart text.</li>
           <li><strong>Bar width:</strong> Bars should be wider than the gaps between them. Minimum 60% fill ratio.</li>
           <li><strong>Pie charts:</strong> Avoid. Use horizontal bar charts instead. If you absolutely must use a pie chart, maximum 4 slices.</li>
         </ul>
@@ -106,18 +108,18 @@
         <h3>Power BI theme</h3>
         <p class="mb-16">Copy this JSON and import it in Power BI Desktop via View &rarr; Themes &rarr; Browse for themes.</p>
         <div class="code-block">{
-  "name": "D8A Monochrome",
+  "name": "D8A Ship Green",
   "dataColors": [
+    "#00a85c",
     "#0a0a0a",
     "#404040",
     "#737373",
     "#a3a3a3",
-    "#d4d4d4",
-    "#e5e5e5"
+    "#d4d4d4"
   ],
   "background": "#ffffff",
   "foreground": "#0a0a0a",
-  "tableAccent": "#0a0a0a",
+  "tableAccent": "#00a85c",
   "textClasses": {
     "callout": {
       "fontFace": "Inter",
@@ -158,7 +160,7 @@
         <p class="mb-16">Set these defaults at the top of your notebook or script.</p>
         <div class="code-block">import matplotlib.pyplot as plt
 
-D8A_PALETTE = ['#0a0a0a', '#404040', '#737373', '#a3a3a3', '#d4d4d4', '#e5e5e5']
+D8A_PALETTE = ['#00a85c', '#0a0a0a', '#404040', '#737373', '#a3a3a3', '#d4d4d4']
 
 plt.rcParams.update({
     'font.family': 'Inter',
@@ -178,7 +180,7 @@ plt.rcParams.update({
 })</div>
       </div>
 
-      <div class="footer">D8A Brand Kit &middot; v1.0 &middot; d8a.pro</div>
+      <div class="footer">D8A Brand Kit &middot; v2.0 &middot; d8a.pro</div>
 
     </main>
   </div>

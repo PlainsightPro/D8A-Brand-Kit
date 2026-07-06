@@ -13,7 +13,7 @@
 
     <aside class="sidebar">
       <div class="sidebar-brand"><h1>D8A</h1></div>
-      <div class="sidebar-version">Brand Kit &middot; v1.0</div>
+      <div class="sidebar-version">Brand Kit &middot; v2.0</div>
       <nav>
         <a href="index.html"><span class="nav-num">00</span> Overview</a>
         <a href="positioning.html"><span class="nav-num">01</span> Positioning</a>
@@ -35,7 +35,90 @@
       <div class="page-header">
         <div class="section-label">05 &middot; Colors</div>
         <h2>Colors</h2>
-        <p class="intro">D8A runs monochrome. Black for authority. Gray for hierarchy. White for space. An accent color will be introduced when the brand is ready for it.</p>
+        <p class="intro">D8A runs monochrome with one weapon. Black for authority. Gray for hierarchy. White for space. Ship Green for the point &mdash; the color of a passing pipeline, used exactly once per surface.</p>
+      </div>
+
+      <!-- Ship Green -->
+      <div class="section">
+        <h3>Ship Green &mdash; the accent</h3>
+        <p class="mb-16">Ship Green is CI green: the color your pipeline turns when the tests pass and the data ships. It says one thing &mdash; <strong>this is the thing that shipped</strong>. It marks the CTA, the key metric, the hero chart series, the active state, the signal pulse. Never decoration.</p>
+        <div class="swatch-grid">
+          <div class="swatch" onclick="copyHex('#00e676')">
+            <div class="color" style="background-color: #00e676;"></div>
+            <div class="meta">
+              <div class="name">Ship Green</div>
+              <div class="hex">#00e676</div>
+              <div class="usage">The signal. Dark canvas only &mdash; CTAs, pulses, active states, hero series</div>
+            </div>
+          </div>
+          <div class="swatch" onclick="copyHex('#00a85c')">
+            <div class="color" style="background-color: #00a85c;"></div>
+            <div class="meta">
+              <div class="name">Green 600</div>
+              <div class="hex">#00a85c</div>
+              <div class="usage">Light canvas: button fills, UI accents, large text, chart hero series</div>
+            </div>
+          </div>
+          <div class="swatch" onclick="copyHex('#007a47')">
+            <div class="color" style="background-color: #007a47;"></div>
+            <div class="meta">
+              <div class="name">Green 700</div>
+              <div class="hex">#007a47</div>
+              <div class="usage">Light canvas: body-size text, links, labels</div>
+            </div>
+          </div>
+          <div class="swatch" onclick="copyHex('#e6f9ef')">
+            <div class="color" style="background-color: #e6f9ef; border-bottom: 1px solid #e5e5e5;"></div>
+            <div class="meta">
+              <div class="name">Green Tint</div>
+              <div class="hex">#e6f9ef</div>
+              <div class="usage">Subtle fills on light. On dark, use rgba(0,230,118,.12) instead</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- One-weapon rule -->
+      <div class="section">
+        <h3>The one-weapon rule</h3>
+        <ul>
+          <li><strong>One green statement per surface.</strong> A slide, a section, a social image, a chart &mdash; each gets exactly one green element. The CTA, <em>or</em> the number, <em>or</em> the hero series. Never several.</li>
+          <li><strong>Green marks the point, not the theme.</strong> If you can remove the green and the message survives, it was in the wrong place.</li>
+          <li><strong>Green is flat.</strong> No gradients, no glows, no shadows. Rule 03 applies to the accent too.</li>
+          <li><strong>If everything is green, nothing is.</strong> When in doubt, take green away &mdash; the monochrome system works without it.</li>
+        </ul>
+        <div class="do-dont-grid mt-24">
+          <div class="do-card">
+            <div class="label">Do</div>
+            <blockquote>A dark slide, gray body text, one green metric: &ldquo;3&times; faster&rdquo;</blockquote>
+            <p class="reason">The green does one job: it points at the proof.</p>
+          </div>
+          <div class="dont-card">
+            <div class="label">Don't</div>
+            <blockquote>Green headline, green icons, green borders, green background section</blockquote>
+            <p class="reason">Four green elements, zero emphasis. The weapon only works drawn once.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dark-led dual system -->
+      <div class="section">
+        <h3>Dark-led dual system</h3>
+        <p class="mb-16">The brand leads on black. Marketing surfaces &mdash; website, social, decks, product screenshots &mdash; sit on Black (#0a0a0a), where Ship Green glows at 11.8:1 contrast. The light canvas is for reading: docs, email, long-form. Same system, same rules, different room.</p>
+        <div class="two-col">
+          <div class="canvas-demo dark">
+            <div class="demo-eyebrow">Primary canvas &middot; marketing</div>
+            <div class="demo-headline">Ship data,<br>not excuses.</div>
+            <div class="demo-body">Dark canvas, gray hierarchy, one green statement. This is how D8A shows up in the feed.</div>
+            <span class="demo-cta">Join the waitlist &rarr;</span>
+          </div>
+          <div class="canvas-demo">
+            <div class="demo-eyebrow">Secondary canvas &middot; reading</div>
+            <div class="demo-headline">Ship data,<br>not excuses.</div>
+            <div class="demo-body">Light canvas for docs, email, and long-form. Green steps down to Green 600 / 700 for contrast.</div>
+            <span class="demo-cta">Join the waitlist &rarr;</span>
+          </div>
+        </div>
       </div>
 
       <!-- Core palette -->
@@ -47,7 +130,7 @@
             <div class="meta">
               <div class="name">Black</div>
               <div class="hex">#0a0a0a</div>
-              <div class="usage">Primary text, headlines, logo, hero backgrounds</div>
+              <div class="usage">The primary brand canvas. Also primary text, headlines, logo on light</div>
             </div>
           </div>
           <div class="swatch" onclick="copyHex('#171717')">
@@ -140,6 +223,10 @@
             <tr><th>Name</th><th>HEX</th><th>RGB</th><th>HSL</th></tr>
           </thead>
           <tbody>
+            <tr><td>Ship Green</td><td>#00e676</td><td>0, 230, 118</td><td>151, 100%, 45%</td></tr>
+            <tr><td>Green 600</td><td>#00a85c</td><td>0, 168, 92</td><td>153, 100%, 33%</td></tr>
+            <tr><td>Green 700</td><td>#007a47</td><td>0, 122, 71</td><td>155, 100%, 24%</td></tr>
+            <tr><td>Green Tint</td><td>#e6f9ef</td><td>230, 249, 239</td><td>148, 61%, 94%</td></tr>
             <tr><td>Black</td><td>#0a0a0a</td><td>10, 10, 10</td><td>0, 0%, 4%</td></tr>
             <tr><td>Gray 950</td><td>#171717</td><td>23, 23, 23</td><td>0, 0%, 9%</td></tr>
             <tr><td>Gray 800</td><td>#262626</td><td>38, 38, 38</td><td>0, 0%, 15%</td></tr>
@@ -161,7 +248,10 @@
           <li><strong>Text on light backgrounds:</strong> Use Black (#0a0a0a) or Gray 600 (#525252) for body. Never lighter than Gray 500.</li>
           <li><strong>Text on dark backgrounds:</strong> Use White (#fafafa) or Gray 300 (#d4d4d4) for body. Never darker than Gray 400.</li>
           <li><strong>Borders:</strong> Gray 200 on light surfaces, Gray 800 on dark surfaces.</li>
-          <li><strong>Emphasis:</strong> Use weight (bold) and size, not color. Monochrome hierarchy comes from contrast, not hue.</li>
+          <li><strong>Emphasis:</strong> Hierarchy comes from weight, size, and contrast. Green is reserved for the single point of the surface &mdash; not for general emphasis.</li>
+          <li><strong>Green on dark:</strong> Ship Green (#00e676) only. It's tuned for the black canvas.</li>
+          <li><strong>Green on light:</strong> Green 600 (#00a85c) for fills and large text, Green 700 (#007a47) for body-size text and links. Ship Green itself never carries text on white &mdash; it fails contrast (1.6:1).</li>
+          <li><strong>Never</strong> green-on-green, green text on mid-grays, or green paired with any other hue.</li>
         </ul>
       </div>
 
@@ -173,16 +263,20 @@
           <li><strong>Gray 600 on White:</strong> 7.1:1 contrast ratio &mdash; WCAG AAA</li>
           <li><strong>Gray 500 on White:</strong> 4.6:1 contrast ratio &mdash; WCAG AA (large text only)</li>
           <li><strong>White on Gray 950:</strong> 16.2:1 contrast ratio &mdash; WCAG AAA</li>
+          <li><strong>Ship Green on Black:</strong> 11.8:1 contrast ratio &mdash; WCAG AAA</li>
+          <li><strong>Green 600 on White:</strong> 3.0:1 contrast ratio &mdash; UI components and large text only</li>
+          <li><strong>Green 700 on White:</strong> 5.2:1 contrast ratio &mdash; WCAG AA body text</li>
+          <li><strong>Ship Green on White:</strong> 1.6:1 &mdash; fails. Never set #00e676 text on light backgrounds.</li>
         </ul>
       </div>
 
-      <!-- Accent placeholder -->
+      <!-- Why green -->
       <div class="section">
-        <h3>Accent color (reserved)</h3>
-        <p>A brand accent color will be introduced in a future version of this kit. When it arrives, it will be used sparingly &mdash; for CTAs, links, and active states. The monochrome system is designed to accommodate a single accent without disruption.</p>
+        <h3>Why Ship Green</h3>
+        <p>v1.0 reserved this slot on purpose: the monochrome system was designed to accommodate a single accent without disruption. v2.0 fills it. Green is the one color that means what D8A does &mdash; tests pass, pipeline green, shipped. And it's open territory: dbt owns orange, Databricks red, Snowflake and Azure blue, Fabric teal, Power BI yellow. Those logos sit on our own integrations row &mdash; Ship Green collides with none of them.</p>
       </div>
 
-      <div class="footer">D8A Brand Kit &middot; v1.0 &middot; d8a.pro</div>
+      <div class="footer">D8A Brand Kit &middot; v2.0 &middot; d8a.pro</div>
 
     </main>
   </div>

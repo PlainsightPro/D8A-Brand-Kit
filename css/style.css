@@ -1,6 +1,6 @@
 /* =========================================================
    D8A Brand Kit — style.css
-   Monochrome system · Grays + Blacks · Accent TBD
+   Monochrome chassis · Ship Green accent · Dark-led
    ========================================================= */
 
 /* --- Custom Properties ---------------------------------- */
@@ -19,9 +19,15 @@
   --gray-100:    #f5f5f5;
   --white:       #fafafa;
 
-  /* Accent — placeholder, swap when ready */
-  --accent:      #0a0a0a;
-  --accent-soft:  #e5e5e5;
+  /* Ship Green — the one accent. The color of a passing pipeline. */
+  --green:       #00e676;  /* signal — dark canvas only */
+  --green-600:   #00a85c;  /* UI accents, large text on light */
+  --green-700:   #007a47;  /* body-size text and links on light */
+  --green-tint:  #e6f9ef;  /* subtle fills on light */
+  --green-glow:  rgba(0, 230, 118, 0.12);  /* subtle fills on dark */
+
+  --accent:      var(--green-600);
+  --accent-soft: var(--green-tint);
 
   /* Semantic */
   --bg:          var(--white);
@@ -91,6 +97,7 @@ img { max-width: 100%; display: block; }
 }
 
 .sidebar-version {
+  font-family: var(--font-mono);
   font-size: 12px;
   font-weight: 500;
   color: var(--muted);
@@ -136,7 +143,7 @@ img { max-width: 100%; display: block; }
 }
 
 .sidebar nav a.active .nav-num {
-  color: var(--gray-400);
+  color: var(--green);
 }
 
 /* --- Main ----------------------------------------------- */
@@ -152,8 +159,9 @@ img { max-width: 100%; display: block; }
 }
 
 .page-header .section-label {
+  font-family: var(--font-mono);
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: var(--muted);
@@ -187,11 +195,12 @@ img { max-width: 100%; display: block; }
 }
 
 .hero .section-label {
+  font-family: var(--font-mono);
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: var(--gray-400);
+  color: var(--green);
   margin-bottom: 16px;
 }
 
@@ -299,8 +308,9 @@ img { max-width: 100%; display: block; }
 }
 
 .index-card .num {
+  font-family: var(--font-mono);
   font-size: 11px;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   color: var(--muted);
@@ -425,7 +435,7 @@ img { max-width: 100%; display: block; }
 }
 
 .do-card {
-  border-top: 3px solid var(--gray-950);
+  border-top: 3px solid var(--green-600);
 }
 
 .dont-card {
@@ -441,7 +451,7 @@ img { max-width: 100%; display: block; }
   margin-bottom: 12px;
 }
 
-.do-card .label { color: var(--gray-950); }
+.do-card .label { color: var(--green-700); }
 .dont-card .label { color: var(--gray-400); }
 
 .do-card blockquote,
@@ -675,8 +685,9 @@ img { max-width: 100%; display: block; }
   position: absolute;
   bottom: 12px;
   left: 16px;
+  font-family: var(--font-mono);
   font-size: 11px;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: var(--muted);
@@ -743,6 +754,82 @@ img { max-width: 100%; display: block; }
   color: var(--muted);
 }
 
+/* --- Canvas demos (colors page) -------------------------- */
+.canvas-demo {
+  border-radius: var(--radius);
+  padding: 40px 36px;
+  border: 1px solid var(--border);
+  background: #ffffff;
+}
+
+.canvas-demo.dark {
+  background: var(--black);
+  border-color: var(--black);
+}
+
+.canvas-demo .demo-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--green-700);
+  margin-bottom: 12px;
+}
+
+.canvas-demo.dark .demo-eyebrow {
+  color: var(--green);
+}
+
+.canvas-demo .demo-headline {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  color: var(--black);
+  margin-bottom: 8px;
+}
+
+.canvas-demo.dark .demo-headline {
+  color: var(--white);
+}
+
+.canvas-demo .demo-body {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--gray-600);
+  margin-bottom: 20px;
+}
+
+.canvas-demo.dark .demo-body {
+  color: var(--gray-400);
+}
+
+.demo-cta {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: var(--radius);
+  background: var(--green-600);
+  color: #ffffff;
+}
+
+.canvas-demo.dark .demo-cta {
+  background: var(--green);
+  color: var(--black);
+}
+
+/* --- Signal pulse (graphics page) ------------------------- */
+.pulse-path {
+  stroke-dasharray: 60 340;
+  animation: d8a-pulse 3s linear infinite;
+}
+
+@keyframes d8a-pulse {
+  to { stroke-dashoffset: -400; }
+}
+
 /* --- Utility -------------------------------------------- */
 .mt-32 { margin-top: 32px; }
 .mt-24 { margin-top: 24px; }
@@ -752,6 +839,7 @@ img { max-width: 100%; display: block; }
 .text-mono { font-family: var(--font-mono); }
 .text-muted { color: var(--muted); }
 .text-sm { font-size: 13px; }
+.text-green { color: var(--green-700); }
 
 /* --- Responsive ----------------------------------------- */
 @media (max-width: 900px) {
