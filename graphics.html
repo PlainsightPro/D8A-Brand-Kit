@@ -13,7 +13,7 @@
 
     <aside class="sidebar">
       <div class="sidebar-brand"><h1>D8A</h1></div>
-      <div class="sidebar-version">Brand Kit &middot; v2.1</div>
+      <div class="sidebar-version">Brand Kit &middot; v3.0</div>
       <nav>
         <a href="index.html"><span class="nav-num">00</span> Overview</a>
         <a href="positioning.html"><span class="nav-num">01</span> Positioning</a>
@@ -35,7 +35,7 @@
       <div class="page-header">
         <div class="section-label">09 &middot; Graphics</div>
         <h2>Graphic elements</h2>
-        <p class="intro">Two signature motifs define D8A's visual language: the infinity symbol and line art. In v2.0 they gained a heartbeat &mdash; the signal pulse, a Ship Green segment traveling the loop.</p>
+        <p class="intro">Three signature gestures define D8A's visual language: the infinity loop with its signal pulse, line art, and &mdash; new in v3.0 &mdash; the redline: the red stroke that underlines the point or strikes the rejected.</p>
       </div>
 
       <!-- Infinity -->
@@ -62,30 +62,30 @@
       <!-- Signal pulse -->
       <div class="section">
         <h3>The signal pulse</h3>
-        <p>The pulse is a short Ship Green segment (~15% of the path) traveling the loop &mdash; data moving through request &rarr; spec &rarr; build &rarr; ship. In motion it's the loading indicator and the hero animation. Static, it's a single green segment on a gray loop.</p>
+        <p>The pulse is a short Redline segment (~15% of the path) traveling the loop &mdash; data moving through request &rarr; spec &rarr; build &rarr; ship. In motion it's the loading indicator and the hero animation. Static, it's a single red segment on a gray loop.</p>
         <div class="logo-grid mt-24">
           <div class="logo-card bg-black">
             <svg width="120" height="60" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M30 30C30 18 18 10 10 20C2 30 10 50 22 45C34 40 40 30 60 30C80 30 86 40 98 45C110 50 118 30 110 20C102 10 90 18 90 30C90 42 80 50 60 30C40 10 30 42 30 30Z" stroke="#404040" stroke-width="2" fill="none"/>
-              <path class="pulse-tail" pathLength="400" d="M30 30C30 18 18 10 10 20C2 30 10 50 22 45C34 40 40 30 60 30C80 30 86 40 98 45C110 50 118 30 110 20C102 10 90 18 90 30C90 42 80 50 60 30C40 10 30 42 30 30Z" stroke="#00e676" stroke-width="4" fill="none" stroke-linecap="round"/>
-              <path class="pulse-path" pathLength="400" d="M30 30C30 18 18 10 10 20C2 30 10 50 22 45C34 40 40 30 60 30C80 30 86 40 98 45C110 50 118 30 110 20C102 10 90 18 90 30C90 42 80 50 60 30C40 10 30 42 30 30Z" stroke="#00e676" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <path class="pulse-tail" pathLength="400" d="M30 30C30 18 18 10 10 20C2 30 10 50 22 45C34 40 40 30 60 30C80 30 86 40 98 45C110 50 118 30 110 20C102 10 90 18 90 30C90 42 80 50 60 30C40 10 30 42 30 30Z" stroke="#ff2b36" stroke-width="4" fill="none" stroke-linecap="round"/>
+              <path class="pulse-path" pathLength="400" d="M30 30C30 18 18 10 10 20C2 30 10 50 22 45C34 40 40 30 60 30C80 30 86 40 98 45C110 50 118 30 110 20C102 10 90 18 90 30C90 42 80 50 60 30C40 10 30 42 30 30Z" stroke="#ff2b36" stroke-width="2" fill="none" stroke-linecap="round"/>
             </svg>
             <span class="variant-label">Animated pulse + tail &middot; loading &amp; hero</span>
           </div>
           <div class="logo-card bg-black">
             <svg width="120" height="60" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M30 30C30 18 18 10 10 20C2 30 10 50 22 45C34 40 40 30 60 30C80 30 86 40 98 45C110 50 118 30 110 20C102 10 90 18 90 30C90 42 80 50 60 30C40 10 30 42 30 30Z" stroke="#404040" stroke-width="2" fill="none"/>
-              <path pathLength="400" d="M30 30C30 18 18 10 10 20C2 30 10 50 22 45C34 40 40 30 60 30C80 30 86 40 98 45C110 50 118 30 110 20C102 10 90 18 90 30C90 42 80 50 60 30C40 10 30 42 30 30Z" stroke="#00e676" stroke-width="2" fill="none" stroke-linecap="round" stroke-dasharray="60 340"/>
+              <path pathLength="400" d="M30 30C30 18 18 10 10 20C2 30 10 50 22 45C34 40 40 30 60 30C80 30 86 40 98 45C110 50 118 30 110 20C102 10 90 18 90 30C90 42 80 50 60 30C40 10 30 42 30 30Z" stroke="#ff2b36" stroke-width="2" fill="none" stroke-linecap="round" stroke-dasharray="60 340"/>
             </svg>
             <span class="variant-label">Static pulse &middot; print &amp; stills</span>
           </div>
         </div>
         <ul class="mt-16">
-          <li><strong>One pulse per composition.</strong> The pulse counts as the surface's one green statement.</li>
-          <li><strong>The loop stays gray</strong> (Gray 700 #404040 on dark) &mdash; only the pulse is green. Never draw the full loop in green at large scale.</li>
-          <li><strong>The tail is atmosphere:</strong> a wider, 25%-opacity trail behind the pulse (Green Fade). It softens the hard edge between gray and green &mdash; use it whenever the pulse animates.</li>
+          <li><strong>One pulse per composition.</strong> The pulse counts as the surface's one red statement.</li>
+          <li><strong>The loop stays gray</strong> (Gray 700 #404040 on dark) &mdash; only the pulse is red. Never draw the full loop in red at large scale.</li>
+          <li><strong>The tail is atmosphere:</strong> a wider, 25%-opacity trail behind the pulse (Red Fade). It softens the hard edge between gray and red &mdash; use it whenever the pulse animates.</li>
           <li><strong>Motion spec:</strong> 3s per lap, linear, infinite. No easing &mdash; pipelines don't hesitate.</li>
-          <li><strong>On light canvas</strong> the pulse uses Green 600 (#00a85c) on a Gray 300 loop.</li>
+          <li><strong>On light canvas</strong> the pulse uses Red 600 (#e4002b) on a Gray 300 loop.</li>
         </ul>
       </div>
 
@@ -98,6 +98,28 @@
           <li><strong>Loading states:</strong> Animated infinity path as a loading indicator.</li>
           <li><strong>Favicons &amp; app icons:</strong> Simplified thick-stroke version.</li>
           <li><strong>Never fill the infinity.</strong> It's always a stroke/outline. The openness is intentional &mdash; it represents flow.</li>
+        </ul>
+      </div>
+
+      <!-- The redline -->
+      <div class="section">
+        <h3>The redline</h3>
+        <p>The brand's bluntest gesture: a straight red stroke, drawn like an engineer's pen on a spec. It does exactly two things &mdash; it <strong>strikes what we reject</strong>, and it <strong>underlines what we mean</strong>. Nothing else.</p>
+        <div class="logo-grid mt-24">
+          <div class="logo-card bg-black" style="min-height:140px;">
+            <span style="font-size:28px; font-weight:800; letter-spacing:-0.5px; color:#fafafa;">Ship data, not <span class="strike-red">excuses</span>.</span>
+            <span class="variant-label">The strike &middot; reject the noise</span>
+          </div>
+          <div class="logo-card bg-white" style="min-height:140px;">
+            <span style="font-size:28px; font-weight:800; letter-spacing:-0.5px; color:#0a0a0a;">Shipped <span class="underline-red" style="text-decoration-color:#e4002b;">3&times; faster</span>.</span>
+            <span class="variant-label">The underline &middot; mark the point</span>
+          </div>
+        </div>
+        <ul class="mt-16">
+          <li><strong>Straight and honest.</strong> No hand-drawn wobble, no marker texture, no swooshes. The redline is set with type tools: <code>text-decoration-thickness: 0.09em</code>, offset 0.14em for underlines.</li>
+          <li><strong>Strike sparingly.</strong> One struck word or phrase per surface, and only words we genuinely reject: excuses, tickets, handoffs, lock-in. Never strike people, brands, or competitors by name.</li>
+          <li><strong>The redline counts</strong> as the surface's one red statement. A strike and a red CTA on the same slide is one red too many.</li>
+          <li><strong>Color:</strong> Redline (#ff2b36) on dark, Red 600 (#e4002b) on light. The struck text itself keeps its normal color &mdash; only the line is red.</li>
         </ul>
       </div>
 
@@ -133,14 +155,14 @@
               <line x1="150" y1="0" x2="150" y2="120" stroke="#262626" stroke-width="0.5"/>
               <!-- Flow path -->
               <polyline points="20,90 50,60 100,60 150,30" stroke="#525252" stroke-width="1.5" fill="none"/>
-              <line x1="150" y1="30" x2="180" y2="30" stroke="#00e676" stroke-width="1.5"/>
+              <line x1="150" y1="30" x2="180" y2="30" stroke="#ff2b36" stroke-width="1.5"/>
               <circle cx="20" cy="90" r="3" fill="#737373"/>
               <circle cx="50" cy="60" r="3" fill="#737373"/>
               <circle cx="100" cy="60" r="3" fill="#737373"/>
               <circle cx="150" cy="30" r="3" fill="#737373"/>
-              <circle cx="180" cy="30" r="3" fill="#00e676"/>
+              <circle cx="180" cy="30" r="3" fill="#ff2b36"/>
             </svg>
-            <span class="variant-label">Grid &amp; flow &middot; green = shipped</span>
+            <span class="variant-label">Grid &amp; flow &middot; red = shipped</span>
           </div>
         </div>
       </div>
@@ -150,7 +172,7 @@
         <h3>Line art rules</h3>
         <ul>
           <li><strong>Stroke weight:</strong> 1&ndash;2px for detail, 0.5px for grid backgrounds.</li>
-          <li><strong>Color:</strong> Gray scale carries the structure. Black (#0a0a0a) for primary strokes, Gray 400 (#a3a3a3) for secondary, Gray 200 (#e5e5e5) for background grids. The <em>active path</em> &mdash; the one that shipped &mdash; may be Ship Green. Max one green path per composition.</li>
+          <li><strong>Color:</strong> Gray scale carries the structure. Black (#0a0a0a) for primary strokes, Gray 400 (#a3a3a3) for secondary, Gray 200 (#e5e5e5) for background grids. The <em>active path</em> &mdash; the one that shipped &mdash; may be Redline. Max one red path per composition.</li>
           <li><strong>Nodes:</strong> Always circles, never squares. Stroke only (no fill) for primary nodes. Small filled dots for waypoints.</li>
           <li><strong>Flow direction:</strong> Left to right, or top to bottom. Never right-to-left.</li>
           <li><strong>No decorative curves.</strong> Lines are straight or use 90-degree angles. Bezier curves only for the infinity symbol.</li>
@@ -182,7 +204,7 @@
         </div>
       </div>
 
-      <div class="footer">D8A Brand Kit &middot; v2.1 &middot; d8a.pro</div>
+      <div class="footer">D8A Brand Kit &middot; v3.0 &middot; d8a.pro</div>
 
     </main>
   </div>

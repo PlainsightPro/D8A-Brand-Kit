@@ -1,6 +1,6 @@
 /* =========================================================
    D8A Brand Kit — style.css
-   Monochrome chassis · Ship Green accent · Dark-led
+   Monochrome chassis · Redline accent · Dark-led
    ========================================================= */
 
 /* --- Custom Properties ---------------------------------- */
@@ -19,26 +19,26 @@
   --gray-100:    #f5f5f5;
   --white:       #fafafa;
 
-  /* Ship Green — the one accent. The color of a passing pipeline. */
-  --green:       #00e676;  /* signal — dark canvas only */
-  --green-600:   #00a85c;  /* UI accents, large text on light */
-  --green-700:   #007a47;  /* body-size text and links on light */
-  --green-tint:  #e6f9ef;  /* subtle fills on light */
-  --green-glow:  rgba(0, 230, 118, 0.12);  /* subtle fills on dark */
+  /* Redline — the one accent. The red pen on every spec. */
+  --red:       #ff2b36;  /* signal — dark canvas only */
+  --red-600:   #e4002b;  /* UI accents, large text on light */
+  --red-700:   #b3001f;  /* body-size text and links on light */
+  --red-tint:  #fdeaec;  /* subtle fills on light */
+  --red-glow:  rgba(255, 43, 54, 0.12);  /* subtle fills on dark */
 
-  --accent:      var(--green-600);
-  --accent-soft: var(--green-tint);
+  --accent:      var(--red-600);
+  --accent-soft: var(--red-tint);
 
-  /* Depth (v2.1) — bridge tones between the grays and the green */
-  --green-300:   #7dffb8;  /* mint — gradient endpoints and text on green-tinted darks */
-  --green-900:   #0f2b1c;  /* deep green surface — badges and fills on dark */
-  --ink-green:   #0d1a13;  /* green-tinted black — canvas depth endpoint */
+  /* Depth (v2.1) — bridge tones between the grays and the red */
+  --red-300:   #ff8591;  /* flare — gradient endpoints and text on red-tinted darks */
+  --red-900:   #2b0f14;  /* deep red surface — badges and fills on dark */
+  --ink-red:   #1a0d10;  /* red-tinted black — canvas depth endpoint */
 
   /* Depth (v2.1) — gradient recipes. One hue family per gradient, or a fade to transparent. */
-  --grad-canvas: linear-gradient(160deg, #0a0a0a 0%, #0d1a13 100%);
-  --grad-green:  linear-gradient(135deg, #00e676 0%, #00a85c 100%);
-  --grad-fade:   linear-gradient(180deg, rgba(0, 230, 118, 0.25) 0%, rgba(0, 230, 118, 0) 100%);
-  --glow-signal: radial-gradient(120% 140% at 85% 15%, rgba(0, 230, 118, 0.16) 0%, rgba(0, 230, 118, 0) 55%);
+  --grad-canvas: linear-gradient(160deg, #0a0a0a 0%, #1a0d10 100%);
+  --grad-red:  linear-gradient(135deg, #ff2b36 0%, #e4002b 100%);
+  --grad-fade:   linear-gradient(180deg, rgba(255, 43, 54, 0.25) 0%, rgba(255, 43, 54, 0) 100%);
+  --glow-signal: radial-gradient(120% 140% at 85% 15%, rgba(255, 43, 54, 0.16) 0%, rgba(255, 43, 54, 0) 55%);
 
   /* Semantic */
   --bg:          var(--white);
@@ -54,7 +54,7 @@
   /* Spacing */
   --sidebar-w:   260px;
   --content-max: 960px;
-  --radius:      6px;
+  --radius:      2px;  /* v3.0: sharp edges — blunt, classic, no soft corners */
 }
 
 /* --- Reset ---------------------------------------------- */
@@ -154,7 +154,7 @@ img { max-width: 100%; display: block; }
 }
 
 .sidebar nav a.active .nav-num {
-  color: var(--green);
+  color: var(--red);
 }
 
 /* --- Main ----------------------------------------------- */
@@ -211,7 +211,7 @@ img { max-width: 100%; display: block; }
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: var(--green);
+  color: var(--red);
   margin-bottom: 16px;
 }
 
@@ -221,11 +221,7 @@ img { max-width: 100%; display: block; }
   letter-spacing: -1px;
   line-height: 1.1;
   margin-bottom: 8px;
-  background: linear-gradient(120deg, var(--white) 45%, var(--green-300) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  width: fit-content;
+  color: var(--white);
 }
 
 .hero .tagline-sub {
@@ -244,16 +240,16 @@ img { max-width: 100%; display: block; }
 
 .hero .badge {
   display: inline-block;
-  background: var(--green-glow);
-  border: 1px solid rgba(0, 230, 118, 0.25);
-  color: var(--green-300);
+  background: var(--red-glow);
+  border: 1px solid rgba(255, 43, 54, 0.25);
+  color: var(--red-300);
   font-family: var(--font-mono);
   font-size: 12px;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   padding: 8px 16px;
-  border-radius: 999px;
+  border-radius: var(--radius);
   margin-top: 24px;
 }
 
@@ -453,7 +449,7 @@ img { max-width: 100%; display: block; }
 }
 
 .do-card {
-  border-top: 3px solid var(--green-600);
+  border-top: 3px solid var(--red-600);
 }
 
 .dont-card {
@@ -469,7 +465,7 @@ img { max-width: 100%; display: block; }
   margin-bottom: 12px;
 }
 
-.do-card .label { color: var(--green-700); }
+.do-card .label { color: var(--red-700); }
 .dont-card .label { color: var(--gray-400); }
 
 .do-card blockquote,
@@ -791,12 +787,12 @@ img { max-width: 100%; display: block; }
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: var(--green-700);
+  color: var(--red-700);
   margin-bottom: 12px;
 }
 
 .canvas-demo.dark .demo-eyebrow {
-  color: var(--green);
+  color: var(--red);
 }
 
 .canvas-demo .demo-headline {
@@ -829,12 +825,12 @@ img { max-width: 100%; display: block; }
   font-weight: 600;
   padding: 10px 20px;
   border-radius: var(--radius);
-  background: var(--green-600);
+  background: var(--red-600);
   color: #ffffff;
 }
 
 .canvas-demo.dark .demo-cta {
-  background: var(--grad-green);
+  background: var(--grad-red);
   color: var(--black);
 }
 
@@ -861,11 +857,25 @@ img { max-width: 100%; display: block; }
 }
 
 .grad-text {
-  background: linear-gradient(120deg, var(--white) 45%, var(--green-300) 100%);
+  background: linear-gradient(120deg, var(--white) 45%, var(--red-300) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   width: fit-content;
+}
+
+/* --- The redline (v3.0) ----------------------------------- */
+.strike-red {
+  text-decoration: line-through;
+  text-decoration-color: var(--red);
+  text-decoration-thickness: 0.09em;
+}
+
+.underline-red {
+  text-decoration: underline;
+  text-decoration-color: var(--red);
+  text-decoration-thickness: 0.09em;
+  text-underline-offset: 0.14em;
 }
 
 /* --- Utility -------------------------------------------- */
@@ -877,7 +887,7 @@ img { max-width: 100%; display: block; }
 .text-mono { font-family: var(--font-mono); }
 .text-muted { color: var(--muted); }
 .text-sm { font-size: 13px; }
-.text-green { color: var(--green-700); }
+.text-red { color: var(--red-700); }
 
 /* --- Responsive ----------------------------------------- */
 @media (max-width: 900px) {
