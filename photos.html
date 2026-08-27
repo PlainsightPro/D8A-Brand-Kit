@@ -5,15 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Photography &middot; D8A Brand Kit</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="shell">
 
     <aside class="sidebar">
-      <div class="sidebar-brand"><h1>D<b>8</b>A</h1></div>
-      <div class="sidebar-version">Brand Kit &middot; v4.0</div>
+      <div class="sidebar-brand">
+        <h1>
+          <span class="logo-mark" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none"><path d="M18 32c0-8 6-14 14-14 5 0 9 2 12 6 3-4 7-6 12-6 8 0 14 6 14 14s-6 14-14 14c-5 0-9-2-12-6-3 4-7 6-12 6-8 0-14-6-14-14z" stroke="currentColor" stroke-width="5.5" stroke-linecap="round"/></svg>
+          </span>
+          D8A
+        </h1>
+      </div>
+      <div class="sidebar-version">Brand Kit &middot; v5.0</div>
       <nav>
         <a href="index.html"><span class="nav-num">00</span> Overview</a>
         <a href="positioning.html"><span class="nav-num">01</span> Positioning</a>
@@ -35,95 +43,116 @@
       <div class="page-header">
         <div class="section-label">08 &middot; Photography</div>
         <h2>Photography</h2>
-        <p class="intro">D8A uses three visual moods. Pick the right one for the context. Never mix moods on the same surface.</p>
+        <p class="intro">The product is the photo. On d8a.pro, every feature is a real app.d8a.pro screenshot in a color frame, with window chrome. That is the D8A image system.</p>
       </div>
 
-      <!-- Three moods -->
       <div class="section">
-        <h3>The three moods</h3>
-        <div class="icp-grid">
-          <div class="icp-card">
-            <h4>Abstract &amp; geometric</h4>
-            <p>Data-inspired visuals. Grid patterns, flowing lines, node-and-connection diagrams. Used for hero sections, backgrounds, and brand-level storytelling. Think: the beauty of data structure made visual.</p>
+        <h3>How a D8A image is built</h3>
+        <ol>
+          <li>A real product screenshot (strategy, specs, architecture, board).</li>
+          <li>Window chrome: red / yellow / sky dots + a Geist Mono URL such as <code>app.d8a.pro / spec → code</code>.</li>
+          <li>A color frame (red / yellow / sky-deep hard-stop gradient). One frame per image.</li>
+          <li>Soft elevation: <code>0 8px 30px rgba(0,0,0,.18)</code>.</li>
+        </ol>
+      </div>
+
+      <div class="section">
+        <h3>Canonical shots (from the site)</h3>
+        <div class="photo-grid">
+          <div class="photo-card">
+            <div class="color-frame frame-c">
+              <div class="mock">
+                <div class="mock-bar">
+                  <i class="d-red"></i><i class="d-yellow"></i><i class="d-blue"></i>
+                  <span class="mock-url">app.d8a.pro / strategy → portfolio</span>
+                </div>
+                <img src="assets/screenshots/strategy-cascade-composite.png" alt="D8A strategy cascade: business pillars mapped to a scored use-case portfolio.">
+              </div>
+            </div>
+            <div class="caption">01 &middot; Strategy → portfolio &middot; frame-c</div>
           </div>
-          <div class="icp-card">
-            <h4>Dark moody tech</h4>
-            <p>High-contrast, low-light, dark backgrounds with subtle illumination. Server racks under status LEDs, circuit-board close-ups, code on screens in the dark. Used for technical content, developer-facing materials, and "under the hood" stories.</p>
+          <div class="photo-card">
+            <div class="color-frame frame-b">
+              <div class="mock">
+                <div class="mock-bar">
+                  <i class="d-red"></i><i class="d-yellow"></i><i class="d-blue"></i>
+                  <span class="mock-url">app.d8a.pro / spec → code</span>
+                </div>
+                <img src="assets/screenshots/specs-cascade-composite.png" alt="D8A specs cascade: living specification beside generated SQL, kept in sync.">
+              </div>
+            </div>
+            <div class="caption">02 &middot; Spec → code &middot; frame-b</div>
           </div>
-          <div class="icp-card">
-            <h4>Clean, bright, minimal</h4>
-            <p>White space, sharp edges, no clutter. Product screenshots, UI details, workspace setups. Used for product marketing, feature pages, and documentation. The product is the hero &mdash; the photo just frames it.</p>
+          <div class="photo-card">
+            <div class="color-frame frame-c">
+              <div class="mock">
+                <div class="mock-bar">
+                  <i class="d-red"></i><i class="d-yellow"></i><i class="d-blue"></i>
+                  <span class="mock-url">app.d8a.pro / architecture</span>
+                </div>
+                <img src="assets/screenshots/architecture-cascade-composite.png" alt="D8A architecture marketplace: Medallion, Data Mesh, Data Vault, Data Warehouse.">
+              </div>
+            </div>
+            <div class="caption">03 &middot; Architecture &middot; frame-c</div>
+          </div>
+          <div class="photo-card">
+            <div class="color-frame frame-d">
+              <div class="mock">
+                <div class="mock-bar">
+                  <i class="d-red"></i><i class="d-yellow"></i><i class="d-blue"></i>
+                  <span class="mock-url">app.d8a.pro / board</span>
+                </div>
+                <img src="assets/screenshots/board-cascade-composite.png" alt="D8A delivery board with autonomy tags per column.">
+              </div>
+            </div>
+            <div class="caption">04 &middot; Board / command &middot; frame-d</div>
           </div>
         </div>
       </div>
 
-      <!-- When to use which -->
       <div class="section">
-        <h3>When to use which</h3>
+        <h3>When to use which mood</h3>
         <table class="color-table">
           <thead>
-            <tr><th>Context</th><th>Mood</th><th>Example</th></tr>
+            <tr><th>Context</th><th>Treatment</th><th>Example</th></tr>
           </thead>
           <tbody>
-            <tr><td>Landing page hero</td><td>Abstract &amp; geometric</td><td>Flowing data lines on dark background</td></tr>
-            <tr><td>Blog post header</td><td>Dark moody tech</td><td>Close-up of data visualization, low light</td></tr>
-            <tr><td>Feature page</td><td>Clean, bright, minimal</td><td>Product screenshot with white surround</td></tr>
-            <tr><td>Sales deck cover</td><td>Abstract &amp; geometric</td><td>Grid pattern with infinity motif</td></tr>
-            <tr><td>Technical docs</td><td>Clean, bright, minimal</td><td>UI walkthrough screenshots</td></tr>
-            <tr><td>LinkedIn post</td><td>Any (match content)</td><td>Product GIF or abstract visual</td></tr>
+            <tr><td>Landing / feature</td><td>Color-framed product shot</td><td>The four canonical shots above</td></tr>
+            <tr><td>Hero / OG image</td><td>Canvas + wordmark + optional framed shot</td><td>Soft orbs at low opacity allowed</td></tr>
+            <tr><td>Docs / changelog</td><td>Unframed UI crop, canvas surround</td><td>A single panel, no stock</td></tr>
+            <tr><td>LinkedIn</td><td>Framed shot or chrome-dots title card</td><td>One idea, one image</td></tr>
+            <tr><td>Never</td><td>Dark moody stock tech, handshakes, glowing globes</td><td>Retired v4.0 mood board</td></tr>
           </tbody>
         </table>
       </div>
 
-      <!-- Treatment rules -->
       <div class="section">
-        <h3>Photo treatment</h3>
+        <h3>Treatment rules</h3>
         <ul>
-          <li><strong>Desaturate.</strong> Reduce saturation to 60&ndash;80% for all photography. D8A's neutrals are cool and tonal &mdash; photos should feel of the same light, not loudly colorful.</li>
-          <li><strong>No filters.</strong> No Instagram-style overlays, no color grading effects, no vintage treatments.</li>
-          <li><strong>No stock clichés.</strong> No handshakes, no people pointing at screens, no "diverse team laughing in a glass meeting room."</li>
-          <li><strong>Crop tight.</strong> Remove anything that doesn't serve the message. Negative space is intentional, not accidental.</li>
-          <li><strong>Monochrome conversion is always safe.</strong> If unsure about color treatment, convert to black and white. It always works with the D8A palette.</li>
-          <li><strong>Cobalt is light, not grade.</strong> Ambient indigo-to-blue illumination is on-brand &mdash; screen glow, server-room blues, refracted light, the cool cast of a monitor at night. But never color-grade a whole image toward blue: the prism should read as light falling on the scene, not a filter over it.</li>
+          <li><strong>Real UI only.</strong> Screenshots from app.d8a.pro. Do not mock imaginary interfaces or photoshop fake data that implies a customer.</li>
+          <li><strong>Always chrome the mock.</strong> Red, yellow, sky dots, then a mono URL. That chrome is brand, not OS decoration.</li>
+          <li><strong>One frame per surface.</strong> Do not stack four different frames on one slide.</li>
+          <li><strong>No stock clichés.</strong> No handshakes, no people pointing at screens, no &ldquo;diverse team laughing in a glass meeting room,&rdquo; no blue glowing globes.</li>
+          <li><strong>No Instagram filters, no vintage grade, no purple color-grade.</strong></li>
+          <li><strong>Crop tight.</strong> The product is the hero. Negative space is canvas, not a stock desk.</li>
         </ul>
       </div>
 
-      <!-- Do / Don't -->
       <div class="section">
-        <h3>Do / Don't</h3>
+        <h3>Do / Don&rsquo;t</h3>
         <div class="do-dont-grid">
           <div class="do-card">
             <div class="label">Do</div>
-            <blockquote>Abstract data visualizations &mdash; flowing lines, grid structures, node graphs rendered as art</blockquote>
+            <blockquote>Real product screenshots in a color frame, with window chrome and a mono URL</blockquote>
           </div>
           <div class="dont-card">
-            <div class="label">Don't</div>
-            <blockquote>Generic stock photos of "data" &mdash; blue glowing globes, matrix-style falling numbers, stock dashboards</blockquote>
-          </div>
-        </div>
-        <div class="do-dont-grid mt-16">
-          <div class="do-card">
-            <div class="label">Do</div>
-            <blockquote>Real product screenshots showing the actual D8A interface in use</blockquote>
-          </div>
-          <div class="dont-card">
-            <div class="label">Don't</div>
-            <blockquote>Mockups of imaginary interfaces or photoshopped screen content</blockquote>
-          </div>
-        </div>
-        <div class="do-dont-grid mt-16">
-          <div class="do-card">
-            <div class="label">Do</div>
-            <blockquote>Dark, moody close-ups of real technology &mdash; cables, servers, screens with code</blockquote>
-          </div>
-          <div class="dont-card">
-            <div class="label">Don't</div>
-            <blockquote>Overly staged "tech" photos with perfect lighting and models pretending to code</blockquote>
+            <div class="label">Don&rsquo;t</div>
+            <blockquote>Generic stock of &ldquo;data&rdquo; &mdash; glowing globes, matrix rain, fake dashboards, dark server-room clichés</blockquote>
           </div>
         </div>
       </div>
 
-      <div class="footer">D8A Brand Kit &middot; v4.0 &middot; d8a.pro</div>
+      <div class="footer">D8A Brand Kit &middot; v5.0 &middot; d8a.pro</div>
 
     </main>
   </div>

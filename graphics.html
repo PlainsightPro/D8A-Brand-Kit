@@ -5,15 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Graphics &middot; D8A Brand Kit</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="shell">
 
     <aside class="sidebar">
-      <div class="sidebar-brand"><h1>D<b>8</b>A</h1></div>
-      <div class="sidebar-version">Brand Kit &middot; v4.0</div>
+      <div class="sidebar-brand">
+        <h1>
+          <span class="logo-mark" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none"><path d="M18 32c0-8 6-14 14-14 5 0 9 2 12 6 3-4 7-6 12-6 8 0 14 6 14 14s-6 14-14 14c-5 0-9-2-12-6-3 4-7 6-12 6-8 0-14-6-14-14z" stroke="currentColor" stroke-width="5.5" stroke-linecap="round"/></svg>
+          </span>
+          D8A
+        </h1>
+      </div>
+      <div class="sidebar-version">Brand Kit &middot; v5.0</div>
       <nav>
         <a href="index.html"><span class="nav-num">00</span> Overview</a>
         <a href="positioning.html"><span class="nav-num">01</span> Positioning</a>
@@ -35,178 +43,125 @@
       <div class="page-header">
         <div class="section-label">09 &middot; Graphics</div>
         <h2>Graphic elements</h2>
-        <p class="intro">Three signature gestures define D8A's visual language: the infinity loop with its prism signal pulse, line art, and the prism mark &mdash; the cobalt gradient that lifts the accent word or underlines the point.</p>
+        <p class="intro">Four gestures from the live site: the infinity stroke, window chrome, color frames, and soft ambient orbs. The cobalt prism pulse is retired.</p>
       </div>
 
-      <!-- Infinity -->
       <div class="section">
-        <h3>The infinity symbol</h3>
-        <p>The infinity symbol (&infin;) represents continuous data delivery &mdash; the never-ending loop of request, spec, build, ship. It's our primary graphic mark alongside the wordmark.</p>
-
+        <h3>Infinity stroke</h3>
+        <p>The primary graphic mark. Stroke only, never filled. Same path as the logo. On the site it sits next to the wordmark; at large scale and low opacity it can watermark a hero.</p>
         <div class="logo-grid mt-24">
           <div class="logo-card bg-white">
-            <svg width="120" height="60" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M30 30C30 18 18 10 10 20C2 30 10 50 22 45C34 40 40 30 60 30C80 30 86 40 98 45C110 50 118 30 110 20C102 10 90 18 90 30C90 42 80 50 60 30C40 10 30 42 30 30Z" stroke="#0a0a0a" stroke-width="2" fill="none"/>
+            <svg width="120" height="120" viewBox="0 0 64 64" fill="none">
+              <path d="M18 32c0-8 6-14 14-14 5 0 9 2 12 6 3-4 7-6 12-6 8 0 14 6 14 14s-6 14-14 14c-5 0-9-2-12-6-3 4-7 6-12 6-8 0-14-6-14-14z" stroke="#262626" stroke-width="5.5" stroke-linecap="round"/>
             </svg>
-            <span class="variant-label">Thin stroke &middot; light bg</span>
+            <span class="variant-label">Ink on light</span>
           </div>
-          <div class="logo-card bg-black">
-            <svg width="120" height="60" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M30 30C30 18 18 10 10 20C2 30 10 50 22 45C34 40 40 30 60 30C80 30 86 40 98 45C110 50 118 30 110 20C102 10 90 18 90 30C90 42 80 50 60 30C40 10 30 42 30 30Z" stroke="#fafafa" stroke-width="2" fill="none"/>
+          <div class="logo-card bg-dark">
+            <svg width="120" height="120" viewBox="0 0 64 64" fill="none">
+              <path d="M18 32c0-8 6-14 14-14 5 0 9 2 12 6 3-4 7-6 12-6 8 0 14 6 14 14s-6 14-14 14c-5 0-9-2-12-6-3 4-7 6-12 6-8 0-14-6-14-14z" stroke="#ffffff" stroke-width="5.5" stroke-linecap="round"/>
             </svg>
-            <span class="variant-label">Thin stroke &middot; dark bg</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Signal pulse -->
-      <div class="section">
-        <h3>The signal pulse</h3>
-        <p>The pulse is a short prism segment (~15% of the path) traveling the loop &mdash; data moving through request &rarr; spec &rarr; build &rarr; ship, refracting from indigo to blue as it goes. In motion it's the loading indicator and the hero animation. Static, it's a single gradient segment on a grey loop.</p>
-        <div class="logo-grid mt-24">
-          <div class="logo-card bg-white">
-            <svg width="120" height="60" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <defs><linearGradient id="pulseGradL" x1="0" y1="0" x2="120" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#5340e6"/><stop offset="1" stop-color="#2e6bff"/></linearGradient></defs>
-              <path d="M30 30C30 18 18 10 10 20C2 30 10 50 22 45C34 40 40 30 60 30C80 30 86 40 98 45C110 50 118 30 110 20C102 10 90 18 90 30C90 42 80 50 60 30C40 10 30 42 30 30Z" stroke="#d4d4d4" stroke-width="2" fill="none"/>
-              <path class="pulse-tail" pathLength="400" d="M30 30C30 18 18 10 10 20C2 30 10 50 22 45C34 40 40 30 60 30C80 30 86 40 98 45C110 50 118 30 110 20C102 10 90 18 90 30C90 42 80 50 60 30C40 10 30 42 30 30Z" stroke="url(#pulseGradL)" stroke-width="4" fill="none" stroke-linecap="round"/>
-              <path class="pulse-path" pathLength="400" d="M30 30C30 18 18 10 10 20C2 30 10 50 22 45C34 40 40 30 60 30C80 30 86 40 98 45C110 50 118 30 110 20C102 10 90 18 90 30C90 42 80 50 60 30C40 10 30 42 30 30Z" stroke="url(#pulseGradL)" stroke-width="2" fill="none" stroke-linecap="round"/>
-            </svg>
-            <span class="variant-label">Animated pulse + tail &middot; on light</span>
-          </div>
-          <div class="logo-card bg-black">
-            <svg width="120" height="60" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <defs><linearGradient id="pulseGradD" x1="0" y1="0" x2="120" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#7d6bff"/><stop offset="1" stop-color="#2e6bff"/></linearGradient></defs>
-              <path d="M30 30C30 18 18 10 10 20C2 30 10 50 22 45C34 40 40 30 60 30C80 30 86 40 98 45C110 50 118 30 110 20C102 10 90 18 90 30C90 42 80 50 60 30C40 10 30 42 30 30Z" stroke="#3a3550" stroke-width="2" fill="none"/>
-              <path class="pulse-path" pathLength="400" d="M30 30C30 18 18 10 10 20C2 30 10 50 22 45C34 40 40 30 60 30C80 30 86 40 98 45C110 50 118 30 110 20C102 10 90 18 90 30C90 42 80 50 60 30C40 10 30 42 30 30Z" stroke="url(#pulseGradD)" stroke-width="2" fill="none" stroke-linecap="round"/>
-            </svg>
-            <span class="variant-label">Animated pulse &middot; on ink</span>
+            <span class="variant-label">White on ink</span>
           </div>
         </div>
         <ul class="mt-16">
-          <li><strong>One pulse per composition.</strong> The pulse counts as the surface's one prism statement.</li>
-          <li><strong>The loop stays grey</strong> (Line #d4d4d4 on light, #3a3550 on ink) &mdash; only the pulse carries the gradient. Never draw the full loop in the gradient at large scale.</li>
-          <li><strong>The tail is atmosphere:</strong> a wider, 28%-opacity trail behind the pulse (Prism Fade). It softens the edge where grey meets gradient &mdash; use it whenever the pulse animates.</li>
-          <li><strong>Motion spec:</strong> 3s per lap, linear, infinite. No easing &mdash; pipelines don't hesitate.</li>
-          <li><strong>Gradient direction</strong> follows the path, indigo leading into blue &mdash; the same 110&deg; refraction as everywhere else.</li>
+          <li><strong>Never fill the infinity.</strong> The openness is the loop.</li>
+          <li><strong>Never draw it in the triad colors</strong> at logo scale. Chrome colors belong to dots and frames.</li>
+          <li><strong>Hero watermark:</strong> large, ~8% opacity, ink on canvas.</li>
+          <li><strong>No prism pulse traveling the path.</strong> That was v4.0.</li>
         </ul>
       </div>
 
-      <!-- Usage rules -->
       <div class="section">
-        <h3>Infinity usage</h3>
-        <ul>
-          <li><strong>Hero backgrounds:</strong> Use at large scale (200px+), low opacity (4&ndash;8%), as a subtle watermark.</li>
-          <li><strong>Section dividers:</strong> Use inline at medium scale with thin stroke as a visual break.</li>
-          <li><strong>Loading states:</strong> Animated infinity path as a loading indicator.</li>
-          <li><strong>Favicons &amp; app icons:</strong> Simplified thick-stroke version.</li>
-          <li><strong>Never fill the infinity.</strong> It's always a stroke/outline. The openness is intentional &mdash; it represents flow.</li>
-        </ul>
-      </div>
-
-      <!-- The prism mark -->
-      <div class="section">
-        <h3>The prism mark</h3>
-        <p>The brand's emphasis gesture: the cobalt gradient applied to the one thing that matters in a line of type. It does exactly two things &mdash; it <strong>lifts the accent word</strong> into the gradient, and it <strong>underlines the point</strong> with a gradient rule. Nothing else.</p>
-        <div class="logo-grid mt-24">
-          <div class="logo-card bg-white" style="min-height:140px;">
-            <span style="font-size:28px; font-weight:800; letter-spacing:-0.5px; color:#15121f;">Ship <span class="mark-grad" style="display:inline;">data</span>, not excuses.</span>
-            <span class="variant-label">The prism word &middot; lift the accent</span>
+        <h3>Window chrome</h3>
+        <p class="mb-16">Three dots &mdash; red, yellow, sky, always in that order &mdash; plus a mono URL. This is how every product mock on the site is introduced. Also used as &ldquo;hero-dots&rdquo; above headlines.</p>
+        <div class="logo-grid">
+          <div class="logo-card bg-white" style="min-height:140px; flex-direction:column; gap:16px;">
+            <div class="hero-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+            <span class="variant-label">Hero dots</span>
           </div>
-          <div class="logo-card bg-white" style="min-height:140px;">
-            <span style="font-size:28px; font-weight:800; letter-spacing:-0.5px; color:#15121f;">Shipped <span class="underline-grad">3&times; faster</span>.</span>
-            <span class="variant-label">The prism underline &middot; mark the point</span>
+          <div class="logo-card bg-light" style="min-height:140px; padding:0; overflow:hidden;">
+            <div class="mock-bar" style="width:100%;">
+              <i class="d-red"></i><i class="d-yellow"></i><i class="d-blue"></i>
+              <span class="mock-url">app.d8a.pro / spec → code</span>
+            </div>
+            <span class="variant-label">Mock chrome</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Color frames</h3>
+        <p class="mb-16">Hard-stop gradients around product shots. Four sanctioned recipes from the site. Padding ~10px, radius 22px. The mock sits inside.</p>
+        <div class="photo-grid">
+          <div>
+            <div class="color-frame frame-a" style="height:88px;"></div>
+            <p class="text-sm text-muted mt-16">frame-a &middot; yellow → sky-deep &middot; 115°</p>
+          </div>
+          <div>
+            <div class="color-frame frame-b" style="height:88px;"></div>
+            <p class="text-sm text-muted mt-16">frame-b &middot; red → sky-deep → yellow &middot; 245°</p>
+          </div>
+          <div>
+            <div class="color-frame frame-c" style="height:88px;"></div>
+            <p class="text-sm text-muted mt-16">frame-c &middot; red → yellow → sky-deep &middot; 205°</p>
+          </div>
+          <div>
+            <div class="color-frame frame-d" style="height:88px;"></div>
+            <p class="text-sm text-muted mt-16">frame-d &middot; sky-deep → yellow &middot; 115°</p>
           </div>
         </div>
         <ul class="mt-16">
-          <li><strong>One word, or one underline &mdash; not both.</strong> The prism mark is the surface's one statement. A gradient word and a gradient CTA on the same slide is one prism too many.</li>
-          <li><strong>Lift what we affirm.</strong> The gradient goes on the word we mean &mdash; <em>data</em>, <em>shipped</em>, <em>faster</em> &mdash; not on what we reject. This world persuades by lighting the point, not striking the enemy.</li>
-          <li><strong>Straight and precise.</strong> The underline is set with type tools: a gradient rule at 0.14em, offset just below the baseline. No wobble, no marker texture.</li>
-          <li><strong>Large only.</strong> The prism word works at 24px+ where the gradient reads; below that, use solid Cobalt 600.</li>
+          <li><strong>One frame per composition.</strong></li>
+          <li><strong>Hard stops, not soft blends.</strong> The site uses percentage stops, not a wash.</li>
+          <li><strong>No indigo, no pink, no cobalt.</strong></li>
         </ul>
       </div>
 
-      <!-- Line art -->
       <div class="section">
-        <h3>Line art</h3>
-        <p>D8A's secondary graphic language is line art &mdash; thin, precise, geometric lines that suggest data flow, connections, and architecture. Inspired by the blueprint/canvas view in the product.</p>
+        <h3>Ambient orbs</h3>
+        <p>Large, heavily blurred circles in sky / teal / yellow / red, drifting slowly behind the page. Atmosphere only. They must never compete with type. Disabled under <code>prefers-reduced-motion</code>.</p>
+      </div>
 
-        <div class="logo-grid mt-24">
-          <div class="logo-card bg-light" style="min-height:200px;">
-            <svg width="200" height="120" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- Nodes -->
-              <circle cx="30" cy="60" r="6" stroke="#0a0a0a" stroke-width="1.5" fill="none"/>
-              <circle cx="100" cy="30" r="6" stroke="#0a0a0a" stroke-width="1.5" fill="none"/>
-              <circle cx="100" cy="90" r="6" stroke="#0a0a0a" stroke-width="1.5" fill="none"/>
-              <circle cx="170" cy="60" r="6" stroke="#0a0a0a" stroke-width="1.5" fill="none"/>
-              <!-- Lines -->
-              <line x1="36" y1="57" x2="94" y2="33" stroke="#a3a3a3" stroke-width="1"/>
-              <line x1="36" y1="63" x2="94" y2="87" stroke="#a3a3a3" stroke-width="1"/>
-              <line x1="106" y1="33" x2="164" y2="57" stroke="#a3a3a3" stroke-width="1"/>
-              <line x1="106" y1="87" x2="164" y2="63" stroke="#a3a3a3" stroke-width="1"/>
-            </svg>
-            <span class="variant-label">Node &amp; connection pattern</span>
-          </div>
-          <div class="logo-card bg-black" style="min-height:200px;">
-            <svg width="200" height="120" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- Grid lines -->
-              <line x1="0" y1="30" x2="200" y2="30" stroke="#262626" stroke-width="0.5"/>
-              <line x1="0" y1="60" x2="200" y2="60" stroke="#262626" stroke-width="0.5"/>
-              <line x1="0" y1="90" x2="200" y2="90" stroke="#262626" stroke-width="0.5"/>
-              <line x1="50" y1="0" x2="50" y2="120" stroke="#262626" stroke-width="0.5"/>
-              <line x1="100" y1="0" x2="100" y2="120" stroke="#262626" stroke-width="0.5"/>
-              <line x1="150" y1="0" x2="150" y2="120" stroke="#262626" stroke-width="0.5"/>
-              <!-- Flow path -->
-              <polyline points="20,90 50,60 100,60 150,30" stroke="#8a86a0" stroke-width="1.5" fill="none"/>
-              <line x1="150" y1="30" x2="180" y2="30" stroke="#6b8cff" stroke-width="1.5"/>
-              <circle cx="20" cy="90" r="3" fill="#9a96ad"/>
-              <circle cx="50" cy="60" r="3" fill="#9a96ad"/>
-              <circle cx="100" cy="60" r="3" fill="#9a96ad"/>
-              <circle cx="150" cy="30" r="3" fill="#9a96ad"/>
-              <circle cx="180" cy="30" r="3" fill="#6b8cff"/>
-            </svg>
-            <span class="variant-label">Grid &amp; flow &middot; prism = shipped</span>
-          </div>
+      <div class="section">
+        <h3>Numbered badges</h3>
+        <p class="mb-16">White pill, hairline rule, Geist Mono. Used as section indexes: 01, 02, 03, Benefits, Concepts.</p>
+        <div class="chips">
+          <span class="chip">01</span>
+          <span class="chip">02</span>
+          <span class="chip">03</span>
+          <span class="chip">Benefits</span>
+          <span class="chip">Concepts</span>
         </div>
       </div>
 
-      <!-- Line art rules -->
       <div class="section">
-        <h3>Line art rules</h3>
-        <ul>
-          <li><strong>Stroke weight:</strong> 1&ndash;2px for detail, 0.5px for grid backgrounds.</li>
-          <li><strong>Color:</strong> Grey scale carries the structure. Ink (#15121f) for primary strokes, Mauve (#6c6781) for secondary, Line (#e7e3f2) for background grids. The <em>active path</em> &mdash; the one that shipped &mdash; may carry the prism gradient. Max one gradient path per composition.</li>
-          <li><strong>Nodes:</strong> Always circles, never squares. Stroke only (no fill) for primary nodes. Small filled dots for waypoints.</li>
-          <li><strong>Flow direction:</strong> Left to right, or top to bottom. Never right-to-left.</li>
-          <li><strong>No decorative curves.</strong> Lines are straight or use 90-degree angles. Bezier curves only for the infinity symbol.</li>
-        </ul>
+        <h3>Vocabulary chips</h3>
+        <p class="mb-16">The site uses a field of terms (Context lake, Specs are the new code, Technology agnostic, Data Mesh&hellip;). Hairline pills, some tinted with sky or teal. Do not treat this as a random tag cloud of buzzwords &mdash; only terms D8A actually uses.</p>
+        <div class="chips">
+          <span class="chip">Context lake</span>
+          <span class="chip">Specs are the new code</span>
+          <span class="chip">Technology agnostic</span>
+          <span class="chip">Data Mesh</span>
+          <span class="chip">Data Vault</span>
+          <span class="chip">Data Product</span>
+        </div>
       </div>
 
-      <!-- Do / Don't -->
       <div class="section">
-        <h3>Do / Don't</h3>
+        <h3>Do / Don&rsquo;t</h3>
         <div class="do-dont-grid">
           <div class="do-card">
             <div class="label">Do</div>
-            <blockquote>Use line art to illustrate data flow, architecture, and connections between components</blockquote>
+            <blockquote>Infinity stroke, chrome dots, one color frame, soft orbs, numbered mono badges</blockquote>
           </div>
           <div class="dont-card">
-            <div class="label">Don't</div>
-            <blockquote>Use line art as pure decoration with no informational purpose</blockquote>
-          </div>
-        </div>
-        <div class="do-dont-grid mt-16">
-          <div class="do-card">
-            <div class="label">Do</div>
-            <blockquote>Keep line art minimal &mdash; fewer elements with clear relationships</blockquote>
-          </div>
-          <div class="dont-card">
-            <div class="label">Don't</div>
-            <blockquote>Create busy, tangled diagrams with dozens of overlapping lines</blockquote>
+            <div class="label">Don&rsquo;t</div>
+            <blockquote>Prism pulse on the loop, gradient underlines, glassmorphism stacks, emoji, decorative 3D</blockquote>
           </div>
         </div>
       </div>
 
-      <div class="footer">D8A Brand Kit &middot; v4.0 &middot; d8a.pro</div>
+      <div class="footer">D8A Brand Kit &middot; v5.0 &middot; d8a.pro</div>
 
     </main>
   </div>

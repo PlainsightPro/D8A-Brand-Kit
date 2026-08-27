@@ -5,15 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Logos &middot; D8A Brand Kit</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="shell">
 
     <aside class="sidebar">
-      <div class="sidebar-brand"><h1>D<b>8</b>A</h1></div>
-      <div class="sidebar-version">Brand Kit &middot; v4.0</div>
+      <div class="sidebar-brand">
+        <h1>
+          <span class="logo-mark" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none"><path d="M18 32c0-8 6-14 14-14 5 0 9 2 12 6 3-4 7-6 12-6 8 0 14 6 14 14s-6 14-14 14c-5 0-9-2-12-6-3 4-7 6-12 6-8 0-14-6-14-14z" stroke="currentColor" stroke-width="5.5" stroke-linecap="round"/></svg>
+          </span>
+          D8A
+        </h1>
+      </div>
+      <div class="sidebar-version">Brand Kit &middot; v5.0</div>
       <nav>
         <a href="index.html"><span class="nav-num">00</span> Overview</a>
         <a href="positioning.html"><span class="nav-num">01</span> Positioning</a>
@@ -35,111 +43,125 @@
       <div class="page-header">
         <div class="section-label">04 &middot; Logos</div>
         <h2>Logo</h2>
-        <p class="intro">The D8A wordmark, with the prism 8 at its centre. Use the right variant for each background. Respect clear space. Never distort.</p>
+        <p class="intro">The lockup from d8a.pro: a stroke infinity plus the D8A wordmark, both in currentColor. Ink on light. White on ink. Never a gradient 8.</p>
       </div>
 
-      <!-- Logo variants -->
       <div class="section">
-        <h3>Wordmark variants</h3>
-        <p class="mb-16">The 8 is the loop, the source, the prism &mdash; it always carries the cobalt gradient. The D and A adapt to the background: ink on light, white on ink. This is the primary mark everywhere, from favicon to billboard.</p>
+        <h3>Primary lockup</h3>
+        <p class="mb-16">This is the mark on the marketing site, the app chrome, and this kit. The infinity is the symbol of the loop (request &rarr; spec &rarr; code &rarr; ship). The letters are Geist 700, tracking -0.03em.</p>
         <div class="logo-grid">
           <div class="logo-card bg-white">
-            <span class="logo-text" style="color: #15121f;">D<b>8</b>A</span>
+            <span class="logo-lockup" style="color:#262626;">
+              <span class="logo-mark" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none"><path d="M18 32c0-8 6-14 14-14 5 0 9 2 12 6 3-4 7-6 12-6 8 0 14 6 14 14s-6 14-14 14c-5 0-9-2-12-6-3 4-7 6-12 6-8 0-14-6-14-14z" stroke="currentColor" stroke-width="5.5" stroke-linecap="round"/></svg>
+              </span>
+              D8A
+            </span>
             <span class="variant-label">Primary &middot; on white</span>
           </div>
           <div class="logo-card bg-light">
-            <span class="logo-text" style="color: #15121f;">D<b>8</b>A</span>
-            <span class="variant-label">Primary &middot; on pearl / mist</span>
+            <span class="logo-lockup" style="color:#262626;">
+              <span class="logo-mark" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none"><path d="M18 32c0-8 6-14 14-14 5 0 9 2 12 6 3-4 7-6 12-6 8 0 14 6 14 14s-6 14-14 14c-5 0-9-2-12-6-3 4-7 6-12 6-8 0-14-6-14-14z" stroke="currentColor" stroke-width="5.5" stroke-linecap="round"/></svg>
+              </span>
+              D8A
+            </span>
+            <span class="variant-label">Primary &middot; on canvas #F7F7F7</span>
           </div>
           <div class="logo-card bg-dark">
-            <span class="logo-text" style="color: #ffffff;">D<b>8</b>A</span>
-            <span class="variant-label">Primary &middot; on ink</span>
+            <span class="logo-lockup">
+              <span class="logo-mark" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none"><path d="M18 32c0-8 6-14 14-14 5 0 9 2 12 6 3-4 7-6 12-6 8 0 14 6 14 14s-6 14-14 14c-5 0-9-2-12-6-3 4-7 6-12 6-8 0-14-6-14-14z" stroke="currentColor" stroke-width="5.5" stroke-linecap="round"/></svg>
+              </span>
+              D8A
+            </span>
+            <span class="variant-label">Inverse &middot; on ink (footer)</span>
           </div>
           <div class="logo-card bg-black">
-            <span class="logo-text" style="color: #ffffff;">D8A</span>
-            <span class="variant-label">Mono fallback &middot; one-colour print</span>
+            <span class="logo-lockup">D8A</span>
+            <span class="variant-label">Wordmark only &middot; one-colour print</span>
           </div>
         </div>
-        <p class="text-sm text-muted mt-16">Last card: where a single flat colour is required (embossing, one-colour print, fax-grade reproduction), the whole wordmark is set solid &mdash; ink on light, white on dark. The gradient is dropped, never faked with a mid-blue.</p>
       </div>
 
-      <!-- Infinity icon -->
       <div class="section">
-        <h3>Infinity icon</h3>
-        <p class="mb-16">The infinity loop is the secondary mark &mdash; continuous delivery, request to ship. Stroke only, never filled. On its own it may carry the prism as a gradient stroke.</p>
+        <h3>Infinity mark</h3>
+        <p class="mb-16">Stroke only, never filled. Path is the site SVG (viewBox 0 0 64 64, stroke-width 5.5, round caps). Use it alone for favicons, app icons, and loading states.</p>
         <div class="logo-grid">
           <div class="logo-card bg-white">
-            <svg width="120" height="60" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <defs><linearGradient id="pg1" x1="0" y1="0" x2="120" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#5340e6"/><stop offset="1" stop-color="#2e6bff"/></linearGradient></defs>
-              <path d="M30 30C30 18 18 10 10 20C2 30 10 50 22 45C34 40 40 30 60 30C80 30 86 40 98 45C110 50 118 30 110 20C102 10 90 18 90 30C90 42 80 50 60 30C40 10 30 42 30 30Z" stroke="url(#pg1)" stroke-width="2.5" fill="none"/>
+            <svg width="96" height="96" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 32c0-8 6-14 14-14 5 0 9 2 12 6 3-4 7-6 12-6 8 0 14 6 14 14s-6 14-14 14c-5 0-9-2-12-6-3 4-7 6-12 6-8 0-14-6-14-14z" stroke="#262626" stroke-width="5.5" stroke-linecap="round"/>
             </svg>
-            <span class="variant-label">Prism stroke &middot; on light</span>
-          </div>
-          <div class="logo-card bg-black">
-            <svg width="120" height="60" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M30 30C30 18 18 10 10 20C2 30 10 50 22 45C34 40 40 30 60 30C80 30 86 40 98 45C110 50 118 30 110 20C102 10 90 18 90 30C90 42 80 50 60 30C40 10 30 42 30 30Z" stroke="#ffffff" stroke-width="2.5" fill="none"/>
-            </svg>
-            <span class="variant-label">Mono stroke &middot; on ink</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- App icon -->
-      <div class="section">
-        <h3>App icon &amp; avatar</h3>
-        <p>For favicons, app icons, and social avatars, the 8 stands alone on a card &mdash; the prism at the smallest legible scale. It reads on light and on ink.</p>
-        <div class="logo-grid mt-24">
-          <div class="logo-card bg-white">
-            <span style="font-size:44px; font-weight:900; letter-spacing:-1px; width:72px; height:72px; border-radius:16px; background:#f3f1fb; display:inline-flex; align-items:center; justify-content:center;"><span class="mark-8">8</span></span>
-            <span class="variant-label">App icon &middot; on light</span>
+            <span class="variant-label">Stroke &middot; ink on light</span>
           </div>
           <div class="logo-card bg-dark">
-            <span style="font-size:44px; font-weight:900; letter-spacing:-1px; width:72px; height:72px; border-radius:16px; background:#1c1733; display:inline-flex; align-items:center; justify-content:center;"><span class="mark-8">8</span></span>
+            <svg width="96" height="96" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 32c0-8 6-14 14-14 5 0 9 2 12 6 3-4 7-6 12-6 8 0 14 6 14 14s-6 14-14 14c-5 0-9-2-12-6-3 4-7 6-12 6-8 0-14-6-14-14z" stroke="#ffffff" stroke-width="5.5" stroke-linecap="round"/>
+            </svg>
+            <span class="variant-label">Stroke &middot; white on ink</span>
+          </div>
+        </div>
+        <div class="code-block mt-16">&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none"&gt;
+  &lt;path d="M18 32c0-8 6-14 14-14 5 0 9 2 12 6 3-4 7-6 12-6 8 0 14 6 14 14s-6 14-14 14c-5 0-9-2-12-6-3 4-7 6-12 6-8 0-14-6-14-14z" stroke="currentColor" stroke-width="5.5" stroke-linecap="round"/&gt;
+&lt;/svg&gt;</div>
+      </div>
+
+      <div class="section">
+        <h3>App icon &amp; avatar</h3>
+        <p>For favicons, app icons, and social avatars, the infinity sits alone on a rounded square. Ink on canvas, or white on ink. Do not put a gradient 8 in the square &mdash; that was v4.0 Prism and is retired.</p>
+        <div class="logo-grid mt-24">
+          <div class="logo-card bg-white">
+            <span style="width:72px; height:72px; border-radius:16px; background:#f7f7f7; border:1px solid #e0e0e0; display:inline-flex; align-items:center; justify-content:center; color:#262626;">
+              <svg width="36" height="36" viewBox="0 0 64 64" fill="none"><path d="M18 32c0-8 6-14 14-14 5 0 9 2 12 6 3-4 7-6 12-6 8 0 14 6 14 14s-6 14-14 14c-5 0-9-2-12-6-3 4-7 6-12 6-8 0-14-6-14-14z" stroke="currentColor" stroke-width="5.5" stroke-linecap="round"/></svg>
+            </span>
+            <span class="variant-label">App icon &middot; on canvas</span>
+          </div>
+          <div class="logo-card bg-dark">
+            <span style="width:72px; height:72px; border-radius:16px; background:#2f2f2f; display:inline-flex; align-items:center; justify-content:center; color:#fff;">
+              <svg width="36" height="36" viewBox="0 0 64 64" fill="none"><path d="M18 32c0-8 6-14 14-14 5 0 9 2 12 6 3-4 7-6 12-6 8 0 14 6 14 14s-6 14-14 14c-5 0-9-2-12-6-3 4-7 6-12 6-8 0-14-6-14-14z" stroke="currentColor" stroke-width="5.5" stroke-linecap="round"/></svg>
+            </span>
             <span class="variant-label">App icon &middot; on ink</span>
           </div>
         </div>
-        <ul class="mt-16">
-          <li><strong>The 8 is the only glyph that carries the prism.</strong> Never gradient the D or the A.</li>
-          <li><strong>The gradient runs one way</strong> &mdash; indigo top-left to blue bottom-right, near 110&deg;. Never re-angle it per placement.</li>
-          <li><strong>Below 16px</strong> the gradient can muddy; drop to solid Cobalt 600 (#4536d6) for the 8 at favicon scale.</li>
-        </ul>
       </div>
 
-      <!-- Clear space -->
       <div class="section">
         <h3>Clear space</h3>
-        <p>The minimum clear space around the logo is equal to the height of the "8" character in the wordmark. No other element may intrude into this zone.</p>
+        <p>The minimum clear space around the lockup is equal to the height of the infinity mark. No other element may intrude into this zone.</p>
         <div class="logo-card bg-light mt-16" style="border: 2px dashed var(--line);">
-          <span class="logo-text" style="color: #15121f; padding: 40px;">D<b>8</b>A</span>
+          <span class="logo-lockup" style="color:#262626; padding: 40px;">
+            <span class="logo-mark" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none"><path d="M18 32c0-8 6-14 14-14 5 0 9 2 12 6 3-4 7-6 12-6 8 0 14 6 14 14s-6 14-14 14c-5 0-9-2-12-6-3 4-7 6-12 6-8 0-14-6-14-14z" stroke="currentColor" stroke-width="5.5" stroke-linecap="round"/></svg>
+            </span>
+            D8A
+          </span>
         </div>
         <p class="text-sm text-muted mt-16">The dashed border represents the minimum clear-space boundary.</p>
       </div>
 
-      <!-- Minimum size -->
       <div class="section">
         <h3>Minimum size</h3>
         <ul>
-          <li><strong>Digital:</strong> 24px height minimum for the wordmark</li>
-          <li><strong>Print:</strong> 10mm height minimum for the wordmark</li>
-          <li><strong>Icon only:</strong> 16px / 6mm minimum</li>
+          <li><strong>Digital lockup:</strong> 24px height minimum</li>
+          <li><strong>Print lockup:</strong> 10mm height minimum</li>
+          <li><strong>Infinity only:</strong> 16px / 6mm minimum</li>
         </ul>
       </div>
 
-      <!-- Don'ts -->
       <div class="section">
-        <h3>Don't</h3>
+        <h3>Don&rsquo;t</h3>
         <ul>
-          <li>Don't rotate, skew, or distort the logo</li>
-          <li>Don't add drop shadows, outlines, or bevels to the wordmark</li>
-          <li>Don't change the font of the wordmark</li>
-          <li>Don't place the logo on busy backgrounds without sufficient contrast</li>
-          <li>Don't lock up the wordmark with other brand names or logos</li>
-          <li>Don't gradient any glyph other than the 8, or re-angle the prism per placement</li>
-          <li>Don't fake the gradient with a flat mid-blue &mdash; use the true prism, or the solid mono fallback</li>
+          <li>Don&rsquo;t rotate, skew, or distort the mark</li>
+          <li>Don&rsquo;t add drop shadows, outlines, or bevels</li>
+          <li>Don&rsquo;t set the wordmark in a font other than Geist</li>
+          <li>Don&rsquo;t fill the infinity</li>
+          <li>Don&rsquo;t gradient the 8, the D, the A, or the loop &mdash; that was Prism, it is retired</li>
+          <li>Don&rsquo;t recolor the lockup with sky, yellow, red, or teal; those colors belong to chrome and frames</li>
+          <li>Don&rsquo;t lock up the wordmark with other brand names</li>
         </ul>
       </div>
 
-      <div class="footer">D8A Brand Kit &middot; v4.0 &middot; d8a.pro</div>
+      <div class="footer">D8A Brand Kit &middot; v5.0 &middot; d8a.pro</div>
 
     </main>
   </div>

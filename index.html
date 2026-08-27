@@ -5,18 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Overview &middot; D8A Brand Kit</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="shell">
 
-    <!-- Sidebar -->
     <aside class="sidebar">
       <div class="sidebar-brand">
-        <h1>D<b>8</b>A</h1>
+        <h1>
+          <span class="logo-mark" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none"><path d="M18 32c0-8 6-14 14-14 5 0 9 2 12 6 3-4 7-6 12-6 8 0 14 6 14 14s-6 14-14 14c-5 0-9-2-12-6-3 4-7 6-12 6-8 0-14-6-14-14z" stroke="currentColor" stroke-width="5.5" stroke-linecap="round"/></svg>
+          </span>
+          D8A
+        </h1>
       </div>
-      <div class="sidebar-version">Brand Kit &middot; v4.0</div>
+      <div class="sidebar-version">Brand Kit &middot; v5.0</div>
       <nav>
         <a href="index.html" class="active"><span class="nav-num">00</span> Overview</a>
         <a href="positioning.html"><span class="nav-num">01</span> Positioning</a>
@@ -33,44 +38,49 @@
       </nav>
     </aside>
 
-    <!-- Main -->
     <main class="main">
 
-      <!-- Hero -->
       <div class="hero">
-        <div class="section-label">D8A Brand Kit &middot; v4.0 &middot; Prism</div>
-        <h2>Ship <span class="grad">data</span>, not excuses.</h2>
-        <div class="tagline-sub">DataOps how it always should have been.</div>
+        <div class="hero-orbs" aria-hidden="true">
+          <span class="hero-orb hero-orb--sky"></span>
+          <span class="hero-orb hero-orb--teal"></span>
+          <span class="hero-orb hero-orb--yellow"></span>
+        </div>
+        <div class="hero-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="section-label">D8A Brand Kit &middot; v5.0 &middot; from d8a.pro</div>
+        <h2>The autonomous<br>D8A platform.</h2>
+        <div class="tagline-sub">Every person is a data person</div>
         <p class="intro">
           The single source of truth for how D8A looks, sounds, and shows up.
-          Use it whenever you build something with our name on it.
+          Locked to the live marketing site. Use it whenever you build something with our name on it.
         </p>
         <span class="badge">Platform-agnostic DataOps</span>
-        <div class="hero-motif">&infin;</div>
+        <div class="hero-motif" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none"><path d="M18 32c0-8 6-14 14-14 5 0 9 2 12 6 3-4 7-6 12-6 8 0 14 6 14 14s-6 14-14 14c-5 0-9-2-12-6-3 4-7 6-12 6-8 0-14-6-14-14z" stroke="currentColor" stroke-width="5.5" stroke-linecap="round"/></svg>
+        </div>
       </div>
 
-      <!-- What changed -->
       <div class="section">
-        <h3>What changed in v4.0 &mdash; Prism</h3>
-        <p class="mb-16">v1.0 was the monochrome chassis. Earlier accents &mdash; a polite green, a blunt red &mdash; were the wrong <em>shape</em> for what D8A is. v4.0 makes the accent a <strong>prism</strong>: a cobalt-to-blue gradient on a light pearl canvas. One truth, refracted into a spectrum &mdash; exactly what platform-agnostic means.</p>
+        <h3>What changed in v5.0</h3>
+        <p class="mb-16">v4.0 Prism (cobalt gradient on pearl, Inter, AI-adjacent purple) is retired. v5.0 is the identity that ships on <strong>d8a.pro</strong> &mdash; the Bauplan-inspired light canvas from <code>d8a-website-v2</code>.</p>
         <ul>
-          <li><strong>The prism (Cobalt &rarr; Blue)</strong> &mdash; the accent is a gradient, not a hex. #5340e6 &rarr; #2e6bff, disciplined to one statement per surface. See <a href="colors.html" class="text-accent"><strong>Colors</strong></a>.</li>
-          <li><strong>Light-led</strong> &mdash; the canvas is Pearl (#fbfaff) with an ambient Signal Mesh; Ink is the secondary surface for depth. The brand shows up bright, not dark.</li>
-          <li><strong>Soft &amp; dimensional</strong> &mdash; rounded corners, frosted glass, soft prism glow. The opposite of blunt; premium, current, confident.</li>
-          <li><strong>The one-weapon rule</strong> &mdash; kept: exactly one prism <em>statement</em> per surface; mesh, tints, and fades are atmosphere and don&rsquo;t count.</li>
-          <li><strong>The spec voice &amp; the pulse</strong> &mdash; JetBrains Mono for labels and stats; the prism pulse traveling the infinity loop; the gradient 8 in the wordmark. See <a href="fonts.html"><strong>Fonts</strong></a> and <a href="logos.html"><strong>Logos</strong></a>.</li>
+          <li><strong>No AI purple.</strong> The cobalt prism (#5340e6 &rarr; #2e6bff) is gone. Accents are sky, yellow, red, and teal &mdash; used as chrome and frames, not as a gradient theme.</li>
+          <li><strong>Light canvas + ink.</strong> Page background is #F7F7F7. Type and primary buttons are ink #262626. Body copy is blue #2D6FA8 (WCAG AA).</li>
+          <li><strong>Geist, not Inter.</strong> UI, headings, and body are Geist. Labels and code are Geist Mono / JetBrains Mono. See <a href="fonts.html"><strong>Fonts</strong></a>.</li>
+          <li><strong>Infinity + wordmark.</strong> The logo is a stroke infinity lockup plus D8A, all ink. The 8 is not a gradient. See <a href="logos.html"><strong>Logos</strong></a>.</li>
+          <li><strong>Color-frame product mocks.</strong> Product screenshots sit in red / yellow / sky frames with window chrome. The product is the proof. See <a href="photos.html"><strong>Photography</strong></a> and <a href="graphics.html"><strong>Graphics</strong></a>.</li>
+          <li><strong>Copy from the live site.</strong> Headlines, benefits, cascade, and FAQ in this kit match d8a-website-v2. See <a href="positioning.html"><strong>Positioning</strong></a> and <a href="voice.html"><strong>Voice</strong></a>.</li>
         </ul>
       </div>
 
-      <!-- Browse -->
-      <h2 style="font-size:28px; font-weight:800; margin-bottom:24px;">Browse the kit</h2>
+      <h2 style="font-size:28px; font-weight:700; margin-bottom:24px;">Browse the kit</h2>
 
       <div class="index-grid">
 
         <a href="positioning.html" class="index-card">
           <div class="num">01 &middot; Positioning</div>
           <h3>Brand positioning</h3>
-          <p>Value proposition, ideal customer profile, customer pains and gains.</p>
+          <p>The autonomous DataOps workspace. Strategy to code. Architect and Ship. Who it is for.</p>
         </a>
 
         <a href="guidelines.html" class="index-card">
@@ -88,54 +98,54 @@
         <a href="logos.html" class="index-card">
           <div class="num">04 &middot; Logos</div>
           <h3>Logo</h3>
-          <p>Wordmark with the prism 8. On light, on ink. With clear-space and minimum-size rules.</p>
+          <p>Infinity mark + D8A wordmark. Ink on canvas, white on ink. Clear-space and minimum-size rules.</p>
         </a>
 
         <a href="colors.html" class="index-card">
           <div class="num">05 &middot; Colors</div>
           <h3>Colors</h3>
-          <p>Pearl &amp; ink + the Cobalt prism &mdash; the gradient accent, the one-weapon rule, and the light-led dual system.</p>
+          <p>Canvas, ink, body blue, and the red / yellow / sky / teal triad. No AI purple.</p>
         </a>
 
         <a href="fonts.html" class="index-card">
           <div class="num">06 &middot; Fonts</div>
           <h3>Typography</h3>
-          <p>Inter leads. JetBrains Mono is the spec voice &mdash; labels, stats, code. Every size rendered live.</p>
+          <p>Geist leads. Geist Mono and JetBrains Mono are the spec voice &mdash; labels, stats, code.</p>
         </a>
 
         <a href="voice.html" class="index-card">
           <div class="num">07 &middot; Brand voice</div>
           <h3>How we sound</h3>
-          <p>Direct, positive, no-fluff. Voice principles and we say / we don't say pairs.</p>
+          <p>Direct, concrete, no fluff. Lines taken from the live site, plus we say / we don&rsquo;t say.</p>
         </a>
 
         <a href="photos.html" class="index-card">
           <div class="num">08 &middot; Photography</div>
           <h3>Photography</h3>
-          <p>Abstract data visuals, dark moody tech, clean minimal. The three D8A moods.</p>
+          <p>The product is the photo. Color-framed screenshots from app.d8a.pro, not stock tech.</p>
         </a>
 
         <a href="graphics.html" class="index-card">
           <div class="num">09 &middot; Graphics</div>
           <h3>Graphic elements</h3>
-          <p>The infinity symbol, line art, and the signal pulse &mdash; the prism segment traveling the loop.</p>
+          <p>Infinity stroke, window chrome, color frames, ambient orbs, numbered badges.</p>
         </a>
 
         <a href="icons.html" class="index-card">
           <div class="num">10 &middot; Icons</div>
           <h3>Iconography</h3>
-          <p>The icon family we use and the style rules that keep them consistent.</p>
+          <p>Stroke SVG, currentColor, no emoji. The set used on the marketing site.</p>
         </a>
 
         <a href="charts.html" class="index-card">
           <div class="num">11 &middot; Charts</div>
           <h3>Charts &amp; data viz</h3>
-          <p>Gray carries the data, the prism makes the point. One hero series per chart.</p>
+          <p>Ink makes the point. Gray carries the rest. Semantic teal and red only when the data is semantic.</p>
         </a>
 
       </div>
 
-      <div class="footer">D8A Brand Kit &middot; v4.0 &middot; d8a.pro</div>
+      <div class="footer">D8A Brand Kit &middot; v5.0 &middot; d8a.pro</div>
 
     </main>
   </div>
