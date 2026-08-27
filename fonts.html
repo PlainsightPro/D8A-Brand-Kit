@@ -5,15 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fonts &middot; D8A Brand Kit</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="shell">
 
     <aside class="sidebar">
-      <div class="sidebar-brand"><h1>D<b>8</b>A</h1></div>
-      <div class="sidebar-version">Brand Kit &middot; v4.0</div>
+      <div class="sidebar-brand">
+        <h1>
+          <span class="logo-mark" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none"><path d="M18 32c0-8 6-14 14-14 5 0 9 2 12 6 3-4 7-6 12-6 8 0 14 6 14 14s-6 14-14 14c-5 0-9-2-12-6-3 4-7 6-12 6-8 0-14-6-14-14z" stroke="currentColor" stroke-width="5.5" stroke-linecap="round"/></svg>
+          </span>
+          D8A
+        </h1>
+      </div>
+      <div class="sidebar-version">Brand Kit &middot; v5.0</div>
       <nav>
         <a href="index.html"><span class="nav-num">00</span> Overview</a>
         <a href="positioning.html"><span class="nav-num">01</span> Positioning</a>
@@ -35,139 +43,108 @@
       <div class="page-header">
         <div class="section-label">06 &middot; Fonts</div>
         <h2>Typography</h2>
-        <p class="intro">Inter for headings and body. JetBrains Mono for everything that reads like a spec &mdash; labels, stats, metadata, code. Two families, two jobs.</p>
+        <p class="intro">Geist for headings, UI, and body. Geist Mono and JetBrains Mono for everything that reads like a spec &mdash; labels, stats, metadata, code. Two jobs, two families.</p>
       </div>
 
-      <!-- Inter headings -->
       <div class="section">
-        <h3>Inter &mdash; headings</h3>
+        <h3>Geist &mdash; headings</h3>
+        <p class="mb-16">The live site loads Geist 400 / 500 / 600 / 700. Headlines are 700, tight tracking, sentence case. Hero size is <code>clamp(42px, 5.6vw, 68px)</code>. Section H2 is <code>clamp(30px, 3.4vw, 42px)</code>.</p>
 
         <div class="type-specimen">
-          <div class="sample" style="font-size:48px; font-weight:800; letter-spacing:-1px; line-height:1.1;">
-            Ship data, not excuses.
+          <div class="sample" style="font-size:48px; font-weight:700; letter-spacing:-1px; line-height:1.1;">
+            The autonomous D8A platform.
           </div>
-          <div class="spec">Inter &middot; 48px &middot; ExtraBold (800) &middot; -1px tracking</div>
+          <div class="spec">Geist &middot; 48px &middot; Bold (700) &middot; -1px tracking &middot; hero</div>
         </div>
 
         <div class="type-specimen">
-          <div class="sample" style="font-size:48px; font-weight:800; letter-spacing:-1px; line-height:1.1; color:#15121f;">
-            Ship <span class="grad-text" style="display:inline;">data</span>, not excuses.
+          <div class="sample" style="font-size:36px; font-weight:700; letter-spacing:-0.5px; line-height:1.15;">
+            Specs are the new code
           </div>
-          <div class="spec">Prism headline &middot; the accent word set in the Cobalt gradient &middot; display sizes only (24px+), one word per headline</div>
-        </div>
-
-        <div class="type-specimen">
-          <div class="sample" style="font-size:36px; font-weight:800; letter-spacing:-0.5px; line-height:1.15;">
-            Platform-agnostic DataOps
-          </div>
-          <div class="spec">Inter &middot; 36px &middot; ExtraBold (800) &middot; -0.5px tracking</div>
+          <div class="spec">Geist &middot; 36px &middot; Bold (700) &middot; section H2</div>
         </div>
 
         <div class="type-specimen">
           <div class="sample" style="font-size:28px; font-weight:700; line-height:1.2;">
-            Spec-first, agentic, business-led
+            Human in command. Always.
           </div>
-          <div class="spec">Inter &middot; 28px &middot; Bold (700)</div>
+          <div class="spec">Geist &middot; 28px &middot; Bold (700)</div>
         </div>
 
         <div class="type-specimen">
           <div class="sample" style="font-size:22px; font-weight:700; letter-spacing:-0.3px; line-height:1.3;">
-            Customer pains and gains
+            Stop managing process. Start shipping data.
           </div>
-          <div class="spec">Inter &middot; 22px &middot; Bold (700) &middot; -0.3px tracking</div>
-        </div>
-
-        <div class="type-specimen">
-          <div class="sample" style="font-size:18px; font-weight:700; line-height:1.4;">
-            Section heading
-          </div>
-          <div class="spec">Inter &middot; 18px &middot; Bold (700)</div>
+          <div class="spec">Geist &middot; 22px &middot; Bold (700)</div>
         </div>
       </div>
 
-      <!-- Inter body -->
       <div class="section">
-        <h3>Inter &mdash; body &amp; UI</h3>
+        <h3>Geist &mdash; body &amp; UI</h3>
+        <p class="mb-16">Body is 16px / 1.55, in body blue (#2D6FA8), not gray. Buttons are uppercase tracking on Geist 600.</p>
 
         <div class="type-specimen">
-          <div class="sample" style="font-size:17px; font-weight:400; line-height:1.7; color:var(--gray-600);">
-            D8A brings business, data, and AI agents together to deliver end-to-end data pipelines. Spec-first, agentic, business-led. No lock-in. No drama.
+          <div class="sample" style="font-size:17px; font-weight:400; line-height:1.7; color:#2d6fa8;">
+            Every person is a data person. From business strategy to production code, in one workspace. Technology-agnostic. Context-driven. AI-generated, human-curated.
           </div>
-          <div class="spec">Inter &middot; 17px &middot; Regular (400) &middot; 1.7 line-height &middot; Intro text</div>
+          <div class="spec">Geist &middot; 17px &middot; Regular (400) &middot; body blue &middot; intro</div>
         </div>
 
         <div class="type-specimen">
-          <div class="sample" style="font-size:15px; font-weight:400; line-height:1.7; color:var(--gray-600);">
-            Every data request becomes a structured spec. AI agents help translate business language into technical requirements. Nothing falls through the cracks.
+          <div class="sample" style="font-size:16px; font-weight:400; line-height:1.55; color:#2d6fa8;">
+            Business users describe what they need in plain language. D8A crystallizes a complete, reviewable specification grounded in your architecture.
           </div>
-          <div class="spec">Inter &middot; 15px &middot; Regular (400) &middot; 1.7 line-height &middot; Body text</div>
+          <div class="spec">Geist &middot; 16px &middot; Regular (400) &middot; 1.55 line-height &middot; body</div>
         </div>
 
         <div class="type-specimen">
-          <div class="sample" style="font-size:14px; font-weight:500; line-height:1.5;">
-            Button label &nbsp;&middot;&nbsp; Navigation item &nbsp;&middot;&nbsp; Card title
+          <div class="sample" style="font-size:13px; font-weight:600; letter-spacing:0.04em; text-transform:uppercase;">
+            Join the waitlist &nbsp;&middot;&nbsp; See how it works
           </div>
-          <div class="spec">Inter &middot; 14px &middot; Medium (500) &middot; UI elements</div>
+          <div class="spec">Geist &middot; 13px &middot; Semibold (600) &middot; uppercase &middot; buttons</div>
         </div>
 
         <div class="type-specimen">
-          <div class="sample" style="font-size:13px; font-weight:400; line-height:1.5; color:var(--gray-500);">
+          <div class="sample" style="font-size:13px; font-weight:400; line-height:1.5; color:#6b6b6b;">
             Caption text, footnotes, and metadata
           </div>
-          <div class="spec">Inter &middot; 13px &middot; Regular (400) &middot; Captions</div>
+          <div class="spec">Geist &middot; 13px &middot; Regular (400) &middot; muted</div>
         </div>
-
       </div>
 
-      <!-- JetBrains Mono -->
       <div class="section">
-        <h3>JetBrains Mono &mdash; the spec voice</h3>
-        <p class="mb-16">Mono is promoted from code blocks to identity duty. If it reads like a measurement, a label, or a log line, it's mono: eyebrows, section labels, stats, captions, the waitlist counter. A cobalt mono line is the brand's signature &mdash; it reads like a spec annotation.</p>
+        <h3>Geist Mono / JetBrains Mono &mdash; the spec voice</h3>
+        <p class="mb-16">The site stacks <code>"Geist Mono", "JetBrains Mono", ui-monospace</code>. If it reads like a measurement, a label, a URL, or a log line, it is mono: eyebrows, num badges, mock URLs, waitlist counter, SQL.</p>
 
         <div class="type-specimen">
-          <div class="sample" style="font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:500; line-height:1.5; text-transform:uppercase; letter-spacing:1.5px; color:var(--gray-500);">
-            Section label &middot; Category tag &middot; Eyebrow
+          <div class="sample" style="font-family:var(--font-mono); font-size:12px; font-weight:500; line-height:1.5; text-transform:uppercase; letter-spacing:1.5px; color:#6b6b6b;">
+            Platform-agnostic DataOps &nbsp;&middot;&nbsp; 01 &nbsp;&middot;&nbsp; Benefits
           </div>
-          <div class="spec">JetBrains Mono &middot; 12px &middot; Medium (500) &middot; Uppercase &middot; 1.5px tracking &middot; Labels</div>
+          <div class="spec">Geist Mono &middot; 12px &middot; Medium (500) &middot; uppercase &middot; eyebrows / num badges</div>
         </div>
 
         <div class="type-specimen">
-          <div class="sample" style="font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:500; line-height:1.5; text-transform:uppercase; letter-spacing:1.5px; color:#4536d6;">
-            Early access &middot; 41 data leaders on the waitlist
+          <div class="sample" style="font-family:var(--font-mono); font-size:12px; font-weight:500; line-height:1.5; color:#2d6fa8;">
+            Early access · 41 data leaders on the waitlist
           </div>
-          <div class="spec">JetBrains Mono &middot; 12px &middot; Medium (500) &middot; Cobalt 600 on light &middot; The signature line</div>
+          <div class="spec">Geist Mono &middot; 12px &middot; body blue &middot; the signature line</div>
         </div>
 
-        <div class="type-specimen" style="background:#15121f; border-color:#15121f;">
-          <div class="sample" style="font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:500; line-height:1.5; text-transform:uppercase; letter-spacing:1.5px; color:#9db4ff;">
-            Early access &middot; 41 data leaders on the waitlist
+        <div class="type-specimen" style="background:#262626; border-color:#262626;">
+          <div class="sample" style="font-family:var(--font-mono); font-size:12px; font-weight:500; line-height:1.5; color:#a4bcd8;">
+            app.d8a.pro / spec → code
           </div>
-          <div class="spec" style="color:#6c6781;">JetBrains Mono &middot; 12px &middot; Medium (500) &middot; Flash on ink &middot; The signature line, secondary canvas</div>
-        </div>
-
-        <div class="type-specimen">
-          <div class="sample" style="font-family:'JetBrains Mono',monospace; font-size:32px; font-weight:500; line-height:1.2; color:var(--fg);">
-            3&times; faster &middot; 60% &rarr; 12%
-          </div>
-          <div class="spec">JetBrains Mono &middot; 28&ndash;36px &middot; Medium (500) &middot; Stats &amp; key numbers</div>
+          <div class="spec" style="color:#6b6b6b;">Geist Mono &middot; mock URL on ink / mock chrome</div>
         </div>
 
         <div class="type-specimen">
-          <div class="sample" style="font-family:'JetBrains Mono',monospace; font-size:14px; font-weight:400; line-height:1.7; color:var(--gray-600);">
+          <div class="sample" style="font-family:var(--font-mono); font-size:14px; font-weight:400; line-height:1.7; color:#2d6fa8;">
             SELECT * FROM staging.customers WHERE active = true
           </div>
-          <div class="spec">JetBrains Mono &middot; 14px &middot; Regular (400) &middot; Code blocks</div>
-        </div>
-
-        <div class="type-specimen">
-          <div class="sample" style="font-family:'JetBrains Mono',monospace; font-size:13px; font-weight:400; line-height:1.5; color:var(--gray-500);">
-            #0a0a0a &nbsp;&middot;&nbsp; var(--gray-600) &nbsp;&middot;&nbsp; 14px
-          </div>
-          <div class="spec">JetBrains Mono &middot; 13px &middot; Regular (400) &middot; Inline values</div>
+          <div class="spec">JetBrains Mono / Geist Mono &middot; 14px &middot; code</div>
         </div>
       </div>
 
-      <!-- Typography by medium -->
       <div class="section">
         <h3>Typography by medium</h3>
         <table class="color-table">
@@ -175,46 +152,47 @@
             <tr><th>Medium</th><th>Primary font</th><th>Fallback</th></tr>
           </thead>
           <tbody>
-            <tr><td>Website &amp; app</td><td>Inter (Google Fonts)</td><td>system-ui, -apple-system, sans-serif</td></tr>
-            <tr><td>Presentations</td><td>Inter</td><td>Segoe UI, Helvetica Neue</td></tr>
-            <tr><td>Documents</td><td>Inter</td><td>Calibri, Arial</td></tr>
-            <tr><td>LinkedIn &amp; social</td><td>Inter</td><td>Platform default</td></tr>
-            <tr><td>Labels, stats &amp; eyebrows</td><td>JetBrains Mono</td><td>Consolas, Courier New</td></tr>
-            <tr><td>Code &amp; technical</td><td>JetBrains Mono</td><td>Fira Code, Consolas</td></tr>
+            <tr><td>Website &amp; app</td><td>Geist (Google Fonts)</td><td>Inter, system-ui, sans-serif</td></tr>
+            <tr><td>Presentations</td><td>Geist</td><td>Inter, Segoe UI, Helvetica Neue</td></tr>
+            <tr><td>Documents</td><td>Geist</td><td>Calibri, Arial</td></tr>
+            <tr><td>LinkedIn &amp; social</td><td>Geist</td><td>Platform default</td></tr>
+            <tr><td>Labels, stats &amp; eyebrows</td><td>Geist Mono</td><td>JetBrains Mono, Consolas</td></tr>
+            <tr><td>Code &amp; technical</td><td>JetBrains Mono / Geist Mono</td><td>ui-monospace</td></tr>
           </tbody>
         </table>
+        <p class="mt-16">An earlier design-system note listed Satoshi. The shipped site is Geist. Geist wins.</p>
       </div>
 
-      <!-- Rules -->
       <div class="section">
         <h3>Common rules</h3>
         <ul>
-          <li>Never use more than two weights on a single surface (e.g. Regular + Bold, or Medium + ExtraBold).</li>
-          <li>Headings are always Inter 700 or 800. Never use lighter weights for headings.</li>
-          <li>Body text line-height is always 1.6&ndash;1.7. Headings are 1.1&ndash;1.3.</li>
-          <li>Negative letter-spacing on headings only (28px and above). Body text uses default tracking.</li>
-          <li>Mono never sets headings or body copy. Labels, stats, values, captions, and code only &mdash; a few words or a number, not a paragraph.</li>
-          <li>When a mono label carries the cobalt, nothing else on the surface does. The signature line counts as the surface's one prism statement.</li>
+          <li>Never use more than two weights on a single surface (e.g. Regular + Bold).</li>
+          <li>Headings are Geist 700. Do not use 800/900 &mdash; Geist on the site stops at 700.</li>
+          <li>Body line-height is 1.55&ndash;1.7. Headings are 1.1&ndash;1.3.</li>
+          <li>Negative letter-spacing on headings only (28px and above).</li>
+          <li>Mono never sets headings or body copy. Labels, stats, values, captions, URLs, and code only.</li>
+          <li>Buttons: uppercase, tracking, Geist 600. Not title case, not all-small.</li>
+          <li>Sentence case for headings. The wordmark D8A is the exception.</li>
         </ul>
       </div>
 
-      <!-- Fallbacks -->
       <div class="section">
         <h3>CSS font stacks</h3>
-        <div class="code-block">--font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
---font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;</div>
+        <div class="code-block">--font-sans: "Geist", "Inter", system-ui, sans-serif;
+--font-display: "Geist", "Inter", system-ui, sans-serif;
+--font-mono: "Geist Mono", "JetBrains Mono", ui-monospace, monospace;</div>
       </div>
 
-      <!-- Where to get -->
       <div class="section">
         <h3>Where to get the fonts</h3>
         <ul>
-          <li><strong>Inter:</strong> fonts.google.com/specimen/Inter &mdash; weights 400, 500, 600, 700, 800, 900</li>
+          <li><strong>Geist:</strong> fonts.google.com/specimen/Geist &mdash; weights 400, 500, 600, 700</li>
+          <li><strong>Geist Mono:</strong> fonts.google.com/specimen/Geist+Mono &mdash; weights 400, 500</li>
           <li><strong>JetBrains Mono:</strong> fonts.google.com/specimen/JetBrains+Mono &mdash; weights 400, 500</li>
         </ul>
       </div>
 
-      <div class="footer">D8A Brand Kit &middot; v4.0 &middot; d8a.pro</div>
+      <div class="footer">D8A Brand Kit &middot; v5.0 &middot; d8a.pro</div>
 
     </main>
   </div>

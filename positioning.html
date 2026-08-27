@@ -5,15 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Positioning &middot; D8A Brand Kit</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="shell">
 
     <aside class="sidebar">
-      <div class="sidebar-brand"><h1>D<b>8</b>A</h1></div>
-      <div class="sidebar-version">Brand Kit &middot; v4.0</div>
+      <div class="sidebar-brand">
+        <h1>
+          <span class="logo-mark" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none"><path d="M18 32c0-8 6-14 14-14 5 0 9 2 12 6 3-4 7-6 12-6 8 0 14 6 14 14s-6 14-14 14c-5 0-9-2-12-6-3 4-7 6-12 6-8 0-14-6-14-14z" stroke="currentColor" stroke-width="5.5" stroke-linecap="round"/></svg>
+          </span>
+          D8A
+        </h1>
+      </div>
+      <div class="sidebar-version">Brand Kit &middot; v5.0</div>
       <nav>
         <a href="index.html"><span class="nav-num">00</span> Overview</a>
         <a href="positioning.html" class="active"><span class="nav-num">01</span> Positioning</a>
@@ -35,193 +43,242 @@
       <div class="page-header">
         <div class="section-label">01 &middot; Positioning</div>
         <h2>Brand positioning</h2>
-        <p class="intro">What D8A is, who it's for, and the problems it kills. This page is the foundation everything else in the kit builds on.</p>
+        <p class="intro">What D8A is, who it is for, and the problems it kills. Copied from the live site &mdash; d8a-website-v2 &mdash; not invented for this kit.</p>
       </div>
 
-      <!-- Value Proposition -->
       <div class="section">
         <h3>Value proposition</h3>
         <p style="font-size:22px; font-weight:700; line-height:1.4; color:var(--fg); margin-bottom:12px;">
-          Ship data, not excuses. DataOps how it always should have been.
+          The autonomous D8A platform. Every person is a data person.
         </p>
-        <p>D8A is platform-agnostic DataOps. It brings business, data, and AI agents together to deliver end-to-end data pipelines &mdash; spec-first, agentic, business-led. No lock-in. No drama. Just shipped pipelines.</p>
+        <p>D8A is an AI-powered DataOps workspace that manages the entire data engineering lifecycle &mdash; from business strategy and data requests through specifications, code generation, review, and merge &mdash; in one platform, on your stack. Technology-agnostic. Context-driven. AI-generated, human-curated.</p>
       </div>
 
-      <!-- What we are / what we are not -->
       <div class="section">
-        <h3>What D8A is &mdash; and what it isn't</h3>
+        <h3>The cascade</h3>
+        <p class="mb-16">The product story is one cascade, not a feature list. Keep this order when you explain D8A.</p>
+        <div class="pain-gain-grid">
+          <div class="gain-card">
+            <div class="num">01 &middot; Business first</div>
+            <h4>Strategy &rarr; Portfolio &rarr; Discovery</h4>
+            <p>D8A starts from your business strategy. One cascade &mdash; business strategy, data portfolio, and missing insights &mdash; locked to what your company is trying to win.</p>
+          </div>
+          <div class="gain-card">
+            <div class="num">02 &middot; Specs</div>
+            <h4>Request &rarr; Spec &rarr; Code</h4>
+            <p>Specs are the new code. The durable asset is the specification. Plain-language requests become living specs. Code is generated from them and cannot drift.</p>
+          </div>
+          <div class="gain-card">
+            <div class="num">03 &middot; Architecture</div>
+            <h4>Blueprint &rarr; Marketplace &rarr; Canvas</h4>
+            <p>Architecture drives the code. Define layers, patterns, and tech once in the Blueprint &mdash; or pick a curated architecture from the Marketplace. Generated code follows your playbook.</p>
+          </div>
+          <div class="gain-card">
+            <div class="num">04 &middot; Command</div>
+            <h4>In the loop &middot; On the loop &middot; Autonomous</h4>
+            <p>Human in command. Always. AI codes, reviews, and merges at the automation level you choose, per step, per work item.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Two products. One cascade.</h3>
+        <div class="two-col">
+          <div class="col">
+            <h4>Architect</h4>
+            <ul>
+              <li>Define your data architecture</li>
+              <li>Re-use it with your own tools over MCP</li>
+              <li>Every agent and workflow speaks the same platform language</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h4>Ship</h4>
+            <ul>
+              <li>Everything in Architect</li>
+              <li>Strategy, portfolio, and use cases</li>
+              <li>Living specs, stack-native code, human-in-command autonomy</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>What D8A is &mdash; and what it isn&rsquo;t</h3>
         <div class="two-col">
           <div class="col">
             <h4>What we are</h4>
             <ul>
-              <li>Your data delivery machine</li>
-              <li>Platform-agnostic DataOps</li>
-              <li>Spec-first, agentic, business-led</li>
-              <li>Consistent implementation, time after time</li>
-              <li>The orchestration layer above your stack</li>
+              <li>An AI-powered DataOps workspace</li>
+              <li>Platform-agnostic: Databricks, Snowflake, Fabric, PostgreSQL, Azure SQL, Redshift, MySQL, SQL Server, Oracle, Synapse &mdash; via pyodbc / ODBC</li>
+              <li>Spec-first: the spec is the durable asset, code is generated from it</li>
+              <li>Business-led: strategy locks the portfolio and the use cases</li>
+              <li>Human in command: autonomy is a dial you set</li>
             </ul>
           </div>
           <div class="col">
             <h4>What we are not</h4>
             <ul>
+              <li>A replacement for your engineers</li>
+              <li>An autocomplete (Copilot / Cursor) for SQL</li>
               <li>Your next data platform technology</li>
-              <li>Your next add-on waiting to be replaced</li>
-              <li>Your next vendor lock-in</li>
-              <li>A one-trick pony</li>
+              <li>A vendor lock-in &mdash; specs and generated code live in your Git</li>
               <li>A BI tool or an ETL platform</li>
             </ul>
           </div>
         </div>
       </div>
 
-      <!-- ICP -->
       <div class="section">
         <h3>Ideal customer profile</h3>
+        <p class="mb-16">Audience on the live site: data leaders, platform teams, requestors.</p>
 
         <h4 class="mb-16">Buyer</h4>
         <div class="icp-grid mb-24">
           <div class="icp-card">
-            <h4>Head of Data</h4>
-            <p>Responsible for data strategy, team delivery, and platform decisions. Tired of firefighting and context-switching between tools. Wants their team shipping more and better &mdash; not drowning in tickets.</p>
+            <h4>Head of Data / data leader</h4>
+            <p>Owns strategy, delivery, and platform decisions. Tired of process tax, handoffs, and &ldquo;who owns this?&rdquo; Wants the team shipping work that moves the business.</p>
           </div>
         </div>
 
         <h4 class="mb-16">Users</h4>
         <div class="icp-grid">
           <div class="icp-card">
-            <h4>Data Engineer</h4>
-            <p>Builds and maintains pipelines. Wants clear specs, less rework, and an agent that handles the boilerplate so they can focus on the hard problems.</p>
+            <h4>Platform / data engineer</h4>
+            <p>Builds on the stack you already run. Wants architecture encoded once, specs that don&rsquo;t drift, and AI that follows the playbook instead of inventing a new one.</p>
           </div>
           <div class="icp-card">
-            <h4>Business User</h4>
-            <p>Requests data. Doesn't care about infrastructure. Wants to describe what they need and get a working pipeline without learning SQL or filing three Jira tickets.</p>
+            <h4>Requestor / business user</h4>
+            <p>Describes what they need in plain language. Does not care about infrastructure. Every person is a data person.</p>
           </div>
           <div class="icp-card">
-            <h4>Data Product Owner</h4>
-            <p>Bridges business and engineering. Needs visibility into what's requested, what's in progress, and what's shipped. Specs are their primary tool.</p>
-          </div>
-          <div class="icp-card">
-            <h4>Data Analyst</h4>
-            <p>Consumes data products. Needs reliable, documented, timely data. D8A makes sure the pipeline behind the dashboard actually works.</p>
+            <h4>Data product owner</h4>
+            <p>Bridges strategy and delivery. Needs a scored portfolio, living specs, and a board that shows Specifying &rarr; Coding &rarr; Reviewing &rarr; Merging.</p>
           </div>
         </div>
       </div>
 
-      <!-- Customer Pains -->
       <div class="section">
         <h3>Customer pains</h3>
         <div class="pain-gain-grid">
           <div class="pain-card">
             <div class="num">01</div>
-            <h4>Requests lost in chat threads</h4>
-            <p>Data requests come in via Slack, email, meetings. Half never get tracked. The other half lose context by the time someone picks them up.</p>
+            <h4>Days lost to handoffs</h4>
+            <p>The wait between a business question and a production answer is process tax: rewrites, status, and &ldquo;who owns this?&rdquo;</p>
           </div>
           <div class="pain-card">
             <div class="num">02</div>
-            <h4>No spec, no alignment</h4>
-            <p>Engineering builds what they think was asked. Business expected something different. Three rounds of rework before anything ships.</p>
+            <h4>Senior time on tickets</h4>
+            <p>Best people burn capacity on status, tool-switching, and boilerplate instead of decisions that change the numbers.</p>
           </div>
           <div class="pain-card">
             <div class="num">03</div>
-            <h4>Platform lock-in</h4>
-            <p>Every tool vendor wants to be the entire stack. Switching costs grow every quarter. Innovation stalls because migration is too painful.</p>
+            <h4>Loudest-request roadmaps</h4>
+            <p>Low-value work gets funded. Strategy, budget, and impact are not aligned.</p>
           </div>
           <div class="pain-card">
             <div class="num">04</div>
-            <h4>Manual pipeline development</h4>
-            <p>Every pipeline is hand-coded from scratch. No templates, no patterns, no consistency. Senior engineers spend time on boilerplate instead of architecture.</p>
+            <h4>Vague requests, drifting code</h4>
+            <p>Business language never becomes a reviewable spec. Code drifts from what was asked. Ticket ping-pong.</p>
           </div>
           <div class="pain-card">
             <div class="num">05</div>
-            <h4>Disconnected tooling</h4>
-            <p>Jira for tickets, Confluence for docs, Git for code, Slack for context. Nobody has the full picture. Everything is fragmented.</p>
+            <h4>Architecture rotting in a wiki</h4>
+            <p>Patterns and standards are documentation, not instructions the AI follows. Every pipeline is a new invention.</p>
           </div>
           <div class="pain-card">
             <div class="num">06</div>
-            <h4>Backlogs that never shrink</h4>
-            <p>Data teams are permanently behind. The backlog grows faster than the team can deliver. Business loses trust.</p>
+            <h4>2018 workflow in an AI era</h4>
+            <p>LLMs can write code. The data team still uses the same process from 2018.</p>
           </div>
           <div class="pain-card">
             <div class="num">07</div>
-            <h4>No reuse across projects</h4>
-            <p>Patterns solved once are solved again next quarter. There's no pattern library, no blueprint, no institutional memory.</p>
+            <h4>Autocomplete is not a team member</h4>
+            <p>Copilot / Cursor help one developer type faster. They do not manage the lifecycle from request to merge against your architecture.</p>
           </div>
           <div class="pain-card">
             <div class="num">08</div>
-            <h4>Business can't self-serve</h4>
-            <p>Every data request requires an engineer. Business users are blocked. Engineers are bottlenecked. Everyone is frustrated.</p>
-          </div>
-          <div class="pain-card">
-            <div class="num">09</div>
-            <h4>Inconsistent implementations</h4>
-            <p>Every engineer has their own style. Same type of pipeline, five different approaches. Maintenance becomes archaeology.</p>
-          </div>
-          <div class="pain-card">
-            <div class="num">10</div>
-            <h4>No visibility for leadership</h4>
-            <p>Heads of data can't answer basic questions: how many pipelines are in progress? What's the average delivery time? Where are the bottlenecks?</p>
+            <h4>Platform lock-in</h4>
+            <p>Every vendor wants to be the entire stack. Switching costs grow. Specs should stay put when the target changes.</p>
           </div>
         </div>
       </div>
 
-      <!-- Customer Gains -->
       <div class="section">
         <h3>Customer gains</h3>
         <div class="pain-gain-grid">
           <div class="gain-card">
             <div class="num">01</div>
-            <h4>Requests captured, specs generated</h4>
-            <p>Every data request becomes a structured spec. AI agents help translate business language into technical requirements. Nothing falls through the cracks.</p>
+            <h4>Ship data work weeks faster</h4>
+            <p>Cut the wait between a business question and a production answer.</p>
           </div>
           <div class="gain-card">
             <div class="num">02</div>
-            <h4>Ship more, ship better</h4>
-            <p>Teams deliver more pipelines in less time. Specs remove ambiguity. Agents handle boilerplate. Engineers focus on what matters.</p>
+            <h4>Spend engineering time on outcomes</h4>
+            <p>Put your best people on decisions and delivery that change the numbers.</p>
           </div>
           <div class="gain-card">
             <div class="num">03</div>
-            <h4>Run on any platform</h4>
-            <p>Databricks, Snowflake, Fabric, Spark &mdash; D8A orchestrates them all. Switch platforms without rewriting your delivery process.</p>
+            <h4>Fund only what moves the business</h4>
+            <p>Kill low-value projects early. Score every use case the same way: business value, feasibility, data readiness, strategic fit.</p>
           </div>
           <div class="gain-card">
             <div class="num">04</div>
-            <h4>Consistent every time</h4>
-            <p>Same patterns, same structure, same quality bar. Every pipeline follows the blueprint. New team members are productive on day one.</p>
+            <h4>Living specs, code that cannot drift</h4>
+            <p>Plain-language requests crystallize into a reviewable spec. Code is generated from it and validated against it on every save.</p>
           </div>
           <div class="gain-card">
             <div class="num">05</div>
-            <h4>One workspace for everything</h4>
-            <p>Specs, code, requests, status &mdash; all in one place. No more tab-switching between five tools to understand what's happening.</p>
+            <h4>Define once. Deliver anywhere.</h4>
+            <p>Swap the target stack. Specs and architecture stay put. Databricks, Snowflake, Fabric, and the rest via ODBC.</p>
           </div>
           <div class="gain-card">
             <div class="num">06</div>
-            <h4>Business and engineering aligned</h4>
-            <p>Business users submit requests in their language. Agents translate. Engineers build from clear specs. No more telephone game.</p>
+            <h4>You set the mode</h4>
+            <p>Dial autonomy per column of the board. Override any step, any item. Full audit trail from request to production.</p>
           </div>
           <div class="gain-card">
             <div class="num">07</div>
-            <h4>Backlog under control</h4>
-            <p>Faster delivery means the backlog shrinks. Heads of data can show progress, not just promise it.</p>
+            <h4>Stop managing process. Start shipping data.</h4>
+            <p>The close. Early access is a free trial, a direct line to the founding team, and a voice in the product.</p>
           </div>
           <div class="gain-card">
             <div class="num">08</div>
-            <h4>Reusable patterns and blueprints</h4>
-            <p>Build a pattern once, deploy it everywhere. Institutional knowledge is captured in the tool, not in someone's head.</p>
-          </div>
-          <div class="gain-card">
-            <div class="num">09</div>
-            <h4>Full pipeline visibility</h4>
-            <p>Every request tracked from intake to production. Leadership sees delivery metrics. Teams see their work in context.</p>
-          </div>
-          <div class="gain-card">
-            <div class="num">10</div>
-            <h4>Agents that actually help</h4>
-            <p>AI agents that take in requests, generate code, and scaffold pipelines. Not a chatbot &mdash; a delivery partner.</p>
+            <h4>Your Git. Your metadata.</h4>
+            <p>D8A works on schemas, lineage, specifications, and code &mdash; not row-level data. Specs and generated code live in your repositories.</p>
           </div>
         </div>
       </div>
 
-      <div class="footer">D8A Brand Kit &middot; v4.0 &middot; d8a.pro</div>
+      <div class="section">
+        <h3>Platforms (as named on the site)</h3>
+        <div class="chips">
+          <span class="chip">SQL Server</span>
+          <span class="chip">Azure SQL</span>
+          <span class="chip">Fabric</span>
+          <span class="chip">Synapse</span>
+          <span class="chip">Snowflake</span>
+          <span class="chip">Databricks</span>
+          <span class="chip">PostgreSQL</span>
+          <span class="chip">Oracle</span>
+          <span class="chip">MySQL</span>
+          <span class="chip">Redshift</span>
+        </div>
+        <p class="mt-16">D8A is technology-agnostic: it generates code targeting the platforms you already run &mdash; via pyodbc / ODBC.</p>
+      </div>
+
+      <div class="section">
+        <h3>Facts you can claim (from the FAQ)</h3>
+        <ul>
+          <li>The AI drafts specifications, generates code from your patterns, reviews, and merges. Your team curates the context, sets the automation level, and stays in command. It removes process work, not engineers.</li>
+          <li>D8A works on your metadata &mdash; schemas, lineage, specifications, and code &mdash; not on your row-level data. Workspaces are Git-backed and role-gated, with a full audit trail.</li>
+          <li>The core platform is not open source today. The specification format and generated code live in your own Git repositories &mdash; readable, portable, and yours.</li>
+          <li>Self-hosting is on the roadmap for enterprise plans. Early access runs as a managed workspace.</li>
+          <li>Do not invent volumes, customer names, or case studies that are not in this kit or in the product.</li>
+        </ul>
+      </div>
+
+      <div class="footer">D8A Brand Kit &middot; v5.0 &middot; d8a.pro</div>
 
     </main>
   </div>

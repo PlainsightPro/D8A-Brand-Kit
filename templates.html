@@ -5,15 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Templates &middot; D8A Brand Kit</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="shell">
 
     <aside class="sidebar">
-      <div class="sidebar-brand"><h1>D<b>8</b>A</h1></div>
-      <div class="sidebar-version">Brand Kit &middot; v4.0</div>
+      <div class="sidebar-brand">
+        <h1>
+          <span class="logo-mark" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none"><path d="M18 32c0-8 6-14 14-14 5 0 9 2 12 6 3-4 7-6 12-6 8 0 14 6 14 14s-6 14-14 14c-5 0-9-2-12-6-3 4-7 6-12 6-8 0-14-6-14-14z" stroke="currentColor" stroke-width="5.5" stroke-linecap="round"/></svg>
+          </span>
+          D8A
+        </h1>
+      </div>
+      <div class="sidebar-version">Brand Kit &middot; v5.0</div>
       <nav>
         <a href="index.html"><span class="nav-num">00</span> Overview</a>
         <a href="positioning.html"><span class="nav-num">01</span> Positioning</a>
@@ -35,7 +43,7 @@
       <div class="page-header">
         <div class="section-label">03 &middot; Templates</div>
         <h2>Templates</h2>
-        <p class="intro">Starting points for the documents we make most often. Download, duplicate, fill in. Don't start from scratch.</p>
+        <p class="intro">Starting points for the documents we make most often. Every template should look like a page of d8a.pro moved onto another format.</p>
       </div>
 
       <div class="section">
@@ -44,47 +52,58 @@
           <div class="index-card">
             <div class="num">Presentation</div>
             <h3>Sales deck</h3>
-            <p>16:9 PowerPoint/Google Slides template with title, content, and closing slides. Light-led on pearl, brand typography, one prism statement per slide.</p>
+            <p>16:9. Canvas background, ink type, Geist. One color-framed product shot per story slide. Chrome dots on the title. CTA is an ink pill, not a gradient.</p>
           </div>
           <div class="index-card">
             <div class="num">Document</div>
             <h3>One-pager</h3>
-            <p>Single-page PDF/Word template for product overviews, feature summaries, and leave-behinds.</p>
+            <p>Single-page PDF/Word for product overviews. Headline from the site. Cascade in four numbered badges. Screenshot in a color frame.</p>
           </div>
           <div class="index-card">
             <div class="num">Document</div>
             <h3>Technical whitepaper</h3>
-            <p>Multi-page document template for architecture overviews, integration guides, and case studies.</p>
+            <p>Multi-page. Geist body, JetBrains Mono for specs and SQL. Ink headings. No purple callout boxes.</p>
           </div>
           <div class="index-card">
             <div class="num">Email</div>
             <h3>Email signature</h3>
-            <p>HTML email signature with D8A wordmark, name, title, and contact details.</p>
+            <p>Infinity mark + D8A wordmark, name, title, hello@d8a.pro. Ink on white. No slogan stack under the name.</p>
           </div>
           <div class="index-card">
             <div class="num">Social</div>
             <h3>LinkedIn carousel</h3>
-            <p>1080&times;1350 slide template for LinkedIn carousels. Title slide, content slides, closing CTA.</p>
+            <p>1080&times;1350. Title slide with chrome dots + site headline. Content slides: one idea, product proof. Close: &ldquo;Stop managing process. Start shipping data.&rdquo;</p>
           </div>
           <div class="index-card">
             <div class="num">Social</div>
-            <h3>Social image</h3>
-            <p>1200&times;630 Open Graph image template for link previews and social shares.</p>
+            <h3>Social image / OG</h3>
+            <p>1200&times;630. Canvas, wordmark, one headline, optional framed screenshot. Soft orbs allowed at low opacity. No prism gradient.</p>
           </div>
         </div>
       </div>
 
       <div class="section">
-        <h3>Template rules</h3>
+        <h3>What every template inherits from the site</h3>
         <ul>
-          <li>Always start from the template &mdash; never from a blank document.</li>
-          <li>Don't change fonts, colors, or layout structure.</li>
-          <li>Content can be added or removed, but the visual system stays.</li>
-          <li>If you need a template that doesn't exist, request it &mdash; don't improvise.</li>
+          <li><strong>Headline voice:</strong> sentence case, Geist 700, tight tracking. Use a live-site line when one exists.</li>
+          <li><strong>Eyebrows:</strong> Geist Mono, uppercase, letter-spacing, body-blue or muted.</li>
+          <li><strong>Primary button:</strong> ink fill, white type, uppercase tracking, 150&ndash;250ms hover lift.</li>
+          <li><strong>Product proof:</strong> mock window (red / yellow / sky dots + mono URL) inside a color frame.</li>
+          <li><strong>Footer:</strong> infinity + D8A, d8a.pro, hello@d8a.pro.</li>
         </ul>
       </div>
 
-      <div class="footer">D8A Brand Kit &middot; v4.0 &middot; d8a.pro</div>
+      <div class="section">
+        <h3>Template rules</h3>
+        <ul>
+          <li>Always start from the template &mdash; never from a blank document that still has Inter / cobalt / pearl in it.</li>
+          <li>Do not change fonts, colors, or layout structure.</li>
+          <li>Content can be added or removed, but the visual system stays.</li>
+          <li>If you need a template that does not exist, request it &mdash; do not improvise a purple slide.</li>
+        </ul>
+      </div>
+
+      <div class="footer">D8A Brand Kit &middot; v5.0 &middot; d8a.pro</div>
 
     </main>
   </div>

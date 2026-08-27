@@ -1,67 +1,73 @@
 /* =========================================================
    D8A Brand Kit — style.css
-   Prism · Cobalt gradient accent · Light-led
-   The accent is a prism, not a hex. One truth, every facet.
+   v5.0 · sourced from d8a-website-v2 / d8a.pro
+   Light canvas, ink type, blue body, triad frames.
+   No AI purple.
    ========================================================= */
 
 /* --- Custom Properties ---------------------------------- */
 :root {
-  /* Neutrals — pearl & ink, biased slightly toward the accent */
-  --pearl:       #fbfaff;  /* the canvas — white with a whisper of indigo */
-  --mist:        #f3f1fb;  /* raised / hover panel */
-  --ink:         #15121f;  /* near-black, violet bias — headings, ink surfaces */
-  --ink-2:       #1c1733;  /* ink gradient endpoint */
-  --mauve:       #6c6781;  /* muted text, captions */
-  --line:        #e7e3f2;  /* hairlines, borders */
+  /* Surfaces */
+  --canvas:      #f7f7f7;  /* page background */
+  --surface:     #ffffff;  /* cards / mocks */
+  --tray:        #ececec;  /* recessed panels */
+  --ink:         #262626;  /* headings, primary buttons, wordmark */
+  --ink-2:       #2f2f2f;  /* ink hover / secondary dark */
+  --muted:       #6b6b6b;  /* secondary notes */
+  --line:        #e0e0e0;  /* dividers */
   --white:       #ffffff;
+  --badge:       #6b7280;
 
-  /* Structural gray ramp (kept for docs, code, neutral fills) */
+  /* Structural gray ramp */
   --gray-950:    #171717;
   --gray-800:    #262626;
   --gray-700:    #404040;
-  --gray-600:    #4b4757;  /* body copy — violet-grey, readable on pearl */
+  --gray-600:    #525252;
   --gray-500:    #737373;
   --gray-400:    #a3a3a3;
   --gray-300:    #d4d4d4;
   --gray-200:    #e5e5e5;
   --gray-100:    #f5f5f5;
 
-  /* Cobalt — the prism. The accent is a gradient, not a single colour. */
-  --cobalt-500:  #5340e6;  /* gradient start (indigo) */
-  --blue-500:    #2e6bff;  /* gradient end (blue) */
-  --cobalt-600:  #4536d6;  /* solo accent — links, small marks (AA on white) */
-  --cobalt-700:  #372cb0;  /* hover / deepest */
-  --cobalt-tint: #eef0ff;  /* subtle fill on light */
-  --flash:       #9db4ff;  /* light accent for ink surfaces */
+  /* Signature blues */
+  --blue-text:   #2d6fa8;  /* body copy — WCAG AA on canvas */
+  --sky:         #61bae9;  /* accent / code strings / chrome */
+  --sky-deep:    #2e86d1;  /* deeper sky for frames */
 
-  --accent:      var(--cobalt-600);
-  --accent-soft: var(--cobalt-tint);
+  /* Brand triads — chrome, frames, orbs. Never the canvas. */
+  --yellow:      #f8d823;
+  --red:         #f5563f;
+  --teal:        #00b1a6;
 
-  /* Prism recipes — the gradient in its four sanctioned forms */
-  --grad:        linear-gradient(110deg, #5340e6 0%, #2e6bff 100%);          /* fills: CTAs, hero series */
-  --grad-text:   linear-gradient(110deg, #5340e6 0%, #2e6bff 100%);          /* clipped text, large only */
-  --grad-fade:   linear-gradient(180deg, rgba(83,64,230,0.22) 0%, rgba(46,107,255,0) 100%); /* chart fills, tails */
-  --ink-grad:    linear-gradient(160deg, #15121f 0%, #1c1733 100%);          /* secondary ink canvas */
-  --mesh:        radial-gradient(42% 62% at 88% 4%, rgba(83,64,230,0.16) 0%, rgba(83,64,230,0) 70%),
-                 radial-gradient(38% 54% at 100% 42%, rgba(46,107,255,0.13) 0%, rgba(46,107,255,0) 72%);
-  --glow:        0 20px 54px -26px rgba(74,54,214,0.45);   /* soft coloured lift — on-brand in this world */
+  /* Medallion chips only */
+  --bronze:      #b0764a;
+  --silver:      #9aa2ad;
+  --gold:        #c9a13b;
+
+  /* Dark-surface companion */
+  --dark-sub:    #a4bcd8;
+
+  --accent:      var(--blue-text);
+  --accent-soft: #e8f3fa;
+
+  --shadow:      0 2px 10px rgba(0,0,0,.04);
+  --shadow-lg:   0 8px 30px rgba(0,0,0,.18);
+  --glow:        var(--shadow);
 
   /* Semantic */
-  --bg:          var(--pearl);
+  --bg:          var(--canvas);
   --fg:          var(--ink);
-  --muted:       var(--mauve);
   --border:      var(--line);
-  --surface:     #ffffff;
 
-  /* Typography */
-  --font-body:   'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-mono:   'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  /* Typography — live site: Geist + Geist Mono / JetBrains Mono */
+  --font-body:   'Geist', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono:   'Geist Mono', 'JetBrains Mono', ui-monospace, monospace;
 
   /* Spacing */
   --sidebar-w:   260px;
   --content-max: 960px;
-  --radius:      12px;  /* v4.0: soft corners — light, dimensional, premium */
-  --radius-sm:   8px;
+  --radius:      16px;
+  --radius-sm:   10px;
 }
 
 /* --- Reset ---------------------------------------------- */
@@ -108,21 +114,27 @@ img { max-width: 100%; display: block; }
 }
 
 .sidebar-brand h1 {
-  font-size: 24px;
-  font-weight: 800;
-  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
   color: var(--ink);
 }
 
-/* the 8 carries the prism, everywhere the wordmark is set in HTML as D<b>8</b>A */
-.sidebar-brand h1 b,
-.logo-text b,
-.mark-8 {
-  font-weight: inherit;
-  background: linear-gradient(110deg, #5340e6, #2e6bff);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+.logo-mark {
+  display: inline-flex;
+  width: 28px;
+  height: 28px;
+  color: var(--ink);
+  flex-shrink: 0;
+}
+
+.logo-mark svg {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .sidebar-version {
@@ -149,30 +161,31 @@ img { max-width: 100%; display: block; }
   border-radius: var(--radius-sm);
   font-size: 14px;
   font-weight: 500;
-  color: var(--gray-600);
-  transition: background 120ms ease, color 120ms ease;
+  color: var(--muted);
+  transition: background 150ms ease, color 150ms ease;
 }
 
 .sidebar nav a:hover {
-  background: var(--mist);
+  background: var(--tray);
   color: var(--fg);
 }
 
 .sidebar nav a.active {
-  background: var(--grad);
+  background: var(--ink);
   color: #fff;
 }
 
 .nav-num {
   font-size: 11px;
   font-weight: 600;
+  font-family: var(--font-mono);
   font-variant-numeric: tabular-nums;
   color: var(--gray-400);
   min-width: 18px;
 }
 
 .sidebar nav a.active .nav-num {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 /* --- Main ----------------------------------------------- */
@@ -193,13 +206,13 @@ img { max-width: 100%; display: block; }
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: var(--cobalt-600);
+  color: var(--blue-text);
   margin-bottom: 12px;
 }
 
 .page-header h2 {
   font-size: 36px;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: -0.5px;
   line-height: 1.15;
   margin-bottom: 16px;
@@ -208,14 +221,14 @@ img { max-width: 100%; display: block; }
 
 .page-header .intro {
   font-size: 17px;
-  color: var(--gray-600);
+  color: var(--blue-text);
   max-width: 640px;
   line-height: 1.7;
 }
 
-/* --- Hero (overview) — light, prism, glass -------------- */
+/* --- Hero (overview) ------------------------------------ */
 .hero {
-  background: var(--mesh), var(--pearl);
+  background: var(--surface);
   color: var(--ink);
   border: 1px solid var(--line);
   border-radius: 20px;
@@ -223,7 +236,7 @@ img { max-width: 100%; display: block; }
   margin-bottom: 56px;
   position: relative;
   overflow: hidden;
-  box-shadow: var(--glow);
+  box-shadow: var(--shadow);
 }
 
 .hero .section-label {
@@ -232,13 +245,13 @@ img { max-width: 100%; display: block; }
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: var(--cobalt-600);
+  color: var(--blue-text);
   margin-bottom: 16px;
 }
 
 .hero h2 {
   font-size: 48px;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: -1px;
   line-height: 1.1;
   margin-bottom: 8px;
@@ -247,22 +260,19 @@ img { max-width: 100%; display: block; }
 }
 
 .hero h2 .grad {
-  background: var(--grad-text);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--blue-text);
 }
 
 .hero .tagline-sub {
   font-size: 22px;
   font-weight: 400;
-  color: var(--mauve);
+  color: var(--muted);
   margin-bottom: 24px;
 }
 
 .hero .intro {
   font-size: 17px;
-  color: var(--mauve);
+  color: var(--blue-text);
   max-width: 560px;
   line-height: 1.7;
 }
@@ -271,7 +281,7 @@ img { max-width: 100%; display: block; }
   display: inline-block;
   background: var(--white);
   border: 1px solid var(--line);
-  color: var(--cobalt-600);
+  color: var(--blue-text);
   font-family: var(--font-mono);
   font-size: 12px;
   font-weight: 500;
@@ -284,17 +294,39 @@ img { max-width: 100%; display: block; }
 
 .hero-motif {
   position: absolute;
-  right: 48px;
+  right: 40px;
   top: 50%;
   transform: translateY(-50%);
   opacity: 0.08;
-  font-size: 200px;
-  font-weight: 900;
-  line-height: 1;
-  color: var(--cobalt-500);
+  width: 180px;
+  height: 180px;
+  color: var(--ink);
   pointer-events: none;
   user-select: none;
 }
+
+.hero-motif svg {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-orbs {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.hero-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.35;
+}
+
+.hero-orb--sky    { width: 220px; height: 220px; background: var(--sky);    right: -40px; top: -60px; }
+.hero-orb--teal   { width: 160px; height: 160px; background: var(--teal);   right: 80px;  bottom: -50px; }
+.hero-orb--yellow { width: 120px; height: 120px; background: var(--yellow); left: 40%;    top: -40px; }
 
 /* --- Section -------------------------------------------- */
 .section {
@@ -319,7 +351,7 @@ img { max-width: 100%; display: block; }
 .section p,
 .section li {
   font-size: 15px;
-  color: var(--gray-600);
+  color: var(--blue-text);
   line-height: 1.7;
 }
 
@@ -331,6 +363,11 @@ img { max-width: 100%; display: block; }
 .section ul li,
 .section ol li {
   margin-bottom: 8px;
+}
+
+.section a.text-accent,
+.section a strong {
+  color: var(--ink);
 }
 
 /* --- Index Grid ----------------------------------------- */
@@ -350,9 +387,8 @@ img { max-width: 100%; display: block; }
 }
 
 .index-card:hover {
-  border-color: transparent;
-  box-shadow: var(--glow);
-  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+  transform: translateY(-1px);
 }
 
 .index-card .num {
@@ -361,7 +397,7 @@ img { max-width: 100%; display: block; }
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: var(--cobalt-600);
+  color: var(--blue-text);
   margin-bottom: 8px;
 }
 
@@ -374,7 +410,7 @@ img { max-width: 100%; display: block; }
 
 .index-card p {
   font-size: 14px;
-  color: var(--mauve);
+  color: var(--muted);
   line-height: 1.6;
 }
 
@@ -391,12 +427,11 @@ img { max-width: 100%; display: block; }
   overflow: hidden;
   cursor: pointer;
   background: var(--white);
-  transition: border-color 150ms ease, box-shadow 200ms ease;
+  transition: box-shadow 200ms ease;
 }
 
 .swatch:hover {
-  border-color: transparent;
-  box-shadow: var(--glow);
+  box-shadow: var(--shadow);
 }
 
 .swatch .color {
@@ -422,7 +457,7 @@ img { max-width: 100%; display: block; }
 
 .swatch .usage {
   font-size: 12px;
-  color: var(--mauve);
+  color: var(--muted);
   margin-top: 6px;
 }
 
@@ -447,11 +482,18 @@ img { max-width: 100%; display: block; }
   text-transform: uppercase;
   letter-spacing: 1px;
   color: var(--muted);
+  font-family: var(--font-body);
 }
 
 .color-table td {
   font-family: var(--font-mono);
   font-size: 13px;
+  color: var(--ink);
+}
+
+.color-table td:first-child {
+  font-family: var(--font-body);
+  font-weight: 600;
 }
 
 /* --- Type Specimen -------------------------------------- */
@@ -489,7 +531,7 @@ img { max-width: 100%; display: block; }
 }
 
 .do-card {
-  border-top: 3px solid var(--cobalt-600);
+  border-top: 3px solid var(--teal);
 }
 
 .dont-card {
@@ -505,7 +547,7 @@ img { max-width: 100%; display: block; }
   margin-bottom: 12px;
 }
 
-.do-card .label { color: var(--cobalt-700); }
+.do-card .label { color: var(--teal); }
 .dont-card .label { color: var(--gray-400); }
 
 .do-card blockquote,
@@ -564,6 +606,7 @@ img { max-width: 100%; display: block; }
 .gain-card .num {
   font-size: 11px;
   font-weight: 700;
+  font-family: var(--font-mono);
   color: var(--muted);
   margin-bottom: 6px;
 }
@@ -578,7 +621,7 @@ img { max-width: 100%; display: block; }
 .pain-card p,
 .gain-card p {
   font-size: 13px;
-  color: var(--mauve);
+  color: var(--muted);
   line-height: 1.6;
 }
 
@@ -602,7 +645,7 @@ img { max-width: 100%; display: block; }
   font-family: var(--font-mono);
   font-size: 14px;
   font-weight: 700;
-  color: var(--cobalt-600);
+  color: var(--blue-text);
   min-width: 32px;
 }
 
@@ -614,7 +657,7 @@ img { max-width: 100%; display: block; }
 
 .rule .rule-body p {
   font-size: 14px;
-  color: var(--mauve);
+  color: var(--muted);
   line-height: 1.6;
 }
 
@@ -634,12 +677,13 @@ img { max-width: 100%; display: block; }
   border-radius: var(--radius-sm);
   background: var(--white);
   font-size: 14px;
+  color: var(--ink);
 }
 
 .checklist-item .check {
   width: 20px;
   height: 20px;
-  border: 2px solid var(--cobalt-500);
+  border: 2px solid var(--ink);
   border-radius: 6px;
   flex-shrink: 0;
 }
@@ -666,14 +710,14 @@ img { max-width: 100%; display: block; }
 
 .icp-card p {
   font-size: 14px;
-  color: var(--mauve);
+  color: var(--muted);
   line-height: 1.6;
 }
 
-/* --- Code Block (secondary ink surface) ----------------- */
+/* --- Code Block ----------------------------------------- */
 .code-block {
-  background: var(--ink-grad);
-  color: #d9d5ea;
+  background: var(--ink);
+  color: var(--dark-sub);
   border-radius: var(--radius);
   padding: 20px 24px;
   font-family: var(--font-mono);
@@ -686,7 +730,7 @@ img { max-width: 100%; display: block; }
 /* --- Photo Grid ----------------------------------------- */
 .photo-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
 }
 
@@ -699,18 +743,24 @@ img { max-width: 100%; display: block; }
 
 .photo-card .placeholder {
   height: 180px;
-  background: var(--mist);
+  background: var(--tray);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--mauve);
+  color: var(--muted);
   font-size: 13px;
+}
+
+.photo-card img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .photo-card .caption {
   padding: 12px 16px;
   font-size: 13px;
-  color: var(--mauve);
+  color: var(--muted);
 }
 
 /* --- Logo Display --------------------------------------- */
@@ -732,14 +782,28 @@ img { max-width: 100%; display: block; }
 }
 
 .logo-card.bg-white  { background: #ffffff; }
-.logo-card.bg-light  { background: var(--mist); }
+.logo-card.bg-light  { background: var(--canvas); }
 .logo-card.bg-dark   { background: var(--ink); color: #fff; }
-.logo-card.bg-black  { background: var(--ink-grad); color: #fff; }
+.logo-card.bg-black  { background: #171717; color: #fff; }
+
+.logo-card .logo-lockup {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.logo-card .logo-lockup .logo-mark {
+  width: 40px;
+  height: 40px;
+}
 
 .logo-card .logo-text {
   font-size: 42px;
-  font-weight: 900;
-  letter-spacing: -1px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
 }
 
 .logo-card .variant-label {
@@ -756,7 +820,12 @@ img { max-width: 100%; display: block; }
 
 .logo-card.bg-dark .variant-label,
 .logo-card.bg-black .variant-label {
-  color: var(--flash);
+  color: var(--dark-sub);
+}
+
+.logo-card.bg-dark .logo-mark,
+.logo-card.bg-black .logo-mark {
+  color: #fff;
 }
 
 /* --- Chart Palette -------------------------------------- */
@@ -826,7 +895,7 @@ img { max-width: 100%; display: block; }
 }
 
 .canvas-demo.dark {
-  background: var(--mesh), var(--ink-grad);
+  background: var(--ink);
   border-color: var(--ink);
 }
 
@@ -836,17 +905,17 @@ img { max-width: 100%; display: block; }
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: var(--cobalt-600);
+  color: var(--blue-text);
   margin-bottom: 12px;
 }
 
 .canvas-demo.dark .demo-eyebrow {
-  color: var(--flash);
+  color: var(--dark-sub);
 }
 
 .canvas-demo .demo-headline {
   font-size: 24px;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: -0.5px;
   line-height: 1.2;
   color: var(--ink);
@@ -860,76 +929,152 @@ img { max-width: 100%; display: block; }
 .canvas-demo .demo-body {
   font-size: 14px;
   line-height: 1.6;
-  color: var(--gray-600);
+  color: var(--blue-text);
   margin-bottom: 20px;
 }
 
 .canvas-demo.dark .demo-body {
-  color: #b7b1c9;
+  color: var(--dark-sub);
 }
 
 .demo-cta {
   display: inline-block;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   padding: 11px 22px;
   border-radius: 999px;
-  background: var(--grad);
-  color: #fff;
-  box-shadow: var(--glow);
-}
-
-/* --- Glass card (frosted, over mesh) -------------------- */
-.glass {
-  position: relative;
-  border-radius: var(--radius);
-  border: 1px solid rgba(255,255,255,0.6);
-  background: rgba(255,255,255,0.55);
-  -webkit-backdrop-filter: blur(14px);
-  backdrop-filter: blur(14px);
-  box-shadow: 0 20px 60px -30px rgba(80,50,140,0.4);
-  padding: 24px;
-}
-
-/* --- Signal pulse (graphics page) ----------------------- */
-.pulse-path {
-  stroke-dasharray: 60 340;
-  animation: d8a-pulse 3s linear infinite;
-}
-
-.pulse-tail {
-  stroke-dasharray: 120 280;
-  opacity: 0.28;
-  animation: d8a-pulse 3s linear infinite;
-  animation-delay: 0.12s;
-}
-
-@keyframes d8a-pulse {
-  to { stroke-dashoffset: -400; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .pulse-path, .pulse-tail { animation: none; }
-}
-
-/* --- Prism text & marks --------------------------------- */
-.swatch .color.on-ink {
   background: var(--ink);
+  color: #fff;
 }
 
-.grad-text,
-.mark-grad {
-  background: var(--grad-text);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  width: fit-content;
+.canvas-demo.dark .demo-cta {
+  background: #fff;
+  color: var(--ink);
 }
 
-/* gradient underline behind ink text — the "facet" emphasis mark */
-.underline-grad {
-  background: var(--grad) no-repeat 0 100% / 100% 0.14em;
-  padding-bottom: 0.04em;
+/* --- Window chrome (product mocks) ---------------------- */
+.mock {
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--white);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--line);
+}
+
+.mock-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  background: #fafafa;
+  border-bottom: 1px solid var(--line);
+}
+
+.mock-bar i {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.mock-bar .d-red    { background: var(--red); }
+.mock-bar .d-yellow { background: var(--yellow); }
+.mock-bar .d-blue   { background: var(--sky); }
+
+.mock-url {
+  margin-left: 8px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted);
+}
+
+/* --- Color frames around product shots ------------------ */
+.color-frame {
+  padding: 10px;
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+}
+
+.frame-a {
+  background: linear-gradient(115deg, var(--yellow) 0 26%, #3d8fd6 26% 100%);
+}
+.frame-b {
+  background: linear-gradient(245deg, var(--red) 0 22%, #3d8fd6 22% 78%, var(--yellow) 78% 100%);
+}
+.frame-c {
+  background: linear-gradient(205deg, var(--red) 0 24%, var(--yellow) 24% 62%, #3d8fd6 62% 100%);
+}
+.frame-d {
+  background: linear-gradient(115deg, #3d8fd6 0 70%, var(--yellow) 70% 100%);
+}
+
+.color-frame .mock {
+  box-shadow: none;
+}
+
+/* --- Chrome dots (hero-dots) ---------------------------- */
+.hero-dots {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.hero-dots i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.hero-dots i:nth-child(1) { background: var(--red); }
+.hero-dots i:nth-child(2) { background: var(--yellow); }
+.hero-dots i:nth-child(3) { background: var(--sky); }
+
+/* --- Icon preview --------------------------------------- */
+.icon-preview {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 12px;
+}
+
+.icon-cell {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 20px 12px 14px;
+  text-align: center;
+  background: var(--white);
+}
+
+.icon-cell svg {
+  width: 28px;
+  height: 28px;
+  margin: 0 auto 10px;
+  color: var(--ink);
+  display: block;
+}
+
+.icon-cell span {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted);
+}
+
+/* --- Chips ---------------------------------------------- */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--ink);
 }
 
 /* --- Utility -------------------------------------------- */
@@ -941,7 +1086,8 @@ img { max-width: 100%; display: block; }
 .text-mono { font-family: var(--font-mono); }
 .text-muted { color: var(--muted); }
 .text-sm { font-size: 13px; }
-.text-accent, .text-red { color: var(--cobalt-600); }
+.text-accent, .text-red { color: var(--blue-text); }
+.body-blue { color: var(--blue-text); }
 
 /* --- Responsive ----------------------------------------- */
 @media (max-width: 900px) {
@@ -977,6 +1123,11 @@ img { max-width: 100%; display: block; }
     font-size: 32px;
   }
 
+  .hero-motif,
+  .hero-orbs {
+    display: none;
+  }
+
   .index-grid,
   .do-dont-grid,
   .two-col,
@@ -986,20 +1137,23 @@ img { max-width: 100%; display: block; }
   }
 
   .photo-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 600px) {
-  .photo-grid {
-    grid-template-columns: 1fr;
-  }
-
   .swatch-grid {
     grid-template-columns: 1fr 1fr;
   }
 
   .chart-palette {
     flex-wrap: wrap;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
   }
 }
